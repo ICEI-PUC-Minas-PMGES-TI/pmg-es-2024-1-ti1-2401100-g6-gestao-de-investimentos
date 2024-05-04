@@ -1,0 +1,8 @@
+header{
+    background-color: blueviolet;
+}
+.Enviar{
+    background-color: plum;
+    display: grid;
+    justify-content: center;
+}

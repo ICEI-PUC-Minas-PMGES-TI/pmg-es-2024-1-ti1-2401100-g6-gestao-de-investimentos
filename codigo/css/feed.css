@@ -15,12 +15,12 @@ header a {
     color: white;
     margin: 0px 10px;
 }
-.noticias{
+#noticias{
     display: grid;
     justify-content: center;
     border: 10px solid red;
 }
-.noticias > div {
+#noticias > div {
     margin: 10px ;
 }
 @media only screen and (min-width: 600px){
@@ -30,11 +30,11 @@ header a {
         display: grid;
         border: 10px solid rebeccapurple;
     }
-    .noticias{
+    #noticias{
         display: flex;
         justify-content: center;        
     }
-    .noticias > div {
+    #noticias > div {
         margin: 20px 30px ;
     }
 }
