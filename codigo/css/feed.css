@@ -30,4 +30,11 @@ header a {
         display: grid;
         border: 10px solid rebeccapurple;
     }
+    .noticias{
+        display: flex;
+        justify-content: center;        
+    }
+    .noticias > div {
+        margin: 20px 30px ;
+    }
 }
