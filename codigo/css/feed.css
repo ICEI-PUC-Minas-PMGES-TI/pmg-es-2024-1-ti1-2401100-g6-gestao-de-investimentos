@@ -28,7 +28,6 @@ header a {
         width: 100%;
         height: 500px;
         display: grid;
-        border: 10px solid rebeccapurple;
     }
     #noticias{
         display: flex;

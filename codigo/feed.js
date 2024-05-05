@@ -6,21 +6,11 @@ function leNoticias() {
     } else {
         objDados = {
             Noticias: [{
-                    titulo: "noticias teste",
-                    Resumo: "esse e um teste de noticias",
-                    link: "https://www.cnnbrasil.com.br/economia/negocios/brasil-importa-energia-do-uruguai-para-garantir-fornecimento-ao-rs/"
-                },
-                {
-                    titulo: "noticias teste",
-                    Resumo: "esse e um teste de noticias",
-                    link: "https://www.cnnbrasil.com.br/economia/negocios/brasil-importa-energia-do-uruguai-para-garantir-fornecimento-ao-rs/"
-                },
-                {
-                    titulo: "noticias teste",
-                    Resumo: "esse e um teste de noticias",
-                    link: "https://www.cnnbrasil.com.br/economia/negocios/brasil-importa-energia-do-uruguai-para-garantir-fornecimento-ao-rs/"
-                }
-            ]
+                titulo: "noticias teste",
+                Resumo: "esse e um teste de noticias",
+                link: "https://www.cnnbrasil.com.br/economia/negocios/brasil-importa-energia-do-uruguai-para-garantir-fornecimento-ao-rs/",
+                Image: "images/sua-imagem.jpg", // Substitua 'sua-imagem.jpg' pelo nome correto do arquivo da sua imagem
+            }],
         };
     }
     return objDados;
@@ -42,7 +32,7 @@ function incluirNoticias() {
     };
     objDados.Noticias.push(NovaNoticia);
     salvaNoticias(objDados);
-    lerNoticias(); // Atualiza a exibição das notícias após adicionar uma nova
+    lerNoticias();// Atualiza a exibição das notícias após adicionar uma nova
 }
 
 function lerNoticias() {
