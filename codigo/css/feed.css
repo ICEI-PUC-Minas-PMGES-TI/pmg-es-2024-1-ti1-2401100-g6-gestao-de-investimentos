@@ -9,7 +9,25 @@
     background-image: url("img/Baner-site.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     color: white;
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 0%, #454b8f 100%);
+    }
+
+
+}
+#conteudoBaner{
+    position: relative;
+    opacity: 100%;
+    
 }
 header a {
     color: white;
