@@ -1,8 +1,37 @@
-header{
-    background-color: blueviolet;
+body, html {
+    width: 100%;
+    min-height: 100%;
 }
-.Enviar{
-    background-color: plum;
-    display: grid;
+#logo {
+        height: 50px;
+        object-fit: cover;
+}
+
+.Enviar {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    color: white;
+}
+.formulario {
+ 
     justify-content: center;
+}
+.text-imput{
+    background-color: rgba(10, 20, 40, 40);
+    height: 40px;
+    width: 300px;
+    margin: 10px 20px;
+    color: white;
+}
+button {
+    padding: 10px;
+    background-color: purple;
+}
+@media only screen and (min-width: 600px){
+    .Enviar{
+        background-color: plum;
+        display: grid;
+        justify-content: center;
+    }
+
 }
