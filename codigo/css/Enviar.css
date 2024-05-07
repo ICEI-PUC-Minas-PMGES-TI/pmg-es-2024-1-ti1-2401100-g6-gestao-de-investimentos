@@ -28,10 +28,13 @@ button {
     background-color: purple;
 }
 @media only screen and (min-width: 600px){
-    .Enviar{
+    .Enviar {
         background-color: plum;
         display: grid;
         justify-content: center;
-    }
-
+}
+.text-imput {
+    display: flex;
+    margin: 10px 50px 0px ;
+}
 }
