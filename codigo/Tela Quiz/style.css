@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+}
+
+.landing {
+    width: 100vw;
+    height: 100dvh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("imgs/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.landing::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, #454b8f 100%);
+}
+
+.landing::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 100%);
+}
+
+.fade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 1; 
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 60px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.wrapper header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px black;
+}
+
+.wrapper header .logo {
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.wrapper header nav ul li {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.wrapper header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.wrapper header nav ul li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.wrapper header nav ul li.button {
+    padding: 12px 14px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+}
+
+.wrapper header nav ul li.button.sign-in {
+    background-color: #008adb;
+}
+
+.wrapper header nav ul li.button.sign-up {
+    background-color: #454b8f;
+}
+
+.quiz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    max-height: 600px;
+    max-width: 850px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999999;
+    pointer-events: auto; 
+    border-radius: 50px;
+}
+
+.container {
+    position: relative;
+    max-height: 600px;
+    max-width: 1024px;
+    width: 100%;
+    margin-left: 50px;
+    box-sizing: border-box;
+    z-index: 999999;
+    pointer-events: auto; 
+}
+
+.column {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+    .column {
+        margin-left: 4%;
+    }
+    .column:first-child {
+        margin-left: 0;
+    }
+
+    .full-width.column {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .one-half.column {
+        width: 48%;
+    }
+
+    .one-third.column {
+        width: 30.6666666667%;
+    }
+
+    .two-thirds.column {
+        width: 65.3333333333%;
+    }
+
+    .one-quarter.column {
+        width: 22%;
+    }
+
+    .two-quarter.column {
+        width: 48%;
+    }
+
+    .three-quarter.column {
+        width: 74%;
+    }
+
+    .one-half.column {
+        width: 48%;
+    }
+}
+
+.container:after,
+.row:after,
+
+h1, h2, h3, h4 {
+    font-family: 'Barclaycard Co Lt', sans-serif;
+    color: #018fd0;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    color: #5224a0;
+    font-size: 26px;
+}
+
+.center {
+    text-align: center;
+}
+
+.questions_box {
+    padding: 40px;
+    text-align: left;
+    max-width: 960px;
+}
+
+.button {
+    font-family: 'Barclaycard Co Lt',Tahoma,sans-serif;
+    margin: 20px 0 0 0;
+    float: right;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    line-height: 18px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 100px;
+    vertical-align: baseline;
+    background: #008adb;
+    color: white;
+    text-decoration: none !important;
+    display: inline-block;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transition: background-color 200ms ease-in-out;
+    -moz-transition: background-color 200ms ease-in-out;
+    -o-transition: background-color 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+    background-color: #059fdb !important;
+    color: white;
+}
+
+#question-2, #question-3, #question-4, #question-5, #question-6{
+    display: none;
+}
+
+#progress_bar {
+    margin-top: 10px;
+    background-color: #5224a0;
+    width: 25%;
+    height: 13px;
+    transition: all 500ms ease-in-out;
+}
