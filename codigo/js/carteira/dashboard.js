@@ -28,6 +28,7 @@ async function load() {
     }
     investments.forEach(investment => {
         const recentValues = getMostRecentValues(investment);
+        if(recentValues.total === 0) return;
         values.total += recentValues.total;
         values.invested += recentValues.invested;
 
