@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carteira de Investimentos - InvestPro</title>
+    <link rel="stylesheet" href="../../css/carteira/index.css">
+    <link rel="stylesheet" href="../../css/carteira/dashboard.css">
+    <script src="https://kit.fontawesome.com/98f1a308e9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../js/carteira/index.js"></script>
+    <script src="../../js/carteira/dashboard.js"></script>
+</head>
+<body>
+    <main class="loading">
+        <div class="wrapper">
+            <div id="sidebar">
+                <ul>
+                    <li class="logo">
+                        <img src="../../assets/img/logo.png" alt="logo">
+                    </li>
+                    <li class="item active">
+                        <div class="icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <span class="name">Carteira</span>
+                    </li>
+                    <li class="item" data-href="details.html?id=0">
+                        <div class="icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <span class="name">Detalhes</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="dashboard">
+                <h1>Dashboard</h1>
+                <div class="general">
+                    <div id="total-invested">
+                        <span class="name">Total Investido</span>
+                        <span class="value">R$ 0</span>
+                    </div>
+                    <div id="total-value">
+                        <span class="name">Valor Total</span>
+                        <span class="value">R$ 0</span>
+                    </div>
+                    <div id="roi">
+                        <span class="name">ROI</span>
+                        <span class="value">+0%</span>
+                    </div>
+                </div>
+                <div class="graphs">
+                    <div class="growth">
+                        <canvas id="growth"></canvas>
+                    </div>
+                    <div class="portfolio">
+                        <canvas id="portfolio"></canvas>
+                    </div>
+                </div>
+                <div class="investments">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Valor Investido</th>
+                                <th>Valor Total</th>
+                                <th>ROI</th>
+                            </tr>
+                            <!--
+                            Row Model:
+                            <tr>
+                                <td>
+                                    <img width="100" class="icon" src="../../assets/img/brokers/rico.svg" alt="ícone da corretora">
+                                </td>
+                                <td class="name">Ações da VALE</td>
+                                <td class="type">Renda Variável</td>
+                                <td class="value">R$1.242,23</td>
+                                <td class="value">R$1.301,92</td>
+                                <td class="roi">4,89%</td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

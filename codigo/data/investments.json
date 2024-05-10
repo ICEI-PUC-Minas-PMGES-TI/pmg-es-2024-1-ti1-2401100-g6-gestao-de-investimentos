@@ -1,0 +1,254 @@
+[
+    {
+        "id": 0,
+        "name": "A\u00e7\u00f5es da Vale",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2023-12-29T10:25:00.000Z": {
+                "invested": 124223,
+                "total": 130292
+            }
+        },
+        "icon": "../../assets/img/brokers/rico.svg"
+    },
+    {
+        "id": 1,
+        "name": "T\u00edtulos do Governo",
+        "type": "Renda Fixa",
+        "values": {
+            "2023-12-28T15:45:00.000Z": {
+                "invested": 28767,
+                "total": 29656
+            }
+        },
+        "icon": "../../assets/img/brokers/inter.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "A\u00e7\u00f5es da Petrobras",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-01-27T08:10:00.000Z": {
+                "invested": 56000,
+                "total": 58900
+            }
+        },
+        "icon": "../../assets/img/brokers/santander.png"
+    },
+    {
+        "id": 3,
+        "name": "CDB do Banco do Brasil",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-01-26T16:30:00.000Z": {
+                "invested": 85000,
+                "total": 87350
+            }
+        },
+        "icon": "../../assets/img/brokers/bradesco.png"
+    },
+    {
+        "id": 4,
+        "name": "A\u00e7\u00f5es da Amazon",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-01-25T09:55:00.000Z": {
+                "invested": 32000,
+                "total": 34500
+            }
+        },
+        "icon": "../../assets/img/brokers/xp.png"
+    },
+    {
+        "id": 5,
+        "name": "LCI do Banco Santander",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-01-24T11:20:00.000Z": {
+                "invested": 45000,
+                "total": 46900
+            }
+        },
+        "icon": "../../assets/img/brokers/nu-invest.webp"
+    },
+    {
+        "id": 6,
+        "name": "A\u00e7\u00f5es da Tesla",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-02-23T14:05:00.000Z": {
+                "invested": 74000,
+                "total": 79800
+            }
+        },
+        "icon": "../../assets/img/brokers/rico.svg"
+    },
+    {
+        "id": 7,
+        "name": "LCA do Banco do Brasil",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-02-22T07:45:00.000Z": {
+                "invested": 61000,
+                "total": 63250
+            }
+        },
+        "icon": "../../assets/img/brokers/inter.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "A\u00e7\u00f5es da Microsoft",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-02-21T12:15:00.000Z": {
+                "invested": 93000,
+                "total": 97200
+            }
+        },
+        "icon": "../../assets/img/brokers/santander.png"
+    },
+    {
+        "id": 9,
+        "name": "CRI do Banco Santander",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-03-20T08:55:00.000Z": {
+                "invested": 38000,
+                "total": 39900
+            }
+        },
+        "icon": "../../assets/img/brokers/bradesco.png"
+    },
+    {
+        "id": 10,
+        "name": "A\u00e7\u00f5es da Google",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-03-19T16:35:00.000Z": {
+                "invested": 51000,
+                "total": 53550
+            }
+        },
+        "icon": "../../assets/img/brokers/xp.png"
+    },
+    {
+        "id": 11,
+        "name": "LC do Banco Bradesco",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-03-18T09:25:00.000Z": {
+                "invested": 70000,
+                "total": 72400
+            }
+        },
+        "icon": "../../assets/img/brokers/nu-invest.webp"
+    },
+    {
+        "id": 12,
+        "name": "A\u00e7\u00f5es da Apple",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-03-17T13:50:00.000Z": {
+                "invested": 48000,
+                "total": 50960
+            }
+        },
+        "icon": "../../assets/img/brokers/rico.svg"
+    },
+    {
+        "id": 13,
+        "name": "CDB do Banco Ita\u00fa",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-03-16T11:15:00.000Z": {
+                "invested": 89000,
+                "total": 91670
+            }
+        },
+        "icon": "../../assets/img/brokers/inter.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "A\u00e7\u00f5es da Facebook",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-03-15T14:40:00.000Z": {
+                "invested": 67000,
+                "total": 70650
+            }
+        },
+        "icon": "../../assets/img/brokers/santander.png"
+    },
+    {
+        "id": 15,
+        "name": "LCI do Banco do Brasil",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-03-14T07:30:00.000Z": {
+                "invested": 55000,
+                "total": 57200
+            }
+        },
+        "icon": "../../assets/img/brokers/bradesco.png"
+    },
+    {
+        "id": 16,
+        "name": "A\u00e7\u00f5es da Netflix",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-04-13T10:20:00.000Z": {
+                "invested": 42000,
+                "total": 44800
+            }
+        },
+        "icon": "../../assets/img/brokers/xp.png"
+    },
+    {
+        "id": 17,
+        "name": "CRI do Banco Inter",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-04-12T15:00:00.000Z": {
+                "invested": 60000,
+                "total": 61900
+            }
+        },
+        "icon": "../../assets/img/brokers/nu-invest.webp"
+    },
+    {
+        "id": 18,
+        "name": "A\u00e7\u00f5es da Coca-Cola",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-04-11T08:45:00.000Z": {
+                "invested": 37000,
+                "total": 39100
+            }
+        },
+        "icon": "../../assets/img/brokers/rico.svg"
+    },
+    {
+        "id": 19,
+        "name": "LC do Banco Ita\u00fa",
+        "type": "Renda Fixa",
+        "values": {
+            "2024-04-10T12:35:00.000Z": {
+                "invested": 69000,
+                "total": 71850
+            }
+        },
+        "icon": "../../assets/img/brokers/inter.jpeg"
+    },
+    {
+        "id": 20,
+        "name": "A\u00e7\u00f5es da Disney",
+        "type": "Renda Vari\u00e1vel",
+        "values": {
+            "2024-04-09T09:20:00.000Z": {
+                "invested": 48000,
+                "total": 51040
+            }
+        },
+        "icon": "../../assets/img/brokers/santander.png"
+    }
+]

@@ -1,0 +1,112 @@
+#dashboard {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: calc(100% - 100px);
+    height: 100%;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-rows: 60px 400px calc(100% - 60px - 400px);
+    grid-template-columns: 1fr 3fr;
+
+    & > div:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .general {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column: 1;
+        row-gap: 20px;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) {
+                border-bottom: 2px solid rgb(50, 50, 50);
+            }
+
+            .name {
+                font-size: 1.4rem;
+            }
+
+            .value {
+                font-size: 2.6rem;
+                font-weight: 600;
+            }
+        }
+
+        #total-value, #roi {
+            .value {
+                &.positive {
+                    color: #90db68;
+                }
+
+                &.negative {
+                    color: rgb(234, 0, 53);
+                }
+            }
+        }
+    }
+
+    .graphs {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column: 2;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+    }
+
+    .investments {
+        height: 100%;
+        overflow: auto;
+        padding: 0 16px;
+        grid-column: span 2;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            tbody tr {
+                height: 100px;
+                transition: background-color 100ms ease-in, color 100ms ease-in;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid black;
+                }
+
+                &:not(:active):not(:has(th)):hover {
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                td, th {
+                    text-align: left;
+                    font-size: 2rem;
+                    border: none;
+                }
+
+                td:has(.icon) {
+                    width: 100px;
+                    text-align: center;
+                }
+
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
