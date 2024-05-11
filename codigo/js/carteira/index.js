@@ -1,5 +1,34 @@
+const {title, tooltip} = Chart.defaults.plugins;
+title.display = true;
+title.font.size = 36;
+
+tooltip.callbacks.label = function(context) {
+    let label = context.dataset.label || '';
+    label += ": ";
+    if(context.parsed !== null) {
+        label += formatCash("BRL", context.parsed.y ? context.parsed.y : context.parsed);
+    }
+    return label;
+}
+
+const {font} = Chart.defaults;
+font.family = "'Ubuntu', 'sans-serif";
+
 async function getInvestments() {
     return await (await fetch("../../data/investments.json")).json();
+}
+
+const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+function randomRGB() {
+    const rgb = Array.from({length: 3}, () => Math.floor(Math.random() * 256));
+    return `rgb(${rgb.join(",")})`;
+}
+
+function getMostRecentValues(investment) {
+    const times = Object.keys(investment.values).map(key => new Date(key).getTime());
+    const mostRecent = Math.max(...times);
+    return investment.values[Object.keys(investment.values).find(key => mostRecent === new Date(key).getTime())];
 }
 
 function formatCash(currency, value) {

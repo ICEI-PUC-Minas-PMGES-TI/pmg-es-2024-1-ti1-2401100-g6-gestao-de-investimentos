@@ -23,18 +23,6 @@
                 font-weight: 600;
             }
         }
-
-        #total-value, #roi {
-            .value {
-                &.positive {
-                    color: #90db68;
-                }
-
-                &.negative {
-                    color: rgb(234, 0, 53);
-                }
-            }
-        }
     }
 
     .investments {

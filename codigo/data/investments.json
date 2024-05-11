@@ -307,6 +307,10 @@
             "2023-09-17T16:11:00.000Z": {
                 "invested": 26123,
                 "total": 27350
+            },
+            "2024-01-17T16:11:00.000Z": {
+                "invested": 42130,
+                "total": 45102
             }
         },
         "icon": "../../assets/img/brokers/nu-invest.webp"

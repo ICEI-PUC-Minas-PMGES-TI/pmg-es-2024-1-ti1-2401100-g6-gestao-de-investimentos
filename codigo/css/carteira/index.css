@@ -96,6 +96,16 @@ img.icon {
     background-color: white;
 }
 
+.value {
+    &.positive {
+        color: #90db68;
+    }
+
+    &.negative {
+        color: rgb(234, 0, 53);
+    }
+}
+
 button.toggle {
     width: 40px;
     height: 30px;

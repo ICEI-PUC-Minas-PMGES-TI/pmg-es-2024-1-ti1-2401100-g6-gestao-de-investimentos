@@ -1,3 +1,82 @@
 #details {
+    h1 {
+        font-size: 2.8rem;
+    }
 
+    .info {
+        & > div {
+            padding: 20px 0;
+
+            display: flex;
+            flex-direction: column;
+            .name {
+                font-size: 1.4rem;
+                color: gray;
+            }
+
+            .value {
+                font-weight: 500;
+                font-size: 1.8rem;
+            }
+        }
+
+        & > span {
+            display: block;
+        }
+    }
+}
+
+@media screen and (device-width < 1200px) {
+    #details {
+        .info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            & > div {
+                &:first-child {
+                    padding: 12px 20px 12px 0;
+                }
+
+                &:not(:last-child):not(:first-child) {
+                    padding: 12px 20px;
+                }
+
+                &:last-child {
+                    padding: 12px 0 12px 20px;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1px solid gray;
+                }
+            }
+        }
+
+        .graph {
+            padding-top: 10px;
+            height: calc(100vh - 20px);
+        }
+    }
+}
+
+@media screen and (device-width >= 1200px) {
+    #details {
+        display: grid;
+        grid-template: 51px auto / 1fr 4fr;
+
+        .info {
+            & > div {
+                &:not(:last-child) {
+                    border-bottom: 1px solid gray;
+                }
+            }
+        }
+
+        .graph {
+            padding: 0 40px;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column: 2;
+        }
+    }
 }

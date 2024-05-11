@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detalhes - InvestPRO</title>
     <link rel="stylesheet" href="../../css/carteira/index.css">
-    <link rel="stylesheet" href="../../css/carteira/dashboard.css">
+    <link rel="stylesheet" href="../../css/carteira/details.css">
+    <script src="https://kit.fontawesome.com/98f1a308e9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/carteira/index.js"></script>
     <script src="../../js/carteira/details.js"></script>
-    <script src="https://kit.fontawesome.com/98f1a308e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <main class="loading">
@@ -41,7 +42,31 @@
         </nav>
         <div id="details">
             <h1>Detalhes</h1>
-
+            <div class="info">
+                <div id="name">
+                    <span class="name">Nome</span>
+                    <span class="value">...</span>
+                </div>
+                <div id="type">
+                    <span class="name">Tipo</span>
+                    <span class="value">...</span>
+                </div>
+                <div id="invested">
+                    <span class="name">Investido</span>
+                    <span class="value">R$ 0,00</span>
+                </div>
+                <div id="total">
+                    <span class="name">Total</span>
+                    <span class="value">R$ 0,00</span>
+                </div>
+                <div id="roi">
+                    <span class="name">ROI</span>
+                    <span class="value">0%</span>
+                </div>
+            </div>
+            <div class="graph">
+                <canvas id="all-time"></canvas>
+            </div>
         </div>
     </div>
 </main>
