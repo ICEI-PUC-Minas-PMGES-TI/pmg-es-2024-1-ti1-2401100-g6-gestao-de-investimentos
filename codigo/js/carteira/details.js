@@ -2,7 +2,12 @@ const id = parseInt(new URLSearchParams(window.location.search).get("id") ?? "0"
 
 async function load() {
     const investments = await getInvestments();
-    const investment = investments.find((investment) => investment.id === id);
+    if(!investments) return;
+    const investment = investments.find((investment) => investment.id === id) ?? investments[0];
+    if(investment.id !== id) {
+        window.location.replace(window.location.href.replace(/\?id=\d+/, `?id=${investment.id}`));
+        return;
+    }
 
     const name = document.querySelector("#name .value");
     const type = document.querySelector("#type .value");

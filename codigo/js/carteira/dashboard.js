@@ -1,5 +1,6 @@
 async function load() {
     const investments = await getInvestments();
+    if(!investments) return;
     const table = document.querySelector(".investments table tbody");
     const values = {
         total: 0,
