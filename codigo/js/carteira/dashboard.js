@@ -1,7 +1,9 @@
-async function load() {
-    const investments = await getInvestments();
-    if(!investments) return;
+function renderTable(investments) {
     const table = document.querySelector(".investments table tbody");
+    //clear table except for header
+    Array.from(table.children)
+        .splice(1)
+        .forEach(child => table.removeChild(child));
     const values = {
         total: 0,
         invested: 0,
@@ -9,7 +11,7 @@ async function load() {
     }
     investments.forEach(investment => {
         const recentValues = getMostRecentValues(investment);
-        if(recentValues.total === 0) return;
+        if (recentValues.total === 0) return;
         values.total += recentValues.total;
         values.invested += recentValues.invested;
 
@@ -52,6 +54,63 @@ async function load() {
         table.appendChild(row);
     });
 
+    return values;
+}
+
+async function load() {
+    const investments = await getInvestments();
+    if (!investments) return;
+    const headers = document.querySelectorAll(".investments table tbody th");
+    headers.forEach(header => {
+        if(header.children.length === 0) return;
+        header.addEventListener("click", () => {
+            const currentArrow = document.querySelector("th .arrows.top, th .arrows.bottom");
+            const arrows = header.children[0].children[1];
+            if (!currentArrow || currentArrow !== arrows) arrows.classList.add("top");
+            if (currentArrow) {
+                if (currentArrow === arrows) {
+                    if (currentArrow.classList.contains("top")) {
+                        currentArrow.classList.remove("top");
+                        currentArrow.classList.add("bottom");
+                    } else {
+                        currentArrow.classList.remove("bottom");
+                    }
+                } else {
+                    currentArrow.classList.remove("top", "bottom");
+                }
+            }
+            let sortFunction;
+            const factor = arrows.classList.contains("top") ? 1 : -1;
+            switch(header.children[0].children[0].innerText) {
+                case "Nome":
+                    sortFunction = (a, b) => factor * a.name.localeCompare(b.name);
+                    break;
+                case "Tipo":
+                    sortFunction = (a, b) => factor * a.type.localeCompare(b.type);
+                    break;
+                case "Valor Investido":
+                    sortFunction = (a, b) => factor * (getMostRecentValues(a).invested - getMostRecentValues(b).invested);
+                    break;
+                case "Valor Total":
+                    sortFunction = (a, b) => factor * (getMostRecentValues(a).total - getMostRecentValues(b).total);
+                    break;
+                case "ROI":
+                    sortFunction = (a, b) => {
+                        const aValues = getMostRecentValues(a);
+                        const aROI = aValues.total / aValues.invested;
+                        const bValues = getMostRecentValues(b);
+                        const bROI = bValues.total / bValues.invested;
+                        return factor * (aROI - bROI);
+                    }
+                    break;
+            }
+            if(sortFunction) renderTable(investments.sort(sortFunction));
+            else renderTable(investments);
+        });
+    });
+
+    const values = renderTable(investments);
+
     values.roi = values.total / values.invested - 1;
 
     const totalInvested = document.querySelector("#total-invested .value");
@@ -59,15 +118,15 @@ async function load() {
 
     const totalValue = document.querySelector("#total-value .value");
     totalValue.innerText = formatCash("BRL", values.total / 100);
-    if(values.total !== 0) totalValue.classList.add(values.total > 0 ? "positive" : "negative");
+    if (values.total !== 0) totalValue.classList.add(values.total > 0 ? "positive" : "negative");
 
     const roi = document.querySelector("#roi .value");
     roi.innerText = `${(values.roi * 100).toFixed(2)}%`;
 
-    if(values.roi > 0) {
+    if (values.roi > 0) {
         roi.classList.add("positive");
         roi.innerText = "+" + roi.innerText;
-    } else if(values.roi < 0) {
+    } else if (values.roi < 0) {
         roi.classList.add("negative");
     }
 
@@ -97,7 +156,7 @@ async function load() {
     const times = [], investmentsByType = {};
     investments.forEach(investment => {
         times.push(...Object.keys(investment.values).map(key => new Date(key).getTime()));
-        if(!investmentsByType[investment.type]) {
+        if (!investmentsByType[investment.type]) {
             portfolioLabels.push(investment.type);
             investmentsByType[investment.type] = [];
         }
@@ -105,23 +164,23 @@ async function load() {
     });
     const mostRecent = new Date(Math.max(...times));
     const leastRecent = new Date(Math.min(...times));
-    if(mostRecent.getFullYear() - leastRecent.getFullYear() > 0) {
+    if (mostRecent.getFullYear() - leastRecent.getFullYear() > 0) {
         let total = 0, invested = 0;
-        for(let year = leastRecent.getFullYear(); year <= mostRecent.getFullYear(); year++) {
+        for (let year = leastRecent.getFullYear(); year <= mostRecent.getFullYear(); year++) {
             let month = 0, maxMonth = 11;
-            if(year === leastRecent.getFullYear()) month = leastRecent.getMonth();
-            else if(year === mostRecent.getFullYear()) maxMonth = mostRecent.getMonth();
-            for(; month <= maxMonth; month++) {
+            if (year === leastRecent.getFullYear()) month = leastRecent.getMonth();
+            else if (year === mostRecent.getFullYear()) maxMonth = mostRecent.getMonth();
+            for (; month <= maxMonth; month++) {
                 growthLabels.push(`${year}-${monthNames[month]}`);
                 investments.forEach(investment => {
                     const currentValues = getValues(investment, month, year);
-                    if(!currentValues) return;
+                    if (!currentValues) return;
                     const [time, values] = currentValues;
                     total += values.total;
                     invested += values.invested;
 
                     const previousValues = getPreviousValues(investment, time);
-                    if(previousValues) {
+                    if (previousValues) {
                         total -= previousValues.total;
                         invested -= previousValues.invested;
                     }
@@ -132,17 +191,17 @@ async function load() {
         }
     } else {
         let total = 0, invested = 0;
-        for(let month = leastRecent.getMonth(); month <= mostRecent.getMonth(); month++) {
+        for (let month = leastRecent.getMonth(); month <= mostRecent.getMonth(); month++) {
             growthLabels.push(monthNames[month]);
             investments.forEach(investment => {
                 const currentValues = getValues(investment, month);
-                if(!currentValues) return;
+                if (!currentValues) return;
                 const [time, values] = currentValues;
                 total += values.total;
                 invested += values.invested;
 
                 const previousValues = getPreviousValues(investment, time);
-                if(previousValues) {
+                if (previousValues) {
                     total -= previousValues.total;
                     invested -= previousValues.invested;
                 }
@@ -175,7 +234,7 @@ async function load() {
             scales: {
                 y: {
                     ticks: {
-                        callback: function(value, index, ticks) {
+                        callback: function (value, index, ticks) {
                             return formatCash("BRL", value);
                         }
                     }

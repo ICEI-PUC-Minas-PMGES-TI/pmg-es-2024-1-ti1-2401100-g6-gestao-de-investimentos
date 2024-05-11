@@ -45,11 +45,16 @@ main {
         list-style: none;
         overflow: hidden;
 
-        li {
+        li, a {
             display: grid;
             grid-template-columns: 100px auto;
             width: 100%;
             height: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
 
         .logo {
@@ -269,7 +274,10 @@ button.toggle {
                 &:not(.active):not(:active):hover {
                     cursor: pointer;
                     background-color: black;
-                    color: white;
+
+                    a {
+                        color: white;
+                    }
                 }
             }
         }

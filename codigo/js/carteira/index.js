@@ -52,16 +52,6 @@ function formatCash(currency, value) {
 }
 
 function mainLoad() {
-    const sidebarItems = document.querySelectorAll("#sidebar .item:not(.active)");
-    sidebarItems.forEach(item => {
-        item.addEventListener("click", () => {
-            const {location} = window;
-            const path = location.href.split("/");
-            path[path.length - 1] = item.getAttribute("data-href");
-            location.replace(path.join("/"));
-        });
-    });
-
     const main = document.querySelector("main");
     main.classList.remove("loading");
 }

@@ -54,6 +54,58 @@
                     border: none;
                 }
 
+                th {
+                    &:hover:not(:active) {
+                        cursor: pointer;
+                    }
+
+                    & > div {
+                        display: flex;
+                        align-items: center;
+
+                        & > span {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .arrows {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 22px;
+                        width: 10px;
+
+                        span {
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            border-right: 5px solid transparent;
+                            border-left: 5px solid transparent;
+                            --arrow-color: rgb(180, 180, 180);
+
+                            &:first-child {
+                                border-bottom: 10px solid var(--arrow-color);
+                            }
+
+                            &:last-child {
+                                border-top: 10px solid var(--arrow-color);
+                            }
+                        }
+
+                        &.top {
+                            span:first-child {
+                                --arrow-color: black;
+                            }
+                        }
+
+                        &.bottom {
+                            span:last-child {
+                                --arrow-color: black;
+                            }
+                        }
+                    }
+                }
+
                 td:has(.icon) {
                     width: 100px;
                     text-align: center;
