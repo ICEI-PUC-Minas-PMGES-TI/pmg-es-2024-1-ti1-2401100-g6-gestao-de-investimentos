@@ -4,6 +4,10 @@
     padding: 0px;
 
 }
+#logo {
+    height: 50px;
+    object-fit: cover;
+}
 
 #Bem-vindo{
     background-image: url("img/Baner-site.jpg");
@@ -36,22 +40,52 @@ header a {
 #noticias{
     display: grid;
     justify-content: center;
-    border: 10px solid red;
 }
 #noticias > div {
     margin: 10px ;
 }
+#noticias > a {
+    text-decoration: none;
+}
+.Enviar{ 
+    background-image: url(img/images.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    color: white;
+    justify-content: end;
+    
+}
 @media only screen and (min-width: 600px){
-    #Bem-vindo{
+    #Bem-vindo {
         width: 100%;
         height: 500px;
-        display: grid;
-    }
-    #noticias{
         display: flex;
-        justify-content: center;        
+      }
+    
+    #Bem-vindo .links {
+        position: absolute;
+        bottom: 10px;
+      } 
+    
+    #noticias{
+        margin: 10px;
+        display: grid;   
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
     }
+
     #noticias > div {
         margin: 20px 30px ;
+    }
+    .Enviar{ 
+        width: 100%;
+    }
+    .Enviar > a {
+        background-color: blueviolet;
+        color: white;
     }
 }

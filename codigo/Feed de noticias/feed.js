@@ -40,13 +40,10 @@ function imprimirNoticias() {
     let tela = document.getElementById('noticias');
     let strHtml = '';
     let objDados = lerNoticias();
-    for (let i = objDados.Noticias.length-1 ; i >= 0; i--) {
-        strHtml += '<div class="card" style="width: 20rem;"><h2>' + objDados.Noticias[i].titulo + '</h2><img src="' + objDados.Noticias[i].link + '" class="card-img-top" alt="..."><div class="card-body"><p class="card-text">' + objDados.Noticias[i].Resumo + '</p></div></div>';
+    for (let i = objDados.Noticias.length - 1; i >= 0; i--) {
+        strHtml += '<a href="' + objDados.Noticias[i].link + '"><div class="card" style="width: 20rem;"><h2>' + objDados.Noticias[i].titulo + '</h2><img src="' + objDados.Noticias[i].Image + '" class="card-img-top" alt="..."><div class="card-body"><p class="card-text">' + objDados.Noticias[i].Resumo + '</p></div></div></a>';
     }
     tela.innerHTML = strHtml;
 }
 
-window.onload = imprimirNoticias()
-
-
-
+window.onload = imprimirNoticias();
