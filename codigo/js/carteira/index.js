@@ -25,5 +25,23 @@ function mainLoad() {
 }
 
 window.addEventListener("load", () => {
+    const toggleButtons = document.querySelectorAll("button.toggle");
+    toggleButtons.forEach(button => {
+        const selector = button.getAttribute("data-target");
+        const target = document.querySelector(selector);
+        let first = true;
+        button.addEventListener("click", () => {
+            if(button.classList.contains("open") || first) {
+                button.classList.remove("open");
+                button.classList.add("close");
+                first = false;
+            } else {
+                button.classList.add("open");
+                button.classList.remove("close");
+            }
+            target.classList.toggle("collapse");
+        });
+    });
+
     mainLoad();
 });

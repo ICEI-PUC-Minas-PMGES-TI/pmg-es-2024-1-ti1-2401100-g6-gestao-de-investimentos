@@ -13,8 +13,8 @@ img {
 }
 
 main {
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
 
     .wrapper {
         width: 100%;
@@ -33,19 +33,12 @@ main {
 #sidebar {
     width: 100%;
     height: 100%;
-    max-width: 100px;
-    overflow-y: hidden;
-    border-right: 1px solid black;
+    overflow: hidden;
     background-color: white;
-    transition: max-width 350ms;
     position: absolute;
+    z-index: 100;
     top: 0;
     left: 0;
-    z-index: 100;
-
-    &:not(:has(.item.active:hover)):hover {
-        max-width: 500px;
-    }
 
     ul {
         height: 100%;
@@ -57,10 +50,6 @@ main {
             grid-template-columns: 100px auto;
             width: 100%;
             height: 100px;
-
-            &:not(.item) {
-                grid-template-columns: auto;
-            }
         }
 
         .logo {
@@ -73,34 +62,8 @@ main {
             }
         }
 
-        &:hover .item.active::after {
-            height: 100%;
-            border-radius: 0;
-        }
-
         .item {
-            font-size: 2.8rem;
-            position: relative;
-            transition: background-color 140ms ease-out, color 140ms ease-out;
-
-            &:not(.active):not(:active):hover {
-                cursor: pointer;
-                background-color: black;
-                color: white;
-            }
-
-            &.active::after {
-                content: "";
-                width: 4px;
-                height: 24px;
-                background: #000;
-                border-radius: 2px;
-                top: 50%;
-                right: 0;
-                position: absolute;
-                transform: translateY(-50%);
-                transition: height 250ms, border-radius 250ms;
-            }
+            font-size: 2.4rem;
 
             .icon {
                 width: 100px;
@@ -118,3 +81,193 @@ main {
     }
 }
 
+#sidebar ~ div {
+    padding: 20px 24px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+button.toggle {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &.open > span {
+        &:nth-child(2n + 1) {
+            animation: toggle-button-open 600ms forwards;
+        }
+    }
+
+    &.close {
+        span {
+            &:nth-child(2n + 1) {
+                animation: toggle-button-close 600ms forwards;
+            }
+
+            &:first-child {
+                top: 50%;
+            }
+
+            &:nth-child(2) {
+                left: 100%;
+                opacity: 0;
+            }
+
+            &:last-child {
+                bottom: 50%;
+            }
+        }
+    }
+
+    & > span {
+        transition: transform 300ms ease 300ms, top 300ms ease-in-out, bottom 300ms ease-in-out;
+        border-radius: 3px;
+        display: block;
+        width: 40px;
+        height: 6px;
+        background-color: black;
+        position: absolute;
+
+        &:first-child {
+            --direction: 1;
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            transition: left 300ms, opacity 300ms ease-in-out;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            --direction: -1;
+            bottom: 0;
+        }
+    }
+}
+
+@keyframes toggle-button-close {
+    50% {
+        transform: translateY(calc(-50% * var(--direction)));
+    }
+
+    100% {
+        transform: translateY(calc(-50% * var(--direction))) rotate(calc(45deg * var(--direction)));
+    }
+}
+
+@keyframes toggle-button-open {
+    0% {
+        transform: translateY(calc(-50% * var(--direction))) rotate(calc(45deg * var(--direction)));
+    }
+
+    50% {
+        transform: translateY(calc(-50% * var(--direction)));
+    }
+}
+
+@media screen and (device-width < 1200px) {
+    #sidebar {
+        border-bottom: 1px solid black;
+        transition: height 350ms;
+
+        &.collapse {
+            height: 100px;
+        }
+
+        button.toggle {
+            right: 44px;
+            top: calc((100px - 30px) / 2);
+        }
+
+        ul {
+            .item {
+                border-top: 1px solid black;
+
+                &:last-child {
+                    border-bottom: 1px solid black;
+                }
+            }
+
+            .logo {
+                width: 100%;
+            }
+        }
+    }
+
+    #sidebar ~ div {
+        height: auto;
+        top: 100px;
+    }
+}
+
+@media screen and (device-width >= 1200px) {
+    #sidebar {
+        max-width: 100px;
+        border-right: 1px solid black;
+        transition: max-width 350ms;
+
+        button.toggle {
+            display: none;
+        }
+
+        &:not(:has(.item.active:hover)):hover {
+            max-width: 500px;
+        }
+
+        ul {
+            &:hover .item.active::after {
+                height: 100%;
+                border-radius: 0;
+            }
+
+            li:not(.item) {
+                grid-template-columns: auto;
+            }
+
+            .item {
+                position: relative;
+                transition: background-color 140ms ease-out, color 140ms ease-out;
+
+                &.active::after {
+                    content: "";
+                    width: 4px;
+                    height: 24px;
+                    background: #000;
+                    border-radius: 2px;
+                    top: 50%;
+                    right: 0;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    transition: height 250ms, border-radius 250ms;
+                }
+
+                &:not(.active):not(:active):hover {
+                    cursor: pointer;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #sidebar ~ div {
+        width: calc(100% - 100px);
+        top: 0;
+        left: 100px;
+    }
+}
