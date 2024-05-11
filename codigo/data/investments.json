@@ -1,1002 +1,238 @@
 [
     {
-        "id": 0,
-        "name": "A\u00e7\u00f5es da Vale",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2023-12-29T10:25:00.000Z": {
-                "invested": 124223,
-                "total": 130292
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
         "id": 1,
-        "name": "T\u00edtulos do Governo",
-        "type": "Renda Fixa",
+        "name": "Tecno Brasil",
+        "type": "Ações",
         "values": {
-            "2023-12-28T15:45:00.000Z": {
-                "invested": 28767,
-                "total": 29656
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 312342,
+                "total": 524978
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 235714,
+                "total": 668342
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 427856,
+                "total": 786543
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 642389,
+                "total": 832791
             }
         },
-        "icon": "../../assets/img/brokers/inter.jpeg"
+        "icon": "../../assets/img/brokers/santander.png"
     },
     {
         "id": 2,
-        "name": "A\u00e7\u00f5es da Petrobras",
-        "type": "Renda Vari\u00e1vel",
+        "name": "Verde Renda",
+        "type": "LCI",
         "values": {
-            "2024-01-27T08:10:00.000Z": {
-                "invested": 56000,
-                "total": 58900
+            "2023-04-10T00:00:00.000Z": {
+                "invested": 582923,
+                "total": 924836
+            },
+            "2023-07-15T00:00:00.000Z": {
+                "invested": 474361,
+                "total": 793741
+            },
+            "2023-10-20T00:00:00.000Z": {
+                "invested": 688481,
+                "total": 529314
             }
         },
-        "icon": "../../assets/img/brokers/santander.png"
+        "icon": "../../assets/img/brokers/nu-invest.webp"
     },
     {
         "id": 3,
-        "name": "CDB do Banco do Brasil",
-        "type": "Renda Fixa",
+        "name": "Nexus Cripto",
+        "type": "Criptomoeda",
         "values": {
-            "2024-01-26T16:30:00.000Z": {
-                "invested": 85000,
-                "total": 87350
+            "2023-06-05T00:00:00.000Z": {
+                "invested": 317851,
+                "total": 438529
+            },
+            "2023-09-10T00:00:00.000Z": {
+                "invested": 584736,
+                "total": 765841
+            },
+            "2024-01-15T00:00:00.000Z": {
+                "invested": 689241,
+                "total": 823486
+            },
+            "2024-04-20T00:00:00.000Z": {
+                "invested": 892641,
+                "total": 647812
             }
         },
-        "icon": "../../assets/img/brokers/bradesco.png"
+        "icon": "../../assets/img/brokers/inter.jpeg"
     },
     {
         "id": 4,
-        "name": "A\u00e7\u00f5es da Amazon",
-        "type": "Renda Vari\u00e1vel",
+        "name": "Soluções Renda",
+        "type": "LCA",
         "values": {
-            "2024-01-25T09:55:00.000Z": {
-                "invested": 32000,
-                "total": 34500
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 325879,
+                "total": 586417
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 469813,
+                "total": 751236
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 682415,
+                "total": 834167
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 765832,
+                "total": 923671
             }
         },
-        "icon": "../../assets/img/brokers/xp.png"
+        "icon": "../../assets/img/brokers/inter.jpeg"
     },
     {
         "id": 5,
-        "name": "LCI do Banco Santander",
-        "type": "Renda Fixa",
+        "name": "AlphaOmega CDB",
+        "type": "CDB",
         "values": {
-            "2024-01-24T11:20:00.000Z": {
-                "invested": 45000,
-                "total": 46900
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 215389,
+                "total": 394781
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 458296,
+                "total": 689423
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 589421,
+                "total": 829643
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 722984,
+                "total": 957312
             }
         },
         "icon": "../../assets/img/brokers/nu-invest.webp"
+    },
+    {
+        "id": 6,
+        "name": "Títulos Ventures",
+        "type": "Títulos",
+        "values": {
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 312784,
+                "total": 528192
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 465281,
+                "total": 782319
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 673891,
+                "total": 927614
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 842713,
+                "total": 965812
+            }
+        },
+        "icon": "../../assets/img/brokers/santander.png"
     },
     {
         "id": 7,
-        "name": "LCA do Banco do Brasil",
-        "type": "Renda Fixa",
+        "name": "Empresas Fênix",
+        "type": "Títulos",
         "values": {
-            "2024-02-22T07:45:00.000Z": {
-                "invested": 61000,
-                "total": 63250
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 219481,
+                "total": 368724
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 348912,
+                "total": 479253
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 475318,
+                "total": 689215
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 684912,
+                "total": 795612
             }
         },
-        "icon": "../../assets/img/brokers/inter.jpeg"
+        "icon": "../../assets/img/brokers/bradesco.png"
     },
     {
         "id": 8,
-        "name": "A\u00e7\u00f5es da Microsoft",
-        "type": "Renda Vari\u00e1vel",
+        "name": "Fusão Global",
+        "type": "Criptomoeda",
         "values": {
-            "2024-02-21T12:15:00.000Z": {
-                "invested": 93000,
-                "total": 97200
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 498726,
+                "total": 618532
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 628341,
+                "total": 745982
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 723814,
+                "total": 849613
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 845917,
+                "total": 972813
             }
         },
-        "icon": "../../assets/img/brokers/santander.png"
+        "icon": "../../assets/img/brokers/bradesco.png"
     },
     {
         "id": 9,
-        "name": "CRI do Banco Santander",
-        "type": "Renda Fixa",
+        "name": "Brilhante Títulos",
+        "type": "Títulos",
         "values": {
-            "2024-03-20T08:55:00.000Z": {
-                "invested": 38000,
-                "total": 39900
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 326587,
+                "total": 584271
+            },
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 489217,
+                "total": 718425
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 693815,
+                "total": 826129
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 725981,
+                "total": 951872
             }
         },
-        "icon": "../../assets/img/brokers/bradesco.png"
+        "icon": "../../assets/img/brokers/inter.jpeg"
     },
     {
         "id": 10,
-        "name": "A\u00e7\u00f5es da Google",
-        "type": "Renda Vari\u00e1vel",
+        "name": "Tech Cripto",
+        "type": "Criptomoeda",
         "values": {
-            "2024-03-19T16:35:00.000Z": {
-                "invested": 51000,
-                "total": 53550
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 11,
-        "name": "LC do Banco Bradesco",
-        "type": "Renda Fixa",
-        "values": {
-            "2024-03-18T09:25:00.000Z": {
-                "invested": 70000,
-                "total": 72400
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 12,
-        "name": "A\u00e7\u00f5es da Apple",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2024-03-17T13:50:00.000Z": {
-                "invested": 48000,
-                "total": 50960
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 13,
-        "name": "CDB do Banco Ita\u00fa",
-        "type": "Renda Fixa",
-        "values": {
-            "2024-03-16T11:15:00.000Z": {
-                "invested": 89000,
-                "total": 91670
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 14,
-        "name": "A\u00e7\u00f5es da Facebook",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2024-03-15T14:40:00.000Z": {
-                "invested": 67000,
-                "total": 70650
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 15,
-        "name": "LCI do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2024-03-14T07:30:00.000Z": {
-                "invested": 55000,
-                "total": 57200
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 16,
-        "name": "A\u00e7\u00f5es da Netflix",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2024-04-13T10:20:00.000Z": {
-                "invested": 42000,
-                "total": 44800
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 17,
-        "name": "CRI do Banco Inter",
-        "type": "Renda Fixa",
-        "values": {
-            "2024-04-12T15:00:00.000Z": {
-                "invested": 60000,
-                "total": 61900
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 18,
-        "name": "A\u00e7\u00f5es da Coca-Cola",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2024-04-11T08:45:00.000Z": {
-                "invested": 37000,
-                "total": 39100
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 19,
-        "name": "LC do Banco Ita\u00fa",
-        "type": "Renda Fixa",
-        "values": {
-            "2024-04-10T12:35:00.000Z": {
-                "invested": 69000,
-                "total": 71850
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 20,
-        "name": "A\u00e7\u00f5es da Disney",
-        "type": "Renda Vari\u00e1vel",
-        "values": {
-            "2024-04-09T09:20:00.000Z": {
-                "invested": 48000,
-                "total": 51040
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 20,
-        "name": "Ações da Disney",
-        "type": "Renda Variável",
-        "values": {
-            "2022-09-15T13:34:00.000Z": {
-                "invested": 40645,
-                "total": 42895
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 21,
-        "name": "Títulos do Governo",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-08-05T09:22:00.000Z": {
-                "invested": 45611,
-                "total": 47350
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 22,
-        "name": "Ações da Petrobras",
-        "type": "Renda Variável",
-        "values": {
-            "2023-06-17T14:48:00.000Z": {
-                "invested": 71750,
-                "total": 75450
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 23,
-        "name": "CDB do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-10-27T18:01:00.000Z": {
-                "invested": 92547,
-                "total": 95080
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 24,
-        "name": "Ações da Amazon",
-        "type": "Renda Variável",
-        "values": {
-            "2022-04-30T09:10:00.000Z": {
-                "invested": 28900,
-                "total": 31250
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 25,
-        "name": "LCI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-09-17T16:11:00.000Z": {
-                "invested": 26123,
-                "total": 27350
+            "2023-05-15T00:00:00.000Z": {
+                "invested": 372819,
+                "total": 502931
             },
-            "2024-01-17T16:11:00.000Z": {
-                "invested": 42130,
-                "total": 45102
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 26,
-        "name": "LCA do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-03-24T14:03:00.000Z": {
-                "invested": 56321,
-                "total": 58170
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 27,
-        "name": "Ações da Microsoft",
-        "type": "Renda Variável",
-        "values": {
-            "2022-08-11T10:55:00.000Z": {
-                "invested": 65010,
-                "total": 68260
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 28,
-        "name": "CRI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-01-23T12:09:00.000Z": {
-                "invested": 41839,
-                "total": 43450
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 29,
-        "name": "Ações da Google",
-        "type": "Renda Variável",
-        "values": {
-            "2021-05-14T17:42:00.000Z": {
-                "invested": 58900,
-                "total": 61845
+            "2023-08-20T00:00:00.000Z": {
+                "invested": 517924,
+                "total": 645872
+            },
+            "2023-11-25T00:00:00.000Z": {
+                "invested": 645917,
+                "total": 768413
+            },
+            "2024-02-29T00:00:00.000Z": {
+                "invested": 758123,
+                "total": 891732
             }
         },
         "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 30,
-        "name": "LC do Banco Bradesco",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-02-18T09:30:00.000Z": {
-                "invested": 72220,
-                "total": 74490
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 31,
-        "name": "Ações da Apple",
-        "type": "Renda Variável",
-        "values": {
-            "2021-12-21T11:20:00.000Z": {
-                "invested": 47760,
-                "total": 50250
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 32,
-        "name": "CDB do Banco Itaú",
-        "type": "Renda Fixa",
-        "values": {
-            "2022-10-10T14:15:00.000Z": {
-                "invested": 86900,
-                "total": 89590
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 33,
-        "name": "Ações da Facebook",
-        "type": "Renda Variável",
-        "values": {
-            "2020-12-17T14:23:00.000Z": {
-                "invested": 62080,
-                "total": 65300
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 34,
-        "name": "LCI do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-05-19T07:14:00.000Z": {
-                "invested": 50190,
-                "total": 52350
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 35,
-        "name": "Ações da Netflix",
-        "type": "Renda Variável",
-        "values": {
-            "2021-09-11T12:30:00.000Z": {
-                "invested": 39750,
-                "total": 41820
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 36,
-        "name": "Títulos do Governo",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-04-02T10:45:00.000Z": {
-                "invested": 33100,
-                "total": 34450
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 37,
-        "name": "Ações da Petrobras",
-        "type": "Renda Variável",
-        "values": {
-            "2023-03-28T08:12:00.000Z": {
-                "invested": 63200,
-                "total": 66460
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 38,
-        "name": "CDB do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2022-01-15T09:57:00.000Z": {
-                "invested": 79000,
-                "total": 81470
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 39,
-        "name": "Ações da Amazon",
-        "type": "Renda Variável",
-        "values": {
-            "2021-07-19T14:25:00.000Z": {
-                "invested": 35700,
-                "total": 38310
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 40,
-        "name": "LCI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-03-05T15:30:00.000Z": {
-                "invested": 29450,
-                "total": 30720
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 41,
-        "name": "LCA do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-11-20T16:10:00.000Z": {
-                "invested": 50230,
-                "total": 52160
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 42,
-        "name": "Ações da Microsoft",
-        "type": "Renda Variável",
-        "values": {
-            "2022-12-09T09:20:00.000Z": {
-                "invested": 73420,
-                "total": 76910
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 43,
-        "name": "CRI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-12-30T14:00:00.000Z": {
-                "invested": 36280,
-                "total": 37760
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 44,
-        "name": "Ações da Google",
-        "type": "Renda Variável",
-        "values": {
-            "2022-02-27T12:50:00.000Z": {
-                "invested": 50760,
-                "total": 53340
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 45,
-        "name": "LC do Banco Bradesco",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-07-13T08:40:00.000Z": {
-                "invested": 66120,
-                "total": 68690
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 46,
-        "name": "Ações da Apple",
-        "type": "Renda Variável",
-        "values": {
-            "2020-09-28T13:15:00.000Z": {
-                "invested": 44350,
-                "total": 46780
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 47,
-        "name": "CDB do Banco Itaú",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-08-02T09:00:00.000Z": {
-                "invested": 92500,
-                "total": 95470
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 48,
-        "name": "Ações da Facebook",
-        "type": "Renda Variável",
-        "values": {
-            "2023-05-19T10:20:00.000Z": {
-                "invested": 67600,
-                "total": 71130
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 49,
-        "name": "LCI do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-10-12T14:55:00.000Z": {
-                "invested": 58230,
-                "total": 60670
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 50,
-        "name": "Ações da Netflix",
-        "type": "Renda Variável",
-        "values": {
-            "2023-06-22T09:45:00.000Z": {
-                "invested": 38900,
-                "total": 41360
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 51,
-        "name": "Títulos do Governo",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-03-01T08:10:00.000Z": {
-                "invested": 31500,
-                "total": 32800
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 52,
-        "name": "Ações da Petrobras",
-        "type": "Renda Variável",
-        "values": {
-            "2022-04-05T13:20:00.000Z": {
-                "invested": 58900,
-                "total": 62045
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 53,
-        "name": "CDB do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-11-18T16:30:00.000Z": {
-                "invested": 76580,
-                "total": 79140
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 54,
-        "name": "Ações da Amazon",
-        "type": "Renda Variável",
-        "values": {
-            "2021-01-25T09:35:00.000Z": {
-                "invested": 33200,
-                "total": 35700
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 55,
-        "name": "LCI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-07-10T10:00:00.000Z": {
-                "invested": 27800,
-                "total": 29040
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 56,
-        "name": "LCA do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-01-05T11:40:00.000Z": {
-                "invested": 48090,
-                "total": 49990
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 57,
-        "name": "Ações da Microsoft",
-        "type": "Renda Variável",
-        "values": {
-            "2022-09-28T09:10:00.000Z": {
-                "invested": 70400,
-                "total": 73840
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 58,
-        "name": "CRI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-11-15T14:30:00.000Z": {
-                "invested": 33500,
-                "total": 34850
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 59,
-        "name": "Ações da Google",
-        "type": "Renda Variável",
-        "values": {
-            "2022-07-01T14:45:00.000Z": {
-                "invested": 57600,
-                "total": 60480
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 60,
-        "name": "LC do Banco Bradesco",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-06-22T08:55:00.000Z": {
-                "invested": 63240,
-                "total": 65660
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 61,
-        "name": "Ações da Apple",
-        "type": "Renda Variável",
-        "values": {
-            "2020-10-13T09:20:00.000Z": {
-                "invested": 42400,
-                "total": 44720
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 62,
-        "name": "CDB do Banco Itaú",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-05-12T10:15:00.000Z": {
-                "invested": 89800,
-                "total": 92794
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 63,
-        "name": "Ações da Facebook",
-        "type": "Renda Variável",
-        "values": {
-            "2023-02-04T12:30:00.000Z": {
-                "invested": 73250,
-                "total": 77013
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 64,
-        "name": "LCI do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-08-18T11:20:00.000Z": {
-                "invested": 56000,
-                "total": 58320
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 65,
-        "name": "Ações da Netflix",
-        "type": "Renda Variável",
-        "values": {
-            "2023-08-09T09:40:00.000Z": {
-                "invested": 41400,
-                "total": 44040
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 66,
-        "name": "Títulos do Governo",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-02-11T07:50:00.000Z": {
-                "invested": 29950,
-                "total": 31240
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 67,
-        "name": "Ações da Petrobras",
-        "type": "Renda Variável",
-        "values": {
-            "2021-11-26T14:10:00.000Z": {
-                "invested": 67000,
-                "total": 70560
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 68,
-        "name": "CDB do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-09-29T15:00:00.000Z": {
-                "invested": 74120,
-                "total": 76760
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 69,
-        "name": "Ações da Amazon",
-        "type": "Renda Variável",
-        "values": {
-            "2021-03-18T09:25:00.000Z": {
-                "invested": 37800,
-                "total": 40680
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 70,
-        "name": "LCI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-02-01T12:15:00.000Z": {
-                "invested": 31300,
-                "total": 32650
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 71,
-        "name": "LCA do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2022-11-10T09:35:00.000Z": {
-                "invested": 54020,
-                "total": 56150
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 72,
-        "name": "Ações da Microsoft",
-        "type": "Renda Variável",
-        "values": {
-            "2022-08-07T09:55:00.000Z": {
-                "invested": 77930,
-                "total": 81626
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 73,
-        "name": "CRI do Banco Santander",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-10-09T14:20:00.000Z": {
-                "invested": 38150,
-                "total": 39720
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 74,
-        "name": "Ações da Google",
-        "type": "Renda Variável",
-        "values": {
-            "2022-05-26T11:40:00.000Z": {
-                "invested": 54300,
-                "total": 57015
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 75,
-        "name": "LC do Banco Bradesco",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-08-14T08:30:00.000Z": {
-                "invested": 60120,
-                "total": 62550
-            }
-        },
-        "icon": "../../assets/img/brokers/nu-invest.webp"
-    },
-    {
-        "id": 76,
-        "name": "Ações da Apple",
-        "type": "Renda Variável",
-        "values": {
-            "2020-12-28T13:05:00.000Z": {
-                "invested": 39850,
-                "total": 42020
-            }
-        },
-        "icon": "../../assets/img/brokers/rico.svg"
-    },
-    {
-        "id": 77,
-        "name": "CDB do Banco Itaú",
-        "type": "Renda Fixa",
-        "values": {
-            "2023-04-06T09:10:00.000Z": {
-                "invested": 94500,
-                "total": 97635
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 78,
-        "name": "Ações da Facebook",
-        "type": "Renda Variável",
-        "values": {
-            "2022-12-02T11:15:00.000Z": {
-                "invested": 68900,
-                "total": 72445
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
-    },
-    {
-        "id": 79,
-        "name": "LCI do Banco do Brasil",
-        "type": "Renda Fixa",
-        "values": {
-            "2021-09-18T10:20:00.000Z": {
-                "invested": 54200,
-                "total": 56520
-            }
-        },
-        "icon": "../../assets/img/brokers/bradesco.png"
-    },
-    {
-        "id": 80,
-        "name": "Ações da Netflix",
-        "type": "Renda Variável",
-        "values": {
-            "2023-05-09T09:50:00.000Z": {
-                "invested": 43100,
-                "total": 45760
-            }
-        },
-        "icon": "../../assets/img/brokers/xp.png"
-    },
-    {
-        "id": 81,
-        "name": "Títulos do Governo",
-        "type": "Renda Fixa",
-        "values": {
-            "2020-01-03T07:40:00.000Z": {
-                "invested": 28300,
-                "total": 29532
-            }
-        },
-        "icon": "../../assets/img/brokers/inter.jpeg"
-    },
-    {
-        "id": 82,
-        "name": "Ações da Petrobras",
-        "type": "Renda Variável",
-        "values": {
-            "2021-10-08T13:30:00.000Z": {
-                "invested": 61150,
-                "total": 64528
-            }
-        },
-        "icon": "../../assets/img/brokers/santander.png"
     }
 ]

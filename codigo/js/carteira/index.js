@@ -31,6 +31,19 @@ function getMostRecentValues(investment) {
     return investment.values[Object.keys(investment.values).find(key => mostRecent === new Date(key).getTime())];
 }
 
+function getPreviousValues(investment, current) {
+    const times = Object.keys(investment.values);
+    return investment.values[times[times.indexOf(current) - 1]];
+}
+
+function getValues(investment, month, year) {
+    return Object.entries(investment.values).find(([time, values]) => {
+        const date = new Date(time);
+        if(year) return year === date.getFullYear() && month === date.getMonth();
+        else return month === date.getMonth();
+    });
+}
+
 function formatCash(currency, value) {
     return new Intl.NumberFormat("pt-br", {
         style: "currency",

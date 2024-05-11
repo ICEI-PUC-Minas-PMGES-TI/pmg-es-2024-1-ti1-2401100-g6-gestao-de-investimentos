@@ -113,13 +113,17 @@ async function load() {
             for(; month <= maxMonth; month++) {
                 growthLabels.push(`${year}-${monthNames[month]}`);
                 investments.forEach(investment => {
-                    Object.keys(investment.values).forEach(key => {
-                        const date = new Date(key);
-                        if(date.getMonth() === month && date.getFullYear() === year) {
-                            total += investment.values[key].total;
-                            invested += investment.values[key].invested;
-                        }
-                    });
+                    const currentValues = getValues(investment, month, year);
+                    if(!currentValues) return;
+                    const [time, values] = currentValues;
+                    total += values.total;
+                    invested += values.invested;
+
+                    const previousValues = getPreviousValues(investment, time);
+                    if(previousValues) {
+                        total -= previousValues.total;
+                        invested -= previousValues.invested;
+                    }
                 });
                 graphInvested.data.push(invested / 100);
                 graphTotal.data.push(total / 100);
@@ -130,13 +134,17 @@ async function load() {
         for(let month = leastRecent.getMonth(); month <= mostRecent.getMonth(); month++) {
             growthLabels.push(monthNames[month]);
             investments.forEach(investment => {
-                Object.keys(investment.values).forEach(key => {
-                    const date = new Date(key);
-                    if(date.getMonth() === month) {
-                        total += investment.values[key].total;
-                        invested += investment.values[key].invested;
-                    }
-                });
+                const currentValues = getValues(investment, month);
+                if(!currentValues) return;
+                const [time, values] = currentValues;
+                total += values.total;
+                invested += values.invested;
+
+                const previousValues = getPreviousValues(investment, time);
+                if(previousValues) {
+                    total -= previousValues.total;
+                    invested -= previousValues.invested;
+                }
             });
             graphTotal.data.push(total / 100);
             graphInvested.data.push(invested / 100);
