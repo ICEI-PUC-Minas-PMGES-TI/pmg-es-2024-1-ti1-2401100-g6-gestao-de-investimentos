@@ -15,9 +15,9 @@ async function load() {
     const values = getMostRecentValues(investment);
     invested.innerText = formatCash("BRL", values.invested /100);
     total.innerText = formatCash("BRL", values.total /100);
-    const roiValue = values.total / values.invested;
+    const roiValue = values.total / values.invested - 1;
     if(roiValue !== 0) roi.classList.add(roiValue > 0 ? "positive" : "negative");
-    roi.innerText = `${roiValue > 0 ? "+" : ""}${roiValue.toFixed(4)} %`;
+    roi.innerText = `${roiValue > 0 ? "+" : ""}${(roiValue * 100).toFixed(4)} %`;
 
     const labels = [];
     const graphTotalValues = {
