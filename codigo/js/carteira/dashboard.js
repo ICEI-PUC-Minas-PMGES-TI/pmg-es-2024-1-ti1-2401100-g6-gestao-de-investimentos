@@ -1,6 +1,15 @@
-const {title} = Chart.defaults.plugins;
+const {title, tooltip} = Chart.defaults.plugins;
 title.display = true;
 title.font.size = 36;
+
+tooltip.callbacks.label = function(context) {
+    let label = context.dataset.label || '';
+    label += ": ";
+    if(context.parsed !== null) {
+        label += formatCash("BRL", context.parsed.y ? context.parsed.y : context.parsed);
+    }
+    return label;
+}
 
 const {font} = Chart.defaults;
 font.family = "'Ubuntu', 'sans-serif";
@@ -183,6 +192,15 @@ async function load() {
         },
         options: {
             maintainAspectRatio: false,
+            scales: {
+                y: {
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return formatCash("BRL", value);
+                        }
+                    }
+                }
+            },
             plugins: {
                 legend: {
                     position: "bottom",
