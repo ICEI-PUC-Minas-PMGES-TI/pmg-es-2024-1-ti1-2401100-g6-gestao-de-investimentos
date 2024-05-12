@@ -55,6 +55,7 @@ function getInvestmentProfile() {
         }
     }
 
+    /*Logica para definição do perfil de Investimento*/
 
     if (answerCounts['a'] >= 3) {
         return "Conservador";
