@@ -48,7 +48,7 @@ function renderTable(investments) {
 
         row.addEventListener("click", () => {
             const {location} = window;
-            location.replace(location.href.replace("dashboard", "details") + "?id=" + investment.id);
+            location.href = location.href.replace("dashboard", "details") + "?id=" + investment.id;
         });
 
         table.appendChild(row);
