@@ -123,16 +123,30 @@
             }
         }
 
-        .graphs {
-            div {
-                aspect-ratio: 1.5;
+        .graphs > div {
+            aspect-ratio: 1.5;
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        .investments table {
+            height: calc(100vh - 20px);
+
+            tbody tr {
+                height: 40px;
+
+                th, td {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
 }
 
 
-@media screen and (device-width < 1200px) and (device-width >= 800px) {
+@media screen and (device-width < 1300px) and (device-width >= 800px) {
     #dashboard {
         display: flex;
         row-gap: 20px;
@@ -146,6 +160,7 @@
         .graphs {
             display: flex;
             column-gap: 20px;
+            padding-bottom: 20px;
 
             div {
                 width: 50%;
@@ -164,7 +179,7 @@
     }
 }
 
-@media screen and (device-width >= 1200px) {
+@media screen and (device-width >= 1300px) {
     #dashboard {
         display: grid;
         grid-template-rows: 60px 400px calc(100% - 60px - 400px);
