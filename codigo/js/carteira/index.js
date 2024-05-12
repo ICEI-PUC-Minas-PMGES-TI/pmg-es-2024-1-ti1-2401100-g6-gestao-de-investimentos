@@ -1,4 +1,4 @@
-const {title, tooltip} = Chart.defaults.plugins;
+const {title, tooltip, legend} = Chart.defaults.plugins;
 title.display = true;
 title.font.size = 36;
 
@@ -10,6 +10,10 @@ tooltip.callbacks.label = function(context) {
     }
     return label;
 }
+
+legend.onHover = (event, _, __) => event.chart.canvas.style.cursor = "pointer";
+
+legend.onLeave = (event, _, __) => event.chart.canvas.style.cursor = "auto";
 
 const {font} = Chart.defaults;
 font.family = "'Ubuntu', 'sans-serif";

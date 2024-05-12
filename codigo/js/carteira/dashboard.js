@@ -57,60 +57,7 @@ function renderTable(investments) {
     return values;
 }
 
-async function load() {
-    const investments = await getInvestments();
-    if (!investments) return;
-    const headers = document.querySelectorAll(".investments table tbody th");
-    headers.forEach(header => {
-        if(header.children.length === 0) return;
-        header.addEventListener("click", () => {
-            const currentArrow = document.querySelector("th .arrows.top, th .arrows.bottom");
-            const arrows = header.children[0].children[1];
-            if (!currentArrow || currentArrow !== arrows) arrows.classList.add("top");
-            if (currentArrow) {
-                if (currentArrow === arrows) {
-                    if (currentArrow.classList.contains("top")) {
-                        currentArrow.classList.remove("top");
-                        currentArrow.classList.add("bottom");
-                    } else {
-                        currentArrow.classList.remove("bottom");
-                    }
-                } else {
-                    currentArrow.classList.remove("top", "bottom");
-                }
-            }
-            let sortFunction;
-            const factor = arrows.classList.contains("top") ? 1 : -1;
-            switch(header.children[0].children[0].innerText) {
-                case "Nome":
-                    sortFunction = (a, b) => factor * a.name.localeCompare(b.name);
-                    break;
-                case "Tipo":
-                    sortFunction = (a, b) => factor * a.type.localeCompare(b.type);
-                    break;
-                case "Valor Investido":
-                    sortFunction = (a, b) => factor * (getMostRecentValues(a).invested - getMostRecentValues(b).invested);
-                    break;
-                case "Valor Total":
-                    sortFunction = (a, b) => factor * (getMostRecentValues(a).total - getMostRecentValues(b).total);
-                    break;
-                case "ROI":
-                    sortFunction = (a, b) => {
-                        const aValues = getMostRecentValues(a);
-                        const aROI = aValues.total / aValues.invested;
-                        const bValues = getMostRecentValues(b);
-                        const bROI = bValues.total / bValues.invested;
-                        return factor * (aROI - bROI);
-                    }
-                    break;
-            }
-            if(sortFunction) renderTable(investments.sort(sortFunction));
-            else renderTable(investments);
-        });
-    });
-
-    const values = renderTable(investments);
-
+function renderInfo(values) {
     values.roi = values.total / values.invested - 1;
 
     const totalInvested = document.querySelector("#total-invested .value");
@@ -129,10 +76,70 @@ async function load() {
     } else if (values.roi < 0) {
         roi.classList.add("negative");
     }
+}
 
+function renderGraphs(investments) {
     const growthGraph = document.querySelector("#growth");
     const portfolioGraph = document.querySelector("#portfolio");
 
+    const graphData = calculateGraphsData(investments);
+
+    graphs.growth = new Chart(growthGraph, {
+        type: "line",
+        data: graphData.growth,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    ticks: {
+                        callback: function (value, index, ticks) {
+                            return formatCash("BRL", value);
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                    align: "start",
+                },
+                title: {
+                    text: "Valor Investido"
+                }
+            }
+        }
+    });
+
+    graphs.portfolio = new Chart(portfolioGraph, {
+        type: "doughnut",
+        data: graphData.portfolio,
+        options: {
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "right",
+                    onClick: (_, legendItem, legend) => {
+                        legend.chart.toggleDataVisibility(legendItem.index);
+                        legend.chart.update();
+                        const index = ignorePortfolioGraph.indexOf(legendItem.text);
+                        if(index > -1) ignorePortfolioGraph.splice(index, 1);
+                        else ignorePortfolioGraph.push(legendItem.text);
+                        const finalInvestments = getFinalInvestments(investments);
+                        const values = renderTable(finalInvestments);
+                        renderInfo(values);
+                        graphs.growth.data = calculateGraphsData(finalInvestments).growth;
+                        graphs.growth.update();
+                    }
+                },
+                title: {
+                    text: "Portfólio"
+                }
+            }
+        }
+    });
+}
+
+function calculateGraphsData(investments) {
     const growthLabels = [];
     const graphInvested = {
         label: "Total Investido",
@@ -220,58 +227,90 @@ async function load() {
         graphPortfolio.data.push(total / 100);
     });
 
-    new Chart(growthGraph, {
-        type: "line",
-        data: {
+    return {
+        growth: {
             labels: growthLabels,
             datasets: [
                 graphTotal,
-                graphInvested,
+                graphInvested
             ]
         },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    ticks: {
-                        callback: function (value, index, ticks) {
-                            return formatCash("BRL", value);
-                        }
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    position: "bottom",
-                    align: "start",
-                },
-                title: {
-                    text: "Valor Investido"
-                }
-            }
-        }
-    });
-
-    new Chart(portfolioGraph, {
-        type: "doughnut",
-        data: {
+        portfolio: {
             labels: portfolioLabels,
             datasets: [
                 graphPortfolio
             ]
-        },
-        options: {
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: "right"
-                },
-                title: {
-                    text: "Portfólio"
+        }
+    }
+}
+
+function getFinalInvestments(investments) {
+    const filtered = investments.filter(investment => !ignorePortfolioGraph.includes(investment.type));
+    return sortFunction ? filtered.sort(sortFunction) : filtered;
+}
+
+function setTableSorts(investments) {
+    const headers = document.querySelectorAll(".investments table tbody th");
+    headers.forEach(header => {
+        if(header.children.length === 0) return;
+        header.addEventListener("click", () => {
+            const currentArrow = document.querySelector("th .arrows.top, th .arrows.bottom");
+            const arrows = header.children[0].children[1];
+            if (!currentArrow || currentArrow !== arrows) arrows.classList.add("top");
+            if (currentArrow) {
+                if (currentArrow === arrows) {
+                    if (currentArrow.classList.contains("top")) {
+                        currentArrow.classList.remove("top");
+                        currentArrow.classList.add("bottom");
+                    } else {
+                        currentArrow.classList.remove("bottom");
+                    }
+                } else {
+                    currentArrow.classList.remove("top", "bottom");
                 }
             }
-        }
+            sortFunction = null;
+            const factor = arrows.classList.contains("top") ? 1 : -1;
+            switch(header.children[0].children[0].innerText) {
+                case "Nome":
+                    sortFunction = (a, b) => factor * a.name.localeCompare(b.name);
+                    break;
+                case "Tipo":
+                    sortFunction = (a, b) => factor * a.type.localeCompare(b.type);
+                    break;
+                case "Valor Investido":
+                    sortFunction = (a, b) => factor * (getMostRecentValues(a).invested - getMostRecentValues(b).invested);
+                    break;
+                case "Valor Total":
+                    sortFunction = (a, b) => factor * (getMostRecentValues(a).total - getMostRecentValues(b).total);
+                    break;
+                case "ROI":
+                    sortFunction = (a, b) => {
+                        const aValues = getMostRecentValues(a);
+                        const aROI = aValues.total / aValues.invested;
+                        const bValues = getMostRecentValues(b);
+                        const bROI = bValues.total / bValues.invested;
+                        return factor * (aROI - bROI);
+                    }
+                    break;
+            }
+            renderTable(getFinalInvestments(investments));
+        });
     });
+}
+
+const graphs = {}, ignorePortfolioGraph = [];
+let sortFunction = null;
+async function load() {
+    const investments = await getInvestments();
+    if (!investments) return;
+    setTableSorts(investments);
+
+    const values = renderTable(investments);
+    renderInfo(values);
+    renderGraphs(investments);
+
+    console.log(graphs);
 }
 
 window.addEventListener('load', () => {
