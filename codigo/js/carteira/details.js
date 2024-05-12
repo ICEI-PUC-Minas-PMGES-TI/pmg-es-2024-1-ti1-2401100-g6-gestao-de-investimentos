@@ -1,14 +1,6 @@
 const id = parseInt(new URLSearchParams(window.location.search).get("id") ?? "0");
 
-async function load() {
-    const investments = await getInvestments();
-    if(!investments) return;
-    const investment = investments.find((investment) => investment.id === id) ?? investments[0];
-    if(investment.id !== id) {
-        window.location.replace(window.location.href.replace(/\?id=\d+/, `?id=${investment.id}`));
-        return;
-    }
-
+function renderInfo(investment) {
     const name = document.querySelector("#name .value");
     const type = document.querySelector("#type .value");
     const invested = document.querySelector("#invested .value");
@@ -23,7 +15,9 @@ async function load() {
     const roiValue = values.total / values.invested - 1;
     if(roiValue !== 0) roi.classList.add(roiValue > 0 ? "positive" : "negative");
     roi.innerText = `${roiValue > 0 ? "+" : ""}${(roiValue * 100).toFixed(4)} %`;
+}
 
+function renderGraph(investment) {
     const labels = [];
     const graphTotalValues = {
         label: "Valor Total",
@@ -52,7 +46,6 @@ async function load() {
             graphInvestedValues.data.push(investment.values[time].invested / 100);
         });
     }
-    console.log(labels, graphInvestedValues, graphTotalValues);
 
     const allTimeGraph = document.querySelector("#all-time");
     new Chart(allTimeGraph, {
@@ -86,6 +79,19 @@ async function load() {
             }
         }
     });
+}
+
+async function load() {
+    const investments = await getInvestments();
+    if(!investments) return;
+    const investment = investments.find((investment) => investment.id === id) ?? investments[0];
+    if(investment.id !== id) {
+        window.location.replace(window.location.href.replace(/\?id=\d+/, `?id=${investment.id}`));
+        return;
+    }
+
+    renderInfo(investment);
+    renderGraph(investment);
 }
 
 window.addEventListener("load", () => {
