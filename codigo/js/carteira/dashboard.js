@@ -310,7 +310,10 @@ async function load() {
     renderInfo(values);
     renderGraphs(investments);
 
-    console.log(graphs);
+    window.addEventListener('resize', () => {
+        Object.values(graphs).forEach(graph => graph.destroy());
+        renderGraphs(getFinalInvestments(investments));
+    });
 }
 
 window.addEventListener('load', () => {
