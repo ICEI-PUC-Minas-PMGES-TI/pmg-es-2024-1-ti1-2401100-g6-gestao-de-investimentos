@@ -84,6 +84,10 @@ function renderGraph(investment) {
 async function load() {
     const investments = await getInvestments();
     if(!investments) return;
+    if(investments.length === 0) {
+        alert("Nenhum investimento encontrado!");
+        return;
+    }
     const investment = investments.find((investment) => investment.id === id) ?? investments[0];
     if(investment.id !== id) {
         window.location.replace(window.location.href.replace(/\?id=\d+/, `?id=${investment.id}`));

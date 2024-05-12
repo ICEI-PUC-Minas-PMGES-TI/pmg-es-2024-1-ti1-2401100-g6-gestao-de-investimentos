@@ -307,7 +307,7 @@ async function load() {
     setTableSorts(investments);
 
     const values = renderTable(investments);
-    renderInfo(values);
+    if(investments.length > 0) renderInfo(values);
     renderGraphs(investments);
 
     window.addEventListener('resize', () => {
