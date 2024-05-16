@@ -14,6 +14,7 @@ html {
 }
 
 .landing {
+  position: relative;
   width: 100vw;
   height: 100dvh;
   max-width: 100%;
@@ -113,3 +114,37 @@ html {
   background-color: #454b8f;
 }
 
+.profile-box {
+  margin-top: 45px;
+  border: 2px solid rgb(80, 80, 236);
+  position: absolute; 
+  top: 50%; 
+  left: 60px; 
+  transform: translateY(-50%); 
+  width: 280px; 
+  background-color: white;
+  padding: 20px;
+  z-index: 2; 
+  border-radius: 30px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4)
+}
+
+.profile-image {
+  border: 2px solid rgb(87, 6, 87);
+  width: 200px; 
+  height: 200px; 
+  border-radius: 30px; 
+  display: block; 
+  margin-left: 19px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4)
+}
+
+.tipo-investidor{
+  margin-top: 15px;
+  color:aqua
+}
+
+h3,p{
+  margin-left: 20px;
+}
