@@ -113,22 +113,3 @@ html {
   background-color: #454b8f;
 }
 
-.profile-info {
-    margin-top: 20px;
-  }
-  
-  .profile-info h1,
-  .profile-info h2 {
-    margin-bottom: 10px;
-  }
-  
-  .profile-info p {
-    margin-bottom: 20px;
-  }
-
-  .profile-image {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    border-radius: 50%; /* Para criar uma borda circular */
-    margin-right: 20px; /* Espaço entre a imagem e as informações */
-}
