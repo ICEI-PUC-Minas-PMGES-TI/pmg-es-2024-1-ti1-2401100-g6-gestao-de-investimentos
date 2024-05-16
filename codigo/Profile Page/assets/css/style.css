@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+.landing {
+  width: 100vw;
+  height: 100dvh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.landing::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, #454b8f 100%);
+}
+
+.landing::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.fade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 60px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px black;
+}
+
+.wrapper header .logo {
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.wrapper header nav ul li {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.wrapper header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.wrapper header nav ul li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.wrapper header nav ul li.button {
+  padding: 12px 14px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper header nav ul li.button.sign-in {
+  background-color: #008adb;
+}
+
+.wrapper header nav ul li.button.sign-up {
+  background-color: #454b8f;
+}
+
+.profile-info {
+    margin-top: 20px;
+  }
+  
+  .profile-info h1,
+  .profile-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    border-radius: 50%; /* Para criar uma borda circular */
+    margin-right: 20px; /* Espaço entre a imagem e as informações */
+}
