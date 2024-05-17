@@ -20,7 +20,7 @@ html {
   max-width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url("background.jpg");
+  background-image: url("../css/imgs/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -115,7 +115,7 @@ html {
 }
 
 .profile-box {
-  margin-top: 45px;
+  margin-top: 45 px;
   border: 2px solid rgb(80, 80, 236);
   position: absolute; 
   top: 50%; 
@@ -134,7 +134,8 @@ html {
   width: 200px; 
   height: 200px; 
   border-radius: 30px; 
-  display: block; 
+  display: block;
+  margin-top: 5px; 
   margin-left: 19px;
   margin-bottom: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4)
@@ -148,3 +149,4 @@ html {
 h3,p{
   margin-left: 20px;
 }
+
