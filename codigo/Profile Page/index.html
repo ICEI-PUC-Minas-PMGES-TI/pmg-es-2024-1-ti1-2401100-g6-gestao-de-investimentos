@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Perfil</title>
-    <style>
-        /* Adicione estilos adicionais específicos para a página de perfil aqui */
-    </style>
+    <script src="https://kit.fontawesome.com/9ef390cf17.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,43 +17,59 @@
                 <img class="logo" src="assets/css/imgs/logo.png" alt="logo" />
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Carteiras</a></li>
                         <li><a href="#">Notícias</a></li>
-                        <li><a href="#">Contatos</a></li>
-                        <li class="button sign-in"><a href="#">Meu Perfil</a></li>
+                        <li><a href="#">Configurações</a></li>
                     </ul>
                 </nav>
-            </header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="user-icon">
+                    <img src="assets/css/imgs/img profile.jpg" alt="User Icon">
+                </div>
+            </header> 
         </div>
-    </div>
-    <div class="profile-box">
-        <img class="profile-image" src="assets/css/imgs/img profile.jpg" alt="Imagem de Perfil" />
-        <h3>Perfil</h3> 
-        <p class="tipo-investidor"><strong>Investidor Enrrustido</strong></p>
     </div>
 
-    <div class="background-container">
-        <div class="user-info">
-            <h2>Informações do Usuário</h2>
-            <div class="info-section">
-                <h3>Endereço <span class="edit">Editar</span></h3>
-                <p>Av. Dom José Gaspar, 500 - Coração Eucaristico, Belo Horizonte - MG</p>
+    <main class="main-content">
+        <div class="welcome-message">
+            <h1>Bem vindo de volta, Peter Parker!</h1>
+        </div>
+        <div class="profile-section">
+            <div class="profile-card">
+                <div class="profile-pic">
+                    <img src="assets/css/imgs/img profile.jpg" alt="Perfil">
+                </div>
+                <div class="profile-info">
+                    <h2>Perfil</h2>
+                    <p>Investidor Enrustido</p>
+                    <button>Fazer Teste</button>
+                </div>
             </div>
-            <div class="info-section">
-                <h3>Telefone <span class="edit">Editar</span></h3>
-                <p>+55 (31) 9 9214-0814</p>
-            </div>
-            <div class="info-section">
-                <h3>Informações</h3>
-                <p>CPF: 343.257.940-90</p>
-                <p>Email: peterparker@avengers.com</p>
-                <p>Data de Criação: 02/02/2012</p>
-                <p>Nome: Peter Parker</p>
+            <div class="user-info">
+                <h2>Informações do Usuário</h2>
+                <div class="info-item">
+                    <h3>Endereço <a href="#" class="edit-link">Editar</a></h3>
+                    <p>Av. Dom José Gaspar, 500 - Coração Eucaristico, Belo Horizonte - MG</p>
+                </div>
+                <div class="info-item">
+                    <h3>Telefone <a href="#" class="edit-link">Editar</a></h3>
+                    <p>+55 (31) 9 9214-0814</p>
+                </div>
+                <div class="info-item">
+                    <h3>Informações</h3>
+                    <p>CPF: 343.257.940-90</p>
+                    <p>Email: peterparker@avengers.com</p>
+                    <p>Data de Criação: 02/02/2012</p>
+                    <p>Nome: Peter Parker</p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="assets/js/scripts.js"></script>
 </body>
 

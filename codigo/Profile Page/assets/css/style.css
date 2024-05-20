@@ -114,85 +114,114 @@ html {
   background-color: #454b8f;
 }
 
-.profile-box {
-  border: 2px solid rgb(80, 80, 236);
-  position: absolute;
-  top: 46%;
-  left: 150px;
-  transform: translateY(-50%);
-  width: 280px;
-  background-color: white;
-  padding: 20px;
-  z-index: 2;
-  border-radius: 30px;
+.user-icon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.profile-image {
-  border: 2px solid rgb(87, 6, 87);
-  width: 200px;
-  height: 200px;
-  border-radius: 30px;
-  display: block;
-  margin-top: 5px;
-  margin-left: 19px;
-  margin-bottom: 20px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.tipo-investidor {
-  margin-top: 15px;
-  color: aqua;
-}
-
-h3,
-p {
-  margin-left: 20px;
-}
-
-.background-container {
-  position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
+.search-bar input {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
+  padding: 10px 15px 10px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  outline: none;
 }
 
-.user-info {
-  border: 2px solid rgb(80, 80, 236);
-  background-color: white;
-  padding: 50px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  width: 550px;
+.search-bar .fa-magnifying-glass {
+  position: absolute;
+  top: 12.5%;
+  left: 142vh;
+  transform: translateY(-50%);
+  color: #454b8f;
+}
+
+.main-content {
+  position: absolute;
+  top: 25%;
+  left: 230px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+  width: 70%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-message h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-card, .user-info {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.profile-pic img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.profile-info h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.profile-info button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #454b8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .user-info h2 {
-  margin-bottom: 30px;
-  margin-left: 20px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-.info-section {
-  margin-bottom: 20px;
+.info-item {
+  margin-bottom: 15px;
 }
 
-.info-section h3 {
-  font-size: 1.1em;
-  margin-bottom: 10px;
+.info-item h3 {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.info-section p {
-  margin: 10px 20px;
-  color: #555;
+.edit-link {
+  font-size: 14px;
+  color: #454b8f;
+  text-decoration: none;
 }
 
-.edit {
-  color: #007bff;
-  cursor: pointer;
-  font-size: 0.9em;
-  float: right;
+.edit-link:hover {
+  text-decoration: underline;
+}
+
+.info-item p {
+  font-size: 16px;
+  margin: 5px 0;
 }
