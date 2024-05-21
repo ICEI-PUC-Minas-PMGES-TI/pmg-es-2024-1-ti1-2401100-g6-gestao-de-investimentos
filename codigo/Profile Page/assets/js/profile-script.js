@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Carregar os dados do localStorage
     const username = localStorage.getItem('username');
     const email = localStorage.getItem('email');
+    const tel = localStorage.getItem('tel');
 
     if (username) {
         document.getElementById('user-name').textContent = username;
@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (email) {
         document.getElementById('user-email').textContent = email;
+    }
+
+    if (tel) {
+        document.getElementById('tel').textContent = tel;
     }
 
     

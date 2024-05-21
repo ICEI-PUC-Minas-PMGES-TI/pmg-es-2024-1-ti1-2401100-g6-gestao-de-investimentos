@@ -3,6 +3,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
+    const tel = document.getElementById('tel').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     const message = document.getElementById('message');
@@ -15,6 +16,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     
     localStorage.setItem('username', username);
     localStorage.setItem('email', email);
+    localStorage.setItem('tel', tel);
 
     message.style.color = 'green';
     message.textContent = 'Cadastro realizado com sucesso!';
