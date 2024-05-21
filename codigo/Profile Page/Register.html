@@ -8,6 +8,8 @@
     <title>Cadastro</title>
     <script src="https://kit.fontawesome.com/98f1a308e9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style-register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
 <div class="landing">
@@ -40,7 +42,7 @@
         <input type="email" id="email" name="email" required>
 
         <label for="tel">Telefone</label>
-        <input type="tel" id="tel" name="tel" required>
+        <input type="tel" id="tel" name="tel" maxlength="15" required>
         
         <label for="password">Senha</label>
         <input type="password" id="password" name="password" required>
@@ -52,6 +54,11 @@
     </form>
     <div id="message"></div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('#tel').mask('(00) 00000-0000');
+    });
+</script>
 <script src="assets/js/register-script.js"></script>
 </body>
 </html>
