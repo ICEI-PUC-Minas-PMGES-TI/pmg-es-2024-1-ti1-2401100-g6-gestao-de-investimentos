@@ -20,7 +20,7 @@ html {
   max-width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url("../css/imgs/background.jpg");
+  background-image: url("./imgs/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -114,118 +114,54 @@ html {
   background-color: #454b8f;
 }
 
-.user-icon img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+
+.container {
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.search-bar input {
-  width: 100%;
-  padding: 10px 15px 10px 40px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  outline: none;
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.search-bar .fa-magnifying-glass {
-  position: absolute;
-  top: 12.5%;
-  left: 142vh;
-  transform: translateY(-50%);
-  color: #454b8f;
+label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-.main-content {
-  position: absolute;
-  top: 25%;
-  left: 230px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 30px;
-  width: 70%;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.welcome-message h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #454b8f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.profile-section {
-  display: flex;
-  justify-content: space-between;
+button:hover {
+    background-color: #0056b3;
+    transition: all .5s ease
 }
 
-.profile-card{
-  width: 30;
-}
-
-.profile-card, .user-info {
-  background-color: #e3f2fd;
-  padding: 20px;
-  border-radius: 10px;
-  width: 45%;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.profile-pic img {
-  width: 200px;
-  border-radius: 10px;
-}
-
-.profile-info h2 {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.profile-info p {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-.profile-info button {
-  margin-top: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #454b8f;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.user-info h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.info-item {
-  margin-bottom: 30px;
-}
-
-.info-item h3 {
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.edit-link {
-  font-size: 14px;
-  color: #454b8f;
-  text-decoration: none;
-}
-
-.edit-link:hover {
-  text-decoration: underline;
-}
-
-.info-item p {
-  font-size: 16px;
-  margin: 5px 0;
+#message {
+    margin-top: 20px;
+    text-align: center;
+    color: red;
 }

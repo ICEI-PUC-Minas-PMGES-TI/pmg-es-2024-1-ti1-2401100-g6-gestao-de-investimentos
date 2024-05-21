@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-ProfilePage.css">
     <title>Perfil</title>
     <script src="https://kit.fontawesome.com/9ef390cf17.js" crossorigin="anonymous"></script>
 </head>
@@ -37,7 +37,7 @@
 
     <main class="main-content">
         <div class="welcome-message">
-            <h1>Bem vindo de volta, Peter Parker!</h1>
+            <h1>Bem vindo de volta, <span id="user-name">Usuário</span>!</h1>
         </div>
         <div class="profile-section">
             <div class="profile-card">
@@ -53,24 +53,25 @@
             <div class="user-info">
                 <h2>Informações do Usuário</h2>
                 <div class="info-item">
-                    <h3>Endereço <a href="#" class="edit-link">Editar</a></h3>
-                    <p>Av. Dom José Gaspar, 500 - Coração Eucaristico, Belo Horizonte - MG</p>
+                    <h3>Endereço <a href="#" class="edit-link" data-edit="address">Editar</a></h3>
+                    <p id="address">Av. Dom José Gaspar, 500 - Coração Eucaristico, Belo Horizonte - MG</p>
                 </div>
                 <div class="info-item">
-                    <h3>Telefone <a href="#" class="edit-link">Editar</a></h3>
-                    <p>+55 (31) 9 9214-0814</p>
+                    <h3>Telefone <a href="#" class="edit-link" data-edit="phone">Editar</a></h3>
+                    <p id="phone">+55 (31) 9 9214-0814</p>
                 </div>
                 <div class="info-item">
                     <h3>Informações</h3>
                     <p>CPF: 343.257.940-90</p>
-                    <p>Email: peterparker@avengers.com</p>
+                    <p>Email: <span id="user-email">peterparker@avengers.com</span></p>
                     <p>Data de Criação: 02/02/2012</p>
-                    <p>Nome: Peter Parker</p>
+                    <p>Nome: <span id="user-full-name">Peter Parker</span></p>
                 </div>
             </div>
         </div>
     </main>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/profile-script.js"></script>
+    <script src="assets/js/profile-script.js"></script>
 </body>
 
 </html>

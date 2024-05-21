@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+}
+
+.landing {
+    width: 100vw;
+    height: 100dvh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../css/imgs/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 0%, #454b8f 100%);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 100%;
+        height: 160px;
+        background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 100%);
+    }
+
+    .fade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        max-width: 1600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 48px 60px;
+        z-index: 100;
+        overflow: hidden;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            border-bottom: 1px black;
+
+            .logo {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            nav {
+                ul {
+                    display: flex;
+                    list-style: none;
+                    align-items: center;
+
+                    li {
+                        text-align: left;
+                        font-size: 1.2rem;
+
+                        a {
+                            text-decoration: none;
+                            font-weight: bold;
+                            color: white;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 24px;
+                        }
+
+                        &.button {
+                            padding: 12px 14px;
+                            border-radius: 20px;
+                            box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+
+                            &.sign-in {
+                                background-color: #008adb;
+                            }
+
+                            &.sign-up {
+                                background-color: #454b8f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .title {
+            h1 {
+                font-size: 7rem;
+                margin-left: -7px;
+            }
+
+            span {
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+
+            .section {
+                max-width: 700px;
+                display: flex;
+
+                div {
+                    position: relative;
+                    padding-right: 8px;
+
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        content: "";
+                        height: 100%;
+                        width: 2px;
+                        background-color: white;
+                    }
+
+                    .name {
+                        font-size: 2rem;
+                    }
+
+                    .subtitle {
+                        font-size: 1.1rem;
+                        white-space: nowrap;
+                        font-weight: 500;
+                    }
+                }
+
+                & > span {
+                    font-size: 1.2rem;
+                    padding-left: 32px;
+                    font-weight: 500;
+                }
+            }
+
+            .social {
+                font-size: 1.6rem;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+
+                a {
+                    color: white;
+                }
+
+                a:not(:last-child) {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
