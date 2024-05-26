@@ -1,12 +1,9 @@
-jQuery(document).ready(function ($) {
-    $('.money').mask('000.000.000.000.000,00', {reverse: true});
-  });
 function openPopup(popupId) {
-    document.getElementById('popup' + popupId.charAt(0).toUpperCase() + popupId.slice(1)).style.display = 'block';
+    document.getElementById(popupId).style.display = 'block';
 }
 
 function closePopup(popupId) {
-    document.getElementById('popup' + popupId.charAt(0).toUpperCase() + popupId.slice(1)).style.display = 'none';
+    document.getElementById(popupId).style.display = 'none';
 }
 
 function calcularRendaFixa() {
@@ -18,18 +15,21 @@ function calcularRendaFixa() {
     let montante = valorInicial;
     for (let i = 0; i < tempoInvestimento; i++) {
         montante += valorMensal;
-        montante *= (1 + taxaJuros);
+        montante *= (1 + taxaJuros); // Correção: atribuindo o resultado de volta a montante
     }
 
-    document.getElementById('resultadoRendaFixa').innerText = `Montante Final: R$ ${montante.toFixed(2)}`;
+    document.getElementById('resultadoRendaFixa').innerText = `Montante final: R$ ${montante.toFixed(2)}`;
 }
 
-function calcularAposentadoria() {
-    const valorMensal = parseFloat(document.getElementById('valorMensalAposentadoria').value);
-    const taxaJuros = parseFloat(document.getElementById('taxaJurosAposentadoria').value) / 100;
+function calcularInvestimentoMensal() {
+    const valorMensalDesejado = parseFloat(document.getElementById('valorMensalDesejado').value);
+    const taxaJurosMensal = parseFloat(document.getElementById('taxaJurosMensal').value) / 100;
     const tempoAposentadoria = parseFloat(document.getElementById('tempoAposentadoria').value) * 12;
+    const tempoContribuicao = parseFloat(document.getElementById('tempoContribuicao').value) * 12;
 
-    let montanteNecessario = valorMensal * tempoAposentadoria / taxaJuros;
-    
-    document.getElementById('resultadoAposentadoria').innerText = `Montante Necessário: R$ ${montanteNecessario.toFixed(2)}`;
+    const montanteNecessario = valorMensalDesejado * ((1 - Math.pow(1 + taxaJurosMensal, -tempoAposentadoria)) / taxaJurosMensal);
+    const valorMensalInvestimento = montanteNecessario / ((Math.pow(1 + taxaJurosMensal, tempoContribuicao) - 1) / taxaJurosMensal);
+
+    document.getElementById('resultadoInvestimentoMensal').innerText = `Valor a ser investido mensalmente: R$ ${valorMensalInvestimento.toLocaleString("pt-br",{style:"currency",currency:"BRL"})}`;
 }
+ 

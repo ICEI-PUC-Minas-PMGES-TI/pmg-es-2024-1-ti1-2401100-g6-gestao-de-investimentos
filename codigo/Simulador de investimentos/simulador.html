@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadoras e Simuladores</title>
     <link rel="stylesheet" href="assets/css/simulador.css">
-    
 </head>
+<header>
+    <img class="logo" src="assets/css/img/logo.png" alt="logo">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Contatos</a></li>
+            <li class="button sign-in"><a href="#">Entrar</a></li>
+            <li class="button sign-up"><a href="#">Criar Conta</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-    <div class="header">
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            <a href="#">Cursos</a>
-        </nav>
-    </div>
-
     <div class="container">
         <h1 class="title">CALCULADORAS E SIMULADORES</h1>
         <div class="grid">
-            <img src="renda_fixa.jpg" alt="Renda Fixa" onclick="openPopup('rendaFixa')">
-            <img src="aposentadoria.jpg" alt="Aposentadoria" onclick="openPopup('aposentadoria')">
-            <img src="financiar_alugar.jpg" alt="Financiar ou Alugar" onclick="openPopup('financiarAlugar')">
-            <img src="reserva_emergencia.jpg" alt="Reserva de Emergência" onclick="openPopup('reservaEmergencia')">
+            <img src="assets/css/img/rendafixa.jpeg" alt="Renda Fixa" onclick="openPopup('popupRendaFixa')">
+            <img src="assets/css/img/aposentadoria.jpeg" alt="Aposentadoria" onclick="openPopup('popupAposentadoria')">
+            <img src="assets/css/img/alugar.jpeg" alt="Financiar ou Alugar" onclick="openPopup('popupFinanciarAlugar')">
+            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência" onclick="openPopup('popupReservaEmergencia')">
         </div>
     </div>
 
     <div id="popupRendaFixa" class="popup">
-        <span class="close" onclick="closePopup('rendaFixa')">&times;</span>
+        <span class="close" onclick="closePopup('popupRendaFixa')">&times;</span>
         <h2>Renda Fixa</h2>
         <input type="number" id="valorInicial" placeholder="Valor Inicial">
         <input type="number" id="valorMensal" placeholder="Valor Adicionado Mensalmente">
@@ -39,27 +43,28 @@
     </div>
 
     <div id="popupAposentadoria" class="popup">
-        <span class="close" onclick="closePopup('aposentadoria')">&times;</span>
+        <span class="close" onclick="closePopup('popupAposentadoria')">&times;</span>
         <h2>Aposentadoria</h2>
-        <input type="number" id="valorMensalAposentadoria" placeholder="Valor Mensal Desejado">
-        <input type="number" id="taxaJurosAposentadoria" placeholder="Taxa de Juros (%)">
+        <input type="number" id="valorMensalDesejado" placeholder="Valor Mensal Desejado">
+        <input type="number" id="taxaJurosMensal" placeholder="Taxa de Juros (%)">
         <input type="number" id="tempoAposentadoria" placeholder="Tempo até Aposentadoria (anos)">
-        <button onclick="calcularAposentadoria()">Calcular</button>
-        <p id="resultadoAposentadoria"></p>
+        <input type="number" id="tempoContribuicao" placeholder="Tempo de Contribuição (anos)">
+        <button onclick="calcularInvestimentoMensal()">Calcular</button>
+        <p id="resultadoInvestimentoMensal"></p>
     </div>
-
+    
     <div id="popupFinanciarAlugar" class="popup">
-        <span class="close" onclick="closePopup('financiarAlugar')">&times;</span>
+        <span class="close" onclick="closePopup('popupFinanciarAlugar')">&times;</span>
         <h2>Financiar ou Alugar</h2>
         <!-- Inputs and logic for this calculation go here -->
     </div>
 
     <div id="popupReservaEmergencia" class="popup">
-        <span class="close" onclick="closePopup('reservaEmergencia')">&times;</span>
+        <span class="close" onclick="closePopup('popupReservaEmergencia')">&times;</span>
         <h2>Reserva de Emergência</h2>
         <!-- Inputs and logic for this calculation go here -->
     </div>
 
-    <script src="assets/Js/contas.js"></script>
+    <script src="assets/js/contas.js"></script>
 </body>
 </html>

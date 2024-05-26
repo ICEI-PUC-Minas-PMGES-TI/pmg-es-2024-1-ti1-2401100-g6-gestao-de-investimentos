@@ -1,31 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px black;
+
+    .logo {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+
+            li {
+                text-align: left;
+                font-size: 1.2rem;
+
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: white;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
+
+                &.button {
+                    padding: 12px 14px;
+                    border-radius: 20px;
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+
+                    &.sign-in {
+                        background-color: #008adb;
+                    }
+
+                    &.sign-up {
+                        background-color: #454b8f;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('img/background\ \(1\).jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .container {
     text-align: center;
     padding: 20px;
-}
-
-.header {
-    background-color: #4B0082;
-    padding: 10px 0;
-}
-
-.header nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-.header nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
 }
 
 .title {
