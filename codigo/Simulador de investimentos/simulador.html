@@ -9,6 +9,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="jquery.maskMoney.js" type="text/javascript"></script>
 </head>
+
 <header>
     <img class="logo" src="assets/css/img/logo.png" alt="logo">
     <nav>
@@ -31,8 +32,7 @@
             <img src="assets/css/img/rendafixa.jpeg" alt="Renda Fixa" onclick="openPopup('popupRendaFixa')">
             <img src="assets/css/img/aposentadoria.jpeg" alt="Aposentadoria" onclick="openPopup('popupAposentadoria')">
             <img src="assets/css/img/alugar.jpeg" alt="Financiar ou Alugar" onclick="openPopup('popupFinanciarAlugar')">
-            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência"
-                onclick="openPopup('popupReservaEmergencia')">
+            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência" onclick="openPopup('popupReservaEmergencia')">
         </div>
     </div>
 
@@ -52,7 +52,7 @@
         <h2>Aposentadoria</h2>
         <div>
             <p>Qual o seu investimento mesal</p>
-            <input type="text" id="investimentoMensal" class="brl" placeholder="Salario Atual">
+            <input type="text" id="investimentoMensal" class="brl" placeholder="investimento mesal">
         </div>
         <div>
             <p>Qual o rendimento medio esperado</p>
@@ -64,11 +64,11 @@
         </div>
         <div>
             <p>idade que deseja se aposentar?</p>
-            <input type="number" id="iraAposentar" placeholder="Idade">
+            <input type="number" id="iraAposentar" placeholder="Idade (anos)">
         </div>
         <div>
             <p>Com qual patrimoni deseja se aposentar</p>
-            <input type="number" id="desejada" placeholder="Valoe esperado">
+            <input type="number" id="desejada" placeholder="Valor e esperado">
         </div>
         <button onclick="calcularInvestimentoMensal()">Calcular</button>
         <p id="resultadoInvestimentoMensal"></p>
@@ -83,11 +83,31 @@
     <div id="popupReservaEmergencia" class="popup">
         <span class="close" onclick="closePopup('popupReservaEmergencia')">&times;</span>
         <h2>Reserva de Emergência</h2>
-        <!-- Inputs and logic for this calculation go here -->
+        <h3>Selecione sua fonte de renda</h3>
+        <form>
+            <div class="input-group">
+                <label>
+                    <input type="radio" name="opcao" value="CLT"> CLT
+                </label>
+                <label>
+                    <input type="radio" name="opcao" value="FP"> Funcionario público 
+                </label>
+                <label>
+                    <input type="radio" name="opcao" value="PJ"> PJ / Autônomo 
+                </label>
+            </div>
+        <div>
+            <p>Qual o seu custo de vida mesal</p>
+            <input type="text" id="custo" class="brl" placeholder="investimento mesal">
+        </div>
+            <button  onclick="calcularReserva()">Calcular</button>
+            <p id="resultadoReservaEmergencia"></p>
+        </form>
     </div>
 
     <script src="assets/js/contas.js"></script>
 </body>
+
 <script>
     jQuery(function () {
         jQuery(".brl").maskMoney({

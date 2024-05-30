@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,54 +13,51 @@ header {
     align-items: center;
     height: 100px;
     border-bottom: 1px black;
-
-    .logo {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    nav {
-        ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-
-            li {
-                text-align: left;
-                font-size: 1.2rem;
-
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: white;
-                }
-
-                &:not(:last-child) {
-                    margin-right: 24px;
-                }
-
-                &.button {
-                    padding: 12px 14px;
-                    border-radius: 20px;
-                    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
-
-                    &.sign-in {
-                        background-color: #008adb;
-                    }
-
-                    &.sign-up {
-                        background-color: #454b8f;
-                    }
-                }
-            }
-        }
-    }
 }
 
+header .logo {
+    height: 100%;
+    object-fit: cover;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header nav ul li {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header nav ul li:not(:last-child) {
+    margin-right: 24px;
+}
+
+header nav ul li.button {
+    padding: 12px 14px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+}
+
+header nav ul li.button.sign-in {
+    background-color: #008adb;
+}
+
+header nav ul li.button.sign-up {
+    background-color: #454b8f;
+}
 
 body {
     font-family: Arial, sans-serif;
-    background: url('img/background\ \(1\).jpg') no-repeat center center fixed;
+    background: url("img/background\ \(1\).jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
     margin: 0;
@@ -86,6 +84,8 @@ body {
 
 .grid img {
     width: 100%;
+    height: 200px; 
+    object-fit: cover; 
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -112,7 +112,7 @@ body {
 .popup input, .popup button {
     display: block;
     width: 100%;
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     font-size: 16px;
 }
@@ -135,7 +135,23 @@ body {
     cursor: pointer;
     color: red;
 }
+
 .input-group {
-    max-width: 500px;
-    margin: 20px
-  }
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.input-group label {
+    text-align: center;
+    flex: 1;
+}
+
+.input-group input[type="radio"] {
+    display: block;
+    margin: 0 auto;
+}
+
+#popupReservaEmergencia .popup form {
+    text-align: center;
+}
