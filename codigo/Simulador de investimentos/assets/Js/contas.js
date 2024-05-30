@@ -1,3 +1,5 @@
+
+
 function openPopup(popupId) {
     document.getElementById(popupId).style.display = 'block';
 }
@@ -15,21 +17,30 @@ function calcularRendaFixa() {
     let montante = valorInicial;
     for (let i = 0; i < tempoInvestimento; i++) {
         montante += valorMensal;
-        montante *= (1 + taxaJuros); // Correção: atribuindo o resultado de volta a montante
+        montante *= (1 + taxaJuros);
     }
 
-    document.getElementById('resultadoRendaFixa').innerText = `Montante final: R$ ${montante.toFixed(2)}`;
+    document.getElementById('resultadoRendaFixa').innerText = `Montante final: ${montante.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`;
 }
 
 function calcularInvestimentoMensal() {
-    const valorMensalDesejado = parseFloat(document.getElementById('valorMensalDesejado').value);
+    const investimentoMensal = parseFloat(document.getElementById('investimentoMensal').value);
     const taxaJurosMensal = parseFloat(document.getElementById('taxaJurosMensal').value) / 100;
-    const tempoAposentadoria = parseFloat(document.getElementById('tempoAposentadoria').value) * 12;
-    const tempoContribuicao = parseFloat(document.getElementById('tempoContribuicao').value) * 12;
+    const idade = parseFloat(document.getElementById('idade').value);
+    const aposetara = parseFloat(document.getElementById('iraAposentar').value);
+    const tempoContribuicao = 12 * (aposetara - idade);
+    const desejada = parseFloat(document.getElementById('desejada').value);
 
-    const montanteNecessario = valorMensalDesejado * ((1 - Math.pow(1 + taxaJurosMensal, -tempoAposentadoria)) / taxaJurosMensal);
-    const valorMensalInvestimento = montanteNecessario / ((Math.pow(1 + taxaJurosMensal, tempoContribuicao) - 1) / taxaJurosMensal);
-
-    document.getElementById('resultadoInvestimentoMensal').innerText = `Valor a ser investido mensalmente: R$ ${valorMensalInvestimento.toLocaleString("pt-br",{style:"currency",currency:"BRL"})}`;
+    let montante = investimentoMensal;
+    for (let i = 0; i < tempoContribuicao; i++) {
+        montante += investimentoMensal;
+        montante *= (1 + taxaJurosMensal);
+    }
+    const acima = montante - desejada
+    const abaixo = montante - desejada
+    if (montante > desejada) {
+        document.getElementById('resultadoInvestimentoMensal').innerText = `Seu patrimônio ao se aposentar será de: ${montante.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}. Você está ${acima.toLocaleString("pt-br", { style: "currency", currency: "BRL" })} acima da sua meta.`;
+    } else {
+        document.getElementById('resultadoInvestimentoMensal').innerHTML = `Seu patrimônio ao se aposentar será de: ${montante.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}. Você está ${abaixo.toLocaleString("pt-br", { style: "currency", currency: "BRL" })} abaixo da sua meta. Procure melhores investimentos ou aumente seu investimento mensal. <a href="URL_DA_ABA_DE_CURSOS">Entre na nossa aba de cursos para entender como você pode fazer isso</a>.`;
+    }
 }
- 

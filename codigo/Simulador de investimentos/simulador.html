@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadoras e Simuladores</title>
     <link rel="stylesheet" href="assets/css/simulador.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.maskMoney.js" type="text/javascript"></script>
 </head>
 <header>
     <img class="logo" src="assets/css/img/logo.png" alt="logo">
@@ -20,6 +23,7 @@
         </ul>
     </nav>
 </header>
+
 <body>
     <div class="container">
         <h1 class="title">CALCULADORAS E SIMULADORES</h1>
@@ -27,15 +31,16 @@
             <img src="assets/css/img/rendafixa.jpeg" alt="Renda Fixa" onclick="openPopup('popupRendaFixa')">
             <img src="assets/css/img/aposentadoria.jpeg" alt="Aposentadoria" onclick="openPopup('popupAposentadoria')">
             <img src="assets/css/img/alugar.jpeg" alt="Financiar ou Alugar" onclick="openPopup('popupFinanciarAlugar')">
-            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência" onclick="openPopup('popupReservaEmergencia')">
+            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência"
+                onclick="openPopup('popupReservaEmergencia')">
         </div>
     </div>
 
     <div id="popupRendaFixa" class="popup">
         <span class="close" onclick="closePopup('popupRendaFixa')">&times;</span>
         <h2>Renda Fixa</h2>
-        <input type="number" id="valorInicial" placeholder="Valor Inicial">
-        <input type="number" id="valorMensal" placeholder="Valor Adicionado Mensalmente">
+        <input type="text" id="valorInicial" class="brl" placeholder="Valor Inicial">
+        <input type="text" id="valorMensal" class="brl" placeholder="Valor Adicionado Mensalmente">
         <input type="number" id="taxaJuros" placeholder="Taxa de Juros (%)">
         <input type="number" id="tempoInvestimento" placeholder="Tempo de Investimento (meses)">
         <button onclick="calcularRendaFixa()">Calcular</button>
@@ -45,14 +50,30 @@
     <div id="popupAposentadoria" class="popup">
         <span class="close" onclick="closePopup('popupAposentadoria')">&times;</span>
         <h2>Aposentadoria</h2>
-        <input type="number" id="valorMensalDesejado" placeholder="Valor Mensal Desejado">
-        <input type="number" id="taxaJurosMensal" placeholder="Taxa de Juros (%)">
-        <input type="number" id="tempoAposentadoria" placeholder="Tempo até Aposentadoria (anos)">
-        <input type="number" id="tempoContribuicao" placeholder="Tempo de Contribuição (anos)">
+        <div>
+            <p>Qual o seu investimento mesal</p>
+            <input type="text" id="investimentoMensal" class="brl" placeholder="Salario Atual">
+        </div>
+        <div>
+            <p>Qual o rendimento medio esperado</p>
+            <input type="number" id="taxaJurosMensal" placeholder="Taxa de Juros Esperada (%)">
+        </div>
+        <div>
+            <p>Qual a sua idade atual</p>
+            <input type="number" id="idade" placeholder="sua idade (anos)">
+        </div>
+        <div>
+            <p>idade que deseja se aposentar?</p>
+            <input type="number" id="iraAposentar" placeholder="Idade">
+        </div>
+        <div>
+            <p>Com qual patrimoni deseja se aposentar</p>
+            <input type="number" id="desejada" placeholder="Valoe esperado">
+        </div>
         <button onclick="calcularInvestimentoMensal()">Calcular</button>
         <p id="resultadoInvestimentoMensal"></p>
     </div>
-    
+
     <div id="popupFinanciarAlugar" class="popup">
         <span class="close" onclick="closePopup('popupFinanciarAlugar')">&times;</span>
         <h2>Financiar ou Alugar</h2>
@@ -67,4 +88,14 @@
 
     <script src="assets/js/contas.js"></script>
 </body>
+<script>
+    jQuery(function () {
+        jQuery(".brl").maskMoney({
+            prefix: 'R$',
+            thousands: '.',
+            decimal: ','
+        })
+    });
+</script>
+
 </html>
