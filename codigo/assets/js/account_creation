@@ -1,0 +1,50 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('criarContaForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+        var confirmarSenha = document.getElementById('confirmarSenha').value;
+        var nomeCompleto = document.getElementById('nomeCompleto').value;
+        var dataNascimento = document.getElementById('dataNascimento').value;
+        var telefone = document.getElementById('telefone').value;
+        var cpf = document.getElementById('cpf').value;
+        var termosCheckbox = document.getElementById('termos');
+
+        if (username && email && senha && confirmarSenha && nomeCompleto && dataNascimento && telefone && cpf) {
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem.');
+                return;
+            }
+
+            if (!termosCheckbox.checked) {
+                alert('Você precisa aceitar os termos para criar uma conta.');
+                return;
+            }
+
+            var usuario = {
+                username: username,
+                email: email,
+                senha: senha,
+                nomeCompleto: nomeCompleto,
+                dataNascimento: dataNascimento,
+                telefone: telefone,
+                cpf: cpf
+            };
+
+            var usuarioString = JSON.stringify(usuario);
+            localStorage.setItem('usuario', usuarioString);
+
+            console.log('Conta criada com sucesso:', usuario);
+            alert('Conta criada com sucesso! Redirecionando para a página de login.');
+
+            // Redireciona para a página de login
+            window.location.href = 'login_page.html';
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    });
+});
