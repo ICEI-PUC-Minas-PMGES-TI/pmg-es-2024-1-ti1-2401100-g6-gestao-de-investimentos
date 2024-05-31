@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="488081f3-6d67-4969-94a4-01437f11479c" name="Changes" comment="feature: tela de lista implementada com método de busca, ordenação e filtro de períodos e tela detalhes implementado com filtro para períodos">
+      <change beforePath="$PROJECT_DIR$/codigo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/assets/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/assets/imgs/banners/a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/assets/imgs/icons/b.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/assets/imgs/logos/c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/account_creation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/forgot_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/investment_panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/investor_profile_quiz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/investpro_academy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/investpro_news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/login_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/profile_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/subpages/admin_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/pages/wallet.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jaoppb&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g6-gestao-de-investimentos.git&quot;,
+    &quot;accountId&quot;: &quot;76fc70ab-c326-4cd4-8460-0d9fe3d2bc49&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2g130nX5QT5zGoeaHV0G9kLfnmK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;joao-pedro-tracking-acoes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jao/hd/facul/TIAW/repo&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codigo/views/acoes" />
+      <recent name="$PROJECT_DIR$/codigo/assets/js/acoes" />
+      <recent name="$PROJECT_DIR$/codigo/assets/css/acoes" />
+      <recent name="$PROJECT_DIR$/codigo/pages/acoes" />
+      <recent name="$PROJECT_DIR$/codigo/data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="488081f3-6d67-4969-94a4-01437f11479c" name="Changes" comment="" />
+      <created>1714851035255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714851035255</updated>
+      <workItem from="1714851036333" duration="12024000" />
+      <workItem from="1714865707910" duration="1998000" />
+      <workItem from="1714922799267" duration="8000" />
+      <workItem from="1715266020280" duration="35229000" />
+      <workItem from="1715440146093" duration="31568000" />
+      <workItem from="1717042795727" duration="8948000" />
+      <workItem from="1717082396792" duration="16083000" />
+      <workItem from="1717099448939" duration="3303000" />
+      <workItem from="1717118510149" duration="8120000" />
+    </task>
+    <task id="LOCAL-00001" summary="feature: template implementado">
+      <option name="closed" value="true" />
+      <created>1714861687572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714861687573</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feature: template implementado">
+      <option name="closed" value="true" />
+      <created>1714861811153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714861811153</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature: dashboard básica implementada">
+      <option name="closed" value="true" />
+      <created>1715352634970</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715352634970</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: values formatted as cash on graphs">
+      <option name="closed" value="true" />
+      <created>1715452304106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715452304106</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature: responsividade da sidebar">
+      <option name="closed" value="true" />
+      <created>1715452492490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715452492490</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature: responsividade da sidebar e da dashboard">
+      <option name="closed" value="true" />
+      <created>1715452504639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715452504639</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature: tela de detalhes do investimento implementada">
+      <option name="closed" value="true" />
+      <created>1715459611024</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715459611024</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: agora a dashboard lida com valores de investimentos substituídos">
+      <option name="closed" value="true" />
+      <created>1715463440403</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715463440403</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: valor de ROI errado">
+      <option name="closed" value="true" />
+      <created>1715463540808</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715463540808</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change: checagem de existência dos investimentos">
+      <option name="closed" value="true" />
+      <created>1715463792589</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715463792589</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feature: ordenar por crescente e decrescente a tabela&#10;&#10;changes: uso da tag a para alternar entre as telas">
+      <option name="closed" value="true" />
+      <created>1715467773002</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715467773002</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feature: opções de filtro a partir do gráfico de portfólio">
+      <option name="closed" value="true" />
+      <created>1715472761707</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715472761707</updated>
+    </task>
+    <task id="LOCAL-00013" summary="style: alteração do título da página de detalhes e tabela ocupando a view port em telas menores">
+      <option name="closed" value="true" />
+      <created>1715472823476</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715472823476</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: redirecionamento não estava afetando o histórico do browser">
+      <option name="closed" value="true" />
+      <created>1715473703850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715473703850</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: os gráficos não estavam sendo redimensionados corretamente">
+      <option name="closed" value="true" />
+      <created>1715474717813</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715474717813</updated>
+    </task>
+    <task id="LOCAL-00016" summary="revert: não há necessidade do uso da tag a na navegação">
+      <option name="closed" value="true" />
+      <created>1715476067832</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715476067832</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: funções melhor separadas">
+      <option name="closed" value="true" />
+      <created>1715477137702</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715477137702</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added: arquivo com resultado de investimentos vazio para teste">
+      <option name="closed" value="true" />
+      <created>1715477205261</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715477205261</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor: o código agora não retorna erro ao não encontrar nenhum investimento">
+      <option name="closed" value="true" />
+      <created>1715477960010</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715477960010</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feature: tela com a lista de ações disponíveis implementada">
+      <option name="closed" value="true" />
+      <created>1717085788147</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717085788147</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feature: tela com a lista de ações disponíveis implementada">
+      <option name="closed" value="true" />
+      <created>1717085889940</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717085889940</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feature: tela de lista implementada com método de busca, ordenação e filtro de períodos e tela detalhes implementado com filtro para períodos">
+      <option name="closed" value="true" />
+      <created>1717101969826</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1717101969826</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feature: tela de lista implementada com método de busca, ordenação e filtro de períodos e tela detalhes implementado com filtro para períodos">
+      <option name="closed" value="true" />
+      <created>1717102654026</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717102654026</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature: template implementado" />
+    <MESSAGE value="feature: dashboard básica implementada" />
+    <MESSAGE value="fix: values formatted as cash on graphs" />
+    <MESSAGE value="feature: responsividade da sidebar" />
+    <MESSAGE value="feature: responsividade da sidebar e da dashboard" />
+    <MESSAGE value="feature: tela de detalhes do investimento implementada" />
+    <MESSAGE value="fix: agora a dashboard lida com valores de investimentos substituídos" />
+    <MESSAGE value="fix: valor de ROI errado" />
+    <MESSAGE value="change: checagem de existência dos investimentos" />
+    <MESSAGE value="feature: ordenar por crescente e decrescente a tabela&#10;&#10;changes: uso da tag a para alternar entre as telas" />
+    <MESSAGE value="feature: opções de filtro a partir do gráfico de portfólio" />
+    <MESSAGE value="style: alteração do título da página de detalhes e tabela ocupando a view port em telas menores" />
+    <MESSAGE value="fix: redirecionamento não estava afetando o histórico do browser" />
+    <MESSAGE value="fix: os gráficos não estavam sendo redimensionados corretamente" />
+    <MESSAGE value="revert: não há necessidade do uso da tag a na navegação" />
+    <MESSAGE value="refactor: funções melhor separadas" />
+    <MESSAGE value="added: arquivo com resultado de investimentos vazio para teste" />
+    <MESSAGE value="refactor: o código não retorna erro ao não encontrar nenhum investimento" />
+    <MESSAGE value="refactor: o código agora não retorna erro ao não encontrar nenhum investimento" />
+    <MESSAGE value="feature: tela com a lista de ações disponíveis implementada" />
+    <MESSAGE value="feature: tela de lista implementada com método de busca, ordenação e filtro de períodos e tela detalhes implementado com filtro para períodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: tela de lista implementada com método de busca, ordenação e filtro de períodos e tela detalhes implementado com filtro para períodos" />
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ações</title>
+    <link rel="stylesheet" href="../../assets/css/acoes/index.css">
+    <link rel="stylesheet" href="../../assets/css/acoes/lista.css">
+    <script src="../../assets/js/acoes/lista.js" type="module" defer></script>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div id="filter">
+                <div class="row">
+                    <input type="text" placeholder="Busque pelo Identificador" id="identifier">
+                </div>
+                <div class="row">
+                    <label>
+                        <span>De: </span>
+                        <input type="datetime-local" name="from" id="from">
+                    </label>
+                    <label>
+                        <span>Até: </span>
+                        <input type="datetime-local" name="to" id="to">
+                    </label>
+                    
+                </div>
+            </div>
+            <div id="table">
+                <div class="header row">
+                    <div>
+                        <span>ISIN</span>
+                        <div class="arrows">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Segmento</span>
+                        <div class="arrows">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Preço Máx.</span>
+                        <div class="arrows">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Preço Mín.</span>
+                        <div class="arrows">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <!--
+                        <div class="row">
+                            <span>BRBMEFBGI732</span>
+                            <span>AGRIBUSINESS</span>
+                            <span>R$ 23,23</span>
+                            <span>R$ 20,19</span>
+                        </div>
+                        <div class="row">
+                            <span>BRBMEFBGI740</span>
+                            <span>AGRIBUSINESS</span>
+                            <span>R$ 243,94</span>
+                            <span>R$ 210,34</span>
+                        </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

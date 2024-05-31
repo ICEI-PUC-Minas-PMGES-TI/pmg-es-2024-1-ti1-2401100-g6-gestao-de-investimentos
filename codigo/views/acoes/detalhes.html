@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="../../assets/css/acoes/index.css">
+    <link rel="stylesheet" href="../../assets/css/acoes/detalhes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../assets/js/acoes/detalhes.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="lista.html" class="arrow">
+                <span></span>
+            </a>
+            <div id="filter">
+                <label>
+                    <span>De: </span>
+                    <input type="datetime-local" name="from" id="from">
+                </label>
+                <label>
+                    <span>Até: </span>
+                    <input type="datetime-local" name="to" id="to">
+                </label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div id="details">
+                <div id="ID">
+                    <span>Identificador</span>
+                    <h1 class="value">...</h1>
+                </div>
+                <div id="ISIN">
+                    <span>ISIN</span>
+                    <h1 class="value">...</h1>
+                </div>
+                <div id="min-price">
+                    <span>Preço Mín.</span>
+                    <h1 class="value">R$ -</h1>
+                </div>
+                <div id="max-price">
+                    <span>Preço Máx.</span>
+                    <h1 class="value">R$ -</h1>
+                </div>
+            </div>
+            <div>
+                <canvas id="graph"></canvas>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

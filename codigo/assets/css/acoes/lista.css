@@ -1,0 +1,95 @@
+#filter {
+    flex-direction: column;
+}
+
+#table {
+    height: calc(100% - 156px);
+
+    .row {
+        height: 60px;
+        font-size: 1.4rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        * {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .header {
+        height: 80px;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        border-bottom: 1px solid black;
+
+        & > div {
+            &:not(:active) {
+                cursor: pointer;
+            }
+
+            & > span {
+                margin-right: 20px;
+                font-weight: bolder;
+                font-size: 2rem;
+            }
+        }
+
+        .arrows {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 22px;
+            width: 10px;
+
+            span {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-right: 5px solid transparent;
+                border-left: 5px solid transparent;
+                --arrow-color: rgb(180, 180, 180);
+
+                &:first-child {
+                    border-bottom: 10px solid var(--arrow-color);
+                }
+
+                &:last-child {
+                    border-top: 10px solid var(--arrow-color);
+                }
+            }
+
+            &.top {
+                span:first-child {
+                    --arrow-color: black;
+                }
+            }
+
+            &.bottom {
+                span:last-child {
+                    --arrow-color: black;
+                }
+            }
+        }
+    }
+
+    .body {
+        height: calc(100% - 80px);
+        overflow-y: auto;
+
+        .row {
+            border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+            &:not(:active) {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (device-width <= 900px) {
+    #table {
+        height: calc(100% - 235px);
+    }
+}
