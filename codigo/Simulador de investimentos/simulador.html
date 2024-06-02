@@ -32,17 +32,30 @@
             <img src="assets/css/img/rendafixa.jpeg" alt="Renda Fixa" onclick="openPopup('popupRendaFixa')">
             <img src="assets/css/img/aposentadoria.jpeg" alt="Aposentadoria" onclick="openPopup('popupAposentadoria')">
             <img src="assets/css/img/alugar.jpeg" alt="Financiar ou Alugar" onclick="openPopup('popupFinanciarAlugar')">
-            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência" onclick="openPopup('popupReservaEmergencia')">
+            <img src="assets/css/img/reserva.jpeg" alt="Reserva de Emergência"
+                onclick="openPopup('popupReservaEmergencia')">
         </div>
     </div>
 
     <div id="popupRendaFixa" class="popup">
         <span class="close" onclick="closePopup('popupRendaFixa')">&times;</span>
         <h2>Renda Fixa</h2>
-        <input type="text" id="valorInicial" class="brl" placeholder="Valor Inicial">
-        <input type="text" id="valorMensal" class="brl" placeholder="Valor Adicionado Mensalmente">
-        <input type="number" id="taxaJuros" placeholder="Taxa de Juros (%)">
-        <input type="number" id="tempoInvestimento" placeholder="Tempo de Investimento (meses)">
+        <div>
+            <p>valor inicial a ser investido</p>
+            <input type="text" id="valorInicial" class="brl" placeholder="Valor Inicial">
+        </div>
+        <div>
+            <p>Valor dos aportes mensais esperados</p>
+            <input type="text" id="valorMensal" class="brl" placeholder="Valor Adicionado Mensalmente">
+        </div>
+        <div>
+            <p>Qual o rendimento mesndal dessa plicação</p>
+            <input type="number" id="taxaJuros" placeholder="Taxa de Juros (%)">
+        </div>
+        <div>
+            <p>Numero de messes dessa aplicação</p>
+            <input type="number" id="tempoInvestimento" placeholder="Tempo de Investimento (meses)">
+        </div>
         <button onclick="calcularRendaFixa()">Calcular</button>
         <p id="resultadoRendaFixa"></p>
     </div>
@@ -109,25 +122,23 @@
         <span class="close" onclick="closePopup('popupReservaEmergencia')">&times;</span>
         <h2>Reserva de Emergência</h2>
         <h3>Selecione sua fonte de renda</h3>
-        <form>
-            <div class="input-group">
-                <label>
-                    <input type="radio" name="opcao" value="CLT"> CLT
-                </label>
-                <label>
-                    <input type="radio" name="opcao" value="FP"> Funcionário Público 
-                </label>
-                <label>
-                    <input type="radio" name="opcao" value="PJ"> PJ / Autônomo 
-                </label>
-            </div>
-            <div>
-                <p>Qual o seu custo de vida mensal</p>
-                <input type="text" id="custo" class="brl" placeholder="Custo de Vida Mensal">
-            </div>
-            <button  onclick="calcularReserva()">Calcular</button>
-            <p id="resultadoReservaEmergencia"></p>
-        </form>
+        <div class="input-group">
+            <label>
+                <input type="radio" name="opcao" value="CLT"> CLT
+            </label>
+            <label>
+                <input type="radio" name="opcao" value="FP"> Funcionário Público
+            </label>
+            <label>
+                <input type="radio" name="opcao" value="PJ"> PJ / Autônomo
+            </label>
+        </div>
+        <div>
+            <p>Qual o seu custo de vida mensal</p>
+            <input type="text" id="custo" class="brl" placeholder="Custo de Vida Mensal">
+        </div>
+        <button onclick="calcularReserva()">Calcular</button>
+        <p id="resultadoReservaEmergencia"></p>
     </div>
 
     <script src="assets/js/contas.js"></script>

@@ -101,7 +101,7 @@ function calcularFinanciarAlugar() {
         saldoInvestimento -= aluguelMensal;
     }
 
-    if (saldoInvestimento > custoTotalFinanciamento || saldoInvestimento < 0) {
+    if (saldoInvestimento > custoTotalFinanciamento && saldoInvestimento > 0) {
         document.getElementById('resultadoFinanciarAlugar').innerHTML = `
         <p>É mais vantajoso alugar o imóvel.</p>
         <p>Custo total do financiamento: ${custoTotalFinanciamento.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}</p>
