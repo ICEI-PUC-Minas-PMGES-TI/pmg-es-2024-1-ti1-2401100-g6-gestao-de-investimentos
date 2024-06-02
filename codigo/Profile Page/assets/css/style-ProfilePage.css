@@ -169,7 +169,7 @@ html {
   font-size: 24px;
 }
 
-#user-email, #user-full-name, #tel{
+#user-email, #user-full-name, #tel, #creation-date{
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
