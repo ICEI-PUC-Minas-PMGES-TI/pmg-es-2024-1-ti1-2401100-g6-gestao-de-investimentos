@@ -1,0 +1,83 @@
+/* Root */
+
+:root {
+    /* Cores */
+    --cor-azul-escuro: #441092;
+    --cor-roxo: #723ed1;
+    --cor-roxo-claro: #7f5ce5;
+    --cor-azul: #0089bc;
+    --cor-azul-claro: #0bb9e3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tags do Body */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tags do Main */
+main {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 5%;
+    width: 60%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.form-group {
+    margin-bottom: 5%; /* 5% do tamanho do viewport */
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5%;
+    margin-bottom: 3%;
+}
+
+button {
+    background-color: var(--cor-azul-escuro);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px; /* espaçamento maior no botão */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5%; /* 5% do tamanho do viewport */
+}
+
+button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+button:hover {
+    opacity: 0.9;
+}
