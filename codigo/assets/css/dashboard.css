@@ -1,0 +1,252 @@
+/* Root */
+:root {
+    /* Cores */
+    --cor-azul-escuro: #441092;
+    --cor-roxo: #723ed1;
+    --cor-roxo-claro: #7f5ce5;
+    --cor-azul: #0089bc;
+    --cor-azul-claro: #0bb9e3;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* Tags do Body */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Tags do Header */
+
+#header {
+    padding: 2% 4%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.sun-icon,
+.moon-icon {
+    margin-right: 10px;
+}
+
+.sun-icon i,
+.moon-icon i {
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+    margin-right: 10px; /* Espaço entre o ícone e o switch */
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+#profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
+/* Tags do Menu Lateral Retrátil */
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff; /* Cor de fundo do menu */
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra do menu */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Transição suave para animação */
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-links ul li {
+    margin-bottom: 10px;
+}
+
+.menu-links ul li a {
+    color: #333; /* Cor dos links */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave para a cor do texto */
+}
+
+.menu-links ul li a:hover {
+    color: #000; /* Cor do texto ao passar o mouse */
+}
+
+.perfil-usuario {
+    margin-top: auto; /* Alinha o perfil no final do menu */
+    display: flex;
+    align-items: center;
+}
+
+.perfil-usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.perfil-usuario span {
+    font-size: 14px;
+    color: #333; /* Cor do texto */
+}
+
+/* Tags do Main */
+
+.main {
+    padding: 20px;
+}
+
+.main-header {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+}
+
+.section-content {
+    /* Estilos para o conteúdo da seção */
+}
+
+.main-footer {
+    margin-top: 20px;
+    /* Estilos para o rodapé da seção, se necessário */
+}
+
+/* Tags do Footer */
+
+.footer {
+    background-color: #f8f9fa; /* Cor de fundo do rodapé */
+    padding: 20px;
+    color: #333; /* Cor do texto */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333; /* Cor dos links */
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin-bottom: 5px;
+}
