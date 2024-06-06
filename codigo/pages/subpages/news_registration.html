@@ -7,7 +7,7 @@
     <meta name="keywords" content="gestão de investimentos, criar conta, InvestPro, investimento, finanças">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
     <title>InvestPro News</title>
-    <link rel="stylesheet" href="/codigo/assets/css/investpro_news.css">
+    <link rel="stylesheet" href="/codigo/assets/css/news_registration.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
@@ -16,17 +16,14 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script src="/codigo/assets/js/investpro_news.js"></script>
+    <script src="/codigo/assets/js/news_registration.js"></script>
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="googlebot" content="noindex, noarchive, nosnippet">
     <meta name="robots" content="noindex, nofollow">
 </head>
-
-
-<header id="Bem-vindo">
-  <nav id="conteudoBaner">
+<header>
     <div class="Cabecalho">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid ">
@@ -41,61 +38,39 @@
                 <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active text-white" aria-current="page" href="#">Sobre nos</a>
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active text-white" aria-current="page" href="#">Serviços</a>
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active text-white" aria-current="page" href="#">noticias</a>
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active text-white" aria-current="page" href="#">Contate-nos</a>
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="baner">
-        <h1>Mantenhace informado</h1>
-        <h2>Noticias Sobre o mercado e na InvetPro News</h2>
-        <p>sua fonte confiável de notícias de investimento, você se mantém informado com qualidade e rapidez. Esteja
-          sempre à frente com as últimas notícias do mercado financeiro</p>
-        <div class="links">
-        <a href="#"><span><i class="bi bi-youtube"></i></span></a>
-        <a href="#"><span><i class="bi bi-instagram"></i></span></a>
-        <a href="#"><span><i class="bi bi-twitter-x"></i></span></a>
-        <a href="#"><span><i class="bi bi-linkedin"></i></span></a>
-        <a href="#"><span><i class="bi bi-tiktok"></i></span></a>
+  </header>
+  
+  <body  class="Enviar">
+    <div id="formulario">
+      <input class="text-imput" type="text" id="campoTitulo" placeholder="Titulo:">
+      <input class="text-imput" type="text" id="campoImg" placeholder="link imagem">
+      <input class="text-imput" type="text" id="campoResumo" placeholder="resumo">
+      <input class="text-imput" type="text" id="campoLink" placeholder="link Reportagem"></p>
+      <div class="botoes">
+        <button id="EnviarNoticia" type="button">Enviar</button>
+        <a href="feed.html"><button type="button">voutar</button></a>
       </div>
-      </div>
-  </nav>
-</header>
-
-<body>
-  <aside>
-    <nav id="noticias">
-      
-    </nav>
-  </aside>
-  <footer>
-    <nav class="Enviar">
-      <div>
-        <h1>Sua reportagem merece ser apresentado</h1>
-        <div>
-          <p>Contate-nos para duvugar a sua reportagem, Envia sua reportagem para analise do nosso time de especialistas
-          </p>
-          <div>
-            <a href="enviar.html"><button class="btn btn-success" type="button">Enviar</button></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </footer>
-  <script src="../js/feed.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+    </div>
+    <script src="../js/feed.js"></script>
+    <script src="../js/enviar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+  
+  </html>

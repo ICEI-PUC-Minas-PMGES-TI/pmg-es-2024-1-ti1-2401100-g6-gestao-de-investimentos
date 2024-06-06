@@ -1,0 +1,1 @@
+document.getElementById('EnviarNoticia').addEventListener('click', incluirNoticias);

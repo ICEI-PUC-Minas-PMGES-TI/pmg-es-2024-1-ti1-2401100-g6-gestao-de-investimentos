@@ -1,0 +1,91 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+}
+#logo {
+    height: 50px;
+    object-fit: cover;
+}
+
+#Bem-vindo{
+    background-image: url("img/Baner-site.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 0%, #454b8f 100%);
+    }
+
+
+}
+#conteudoBaner{
+    position: relative;
+    opacity: 100%;
+    
+}
+header a {
+    color: white;
+    margin: 0px 10px;
+}
+#noticias{
+    display: grid;
+    justify-content: center;
+}
+#noticias > div {
+    margin: 10px ;
+}
+#noticias > a {
+    text-decoration: none;
+}
+.Enviar{ 
+    background-image: url(img/images.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    color: white;
+    justify-content: end;
+    
+}
+@media only screen and (min-width: 600px){
+    #Bem-vindo {
+        width: 100%;
+        height: 500px;
+        display: flex;
+      }
+    
+    #Bem-vindo .links {
+        position: absolute;
+        bottom: 10px;
+      } 
+    
+    #noticias{
+        margin: 10px;
+        display: grid;   
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    #noticias > div {
+        margin: 20px 30px ;
+    }
+    .Enviar{ 
+        width: 100%;
+    }
+    .Enviar > a {
+        background-color: blueviolet;
+        color: white;
+    }
+}

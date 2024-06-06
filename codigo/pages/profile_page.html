@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
+    <title>Página de Perfil</title>
+    <link rel="stylesheet" href="/codigo/assets/css/profile_page.css">
+    <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="/codigo/assets/js/profile_page.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <div class="landing">
+        <div class="fade"></div>
+        <div class="wrapper">
+            <header>
+                <img class="logo" src="assets/css/imgs/logo.png" alt="logo" />
+                <nav>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Carteiras</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Configurações</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="user-icon">
+                    <a href="ProfilePage.html"><img src="assets/css/imgs/img profile.jpg" alt="User Icon"></a>
+                </div>
+            </header> 
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="welcome-message">
+            <h1>Bem vindo de volta, <span id="user-name">Usuário</span>!</h1>
+        </div>
+        <div class="profile-section">
+            <div class="profile-card">
+                <div class="profile-pic">
+                    <img src="assets/css/imgs/img profile.jpg" alt="Perfil">
+                </div>
+                <div class="profile-info">
+                    <h2>Perfil</h2>
+                    <p>Investidor Enrustido</p>
+                    <button>Fazer Teste</button>
+                </div>
+            </div>
+            <div class="user-info">
+                <h2>Informações do Usuário</h2>
+                <div class="info-item">
+                    <h3>Endereço <a href="#" class="edit-link" data-edit="address">Editar</a></h3>
+                    <p id="address"> </p>
+                </div>
+                <div class="info-item">
+                    <h3>Telefone <a href="#" class="edit-link" data-edit="tel">Editar</a></h3>
+                    <p id="tel">+55 (31)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Informações</h3>
+                    <p>Email: <span id="user-email">peterparker@avengers.com</span></p>
+                    <p>Data de Criação: <span id="creation-date"></span></p>
+                    <p>Nome: <span id="user-full-name">Peter Parker</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/profile-script.js"></script>
+</body>
+
+</html>
