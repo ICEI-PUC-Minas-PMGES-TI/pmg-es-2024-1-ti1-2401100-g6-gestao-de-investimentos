@@ -7,12 +7,14 @@
     <meta name="keywords" content="gestão de investimentos, criar conta, InvestPro, investimento, finanças">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
     <title>InvestPro - Criação de Conta</title>
-    <link rel="stylesheet" href="/codigo/assets/css/styles.css">
+    <link rel="stylesheet" href="/codigo/assets/css/account_creation.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
-    <script src="/codigo/assets/js/visual.js"></script>
-    <script src="/codigo/assets/js/account_creation"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+    <script src="/codigo/assets/js/account_creation.js" defer></script>
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -20,89 +22,65 @@
     <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-    <main>
-        <section class="conteudo-visual">
-            <div class="logo">
-                <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="Logo da InvestPro">
+    <div class="left-side">
+        <div class="content">
+            <img src="/codigo/assets/imgs/logo.png" alt="InvestPro Logo" class="logo">
+            <h1>Não tem uma conta?</h1>
+            <p>Registre-se para acessar todos os recursos da nossa plataforma. Gerencie seus investimentos em um só lugar. É grátis!</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
             </div>
-            <div class="texto-inferior">
-                <h1><p>Não tem uma conta?</p></h1>
-                <p>Registre-se para acessar gestão de carteiras, simulações, cursos e notícias.</p>
-                <div class="redes-sociais">
-                    <a href="https://www.linkedin.com/company/investpro" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.twitter.com/investpro" target="_blank" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.facebook.com/investpro" target="_blank" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/investpro" target="_blank" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/investpro" target="_blank" class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://wa.me/numero_do_telefone" target="_blank" class="social-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>                
+        </div>
+    </div>
+    <div class="right-side">
+        <form class="registration-form" id="registrationForm">
+            <h2>Crie sua conta na InvestPro</h2>
+            <button class="btn btn-google"><i class="fab fa-google"></i> Cadastrar-se com Google</button>
+            <p>ou</p>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Nome Completo" id="nomeCompleto" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control" placeholder="E-mail" id="email" required>
+                </div>
             </div>
-        </section>        
-        <section class="formulario">
-            <form id="criarContaForm">
-                <div class="form-row">
-                    <div class="form-column">
-                        <label for="username">
-                            <i class="fas fa-user"></i> Nome de Usuário:
-                        </label>
-                        <input type="text" id="username" name="username" required>
-                        
-                        <label for="email">
-                            <i class="fas fa-envelope"></i> Endereço de E-mail:
-                        </label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="senha">
-                            <i class="fas fa-lock"></i> Senha:
-                        </label>
-                        <input type="password" id="senha" name="senha" required>
-        
-                        <label for="confirmarSenha">
-                            <i class="fas fa-lock"></i> Confirmação de Senha:
-                        </label>
-                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-                    </div>
-                    <div class="form-column">
-                        <label for="nomeCompleto">
-                            <i class="fas fa-user-circle"></i> Nome Completo:
-                        </label>
-                        <input type="text" id="nomeCompleto" name="nomeCompleto" required>
-        
-                        <label for="dataNascimento">
-                            <i class="fas fa-calendar-alt"></i> Data de Nascimento:
-                        </label>
-                        <input type="date" id="dataNascimento" name="dataNascimento" required>
-        
-                        <label for="telefone">
-                            <i class="fas fa-phone"></i> Número de Telefone:
-                        </label>
-                        <input type="tel" id="telefone" name="telefone" required>
-        
-                        <label for="cpf">
-                            <i class="fas fa-id-card"></i> CPF:
-                        </label>
-                        <input type="text" id="cpf" name="cpf" required>
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="CPF" id="cpf" required>
                 </div>
-                <div class="termosPrivacidade">
-                    <input type="checkbox" id="termos" name="termos" required>
-                    <label for="termos">Li e concordo com os <a href="#">Termos de Serviço</a> e a <a href="#">Política de Privacidade</a>.</label>
+                <div class="form-group col-md-6">
+                    <input type="tel" class="form-control" placeholder="Telefone" id="telefone" required>
                 </div>
-                <button type="submit">Criar Conta</button>
-            </form>
-        </section>
-    </main>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="date" class="form-control" placeholder="Data de Nascimento" id="dataNascimento" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Endereço" id="endereco" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" placeholder="Senha" id="senha" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" placeholder="Confirmação de Senha" id="confirmacaoSenha" required>
+                </div>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    Aceito os <a href="/termos-de-servico.html">termos de serviço</a> e a <a href="/politica-de-privacidade.html">política de privacidade</a>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar Conta</button>
+            <p class="login-link">Já tem uma conta? <a href="/codigo/pages/login_page.html">Entre aqui</a></p>
+        </form>
+    </div>
 </body>
 </html>

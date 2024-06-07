@@ -1,0 +1,103 @@
+/* Root */
+:root {
+    /* Cores */
+    --cor-azul-escuro: #441092;
+    --cor-roxo: #723ed1;
+    --cor-roxo-claro: #7f5ce5;
+    --cor-azul: #0089bc;
+    --cor-azul-claro: #0bb9e3;
+    --cor-branca: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: var(--cor-roxo-claro);
+}
+
+.left-side {
+    flex: 1;
+    background-color: var(--cor-roxo);
+    color: var(--cor-branca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.left-side .content {
+    text-align: center;
+    max-width: 300px;
+}
+
+.left-side .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.left-side h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.left-side p {
+    margin-bottom: 20px;
+}
+
+.right-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--cor-branca);
+}
+
+.login-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: var(--cor-azul-escuro);
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form .form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: var(--cor-roxo);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form .signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-form .signup-link a {
+    color: var(--cor-azul);
+    text-decoration: none;
+    font-weight: bold;
+}
