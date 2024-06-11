@@ -3,83 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
-    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="description" content="Gerencie seu perfil na InvestPro. Edite suas informações pessoais, configurações da conta e muito mais.">
+    <meta name="keywords" content="perfil, InvestPro, gerenciamento de conta, informações pessoais">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>Página de Perfil</title>
+    <title>InvestPro - Perfil</title>
     <link rel="stylesheet" href="/codigo/assets/css/profile_page.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/codigo/assets/js/profile_page.js" defer></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="googlebot" content="noindex, noarchive, nosnippet">
     <meta name="robots" content="noindex, nofollow">
 </head>
-
 <body>
-    <div class="landing">
-        <div class="fade"></div>
-        <div class="wrapper">
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>InvestPro</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-wallet"></i> Carteira de Investimentos</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-graduation-cap"></i> InvestPro Academy</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-newspaper"></i> InvestPro News</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-chart-line"></i> Painel de Investimentos</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled components bottom-links">
+                <li class="active">
+                    <a href="#"><i class="fas fa-user"></i> Página de Perfil</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i> Configurações</a>
+                </li>
+                <li>
+                    <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="content">
             <header>
-                <img class="logo" src="assets/css/imgs/logo.png" alt="logo" />
-                <nav>
-                    <ul>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Carteiras</a></li>
-                        <li><a href="#">Notícias</a></li>
-                        <li><a href="#">Configurações</a></li>
-                    </ul>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <div class="navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Notificações</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Perfil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" id="logout">Sair</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+            </header>
+            <main>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <img src="/codigo/assets/imgs/user-avatar.png" alt="Avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                                    <h5 class="my-3">Nome do Usuário</h5>
+                                    <p class="text-muted mb-1">Cargo</p>
+                                    <p class="text-muted mb-4">Localização</p>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <button type="button" class="btn btn-primary">Ver Perfil Público</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="account-settings-tab" data-toggle="tab" href="#account-settings" role="tab" aria-controls="account-settings" aria-selected="true">Configurações da Conta</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="company-settings-tab" data-toggle="tab" href="#company-settings" role="tab" aria-controls="company-settings" aria-selected="false">Configurações da Empresa</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="false">Documentos</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="billing-tab" data-toggle="tab" href="#billing" role="tab" aria-controls="billing" aria-selected="false">Faturamento</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">Notificações</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="account-settings" role="tabpanel" aria-labelledby="account-settings-tab">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="firstName">Nome</label>
+                                                        <input type="text" class="form-control" id="firstName" placeholder="Nome">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="lastName">Sobrenome</label>
+                                                        <input type="text" class="form-control" id="lastName" placeholder="Sobrenome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="phoneNumber">Telefone</label>
+                                                        <input type="text" class="form-control" id="phoneNumber" placeholder="Telefone">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="email">E-mail</label>
+                                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="city">Cidade</label>
+                                                        <input type="text" class="form-control" id="city" placeholder="Cidade">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="state">Estado</label>
+                                                        <input type="text" class="form-control" id="state" placeholder="Estado">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="zipcode">CEP</label>
+                                                        <input type="text" class="form-control" id="zipcode" placeholder="CEP">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="country">País</label>
+                                                        <input type="text" class="form-control" id="country" placeholder="País">
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="company-settings" role="tabpanel" aria-labelledby="company-settings-tab">
+                                            <!-- Conteúdo das configurações da empresa -->
+                                        </div>
+                                        <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+                                            <!-- Conteúdo dos documentos -->
+                                        </div>
+                                        <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+                                            <!-- Conteúdo do faturamento -->
+                                        </div>
+                                        <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                                            <!-- Conteúdo das notificações -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="user-icon">
-                    <a href="ProfilePage.html"><img src="assets/css/imgs/img profile.jpg" alt="User Icon"></a>
-                </div>
-            </header> 
+            </main>
+            <footer class="footer bg-light text-center py-3">
+                <p>&copy; 2024 InvestPro. Todos os direitos reservados.</p>
+            </footer>
         </div>
     </div>
-
-    <main class="main-content">
-        <div class="welcome-message">
-            <h1>Bem vindo de volta, <span id="user-name">Usuário</span>!</h1>
-        </div>
-        <div class="profile-section">
-            <div class="profile-card">
-                <div class="profile-pic">
-                    <img src="assets/css/imgs/img profile.jpg" alt="Perfil">
-                </div>
-                <div class="profile-info">
-                    <h2>Perfil</h2>
-                    <p>Investidor Enrustido</p>
-                    <button>Fazer Teste</button>
-                </div>
-            </div>
-            <div class="user-info">
-                <h2>Informações do Usuário</h2>
-                <div class="info-item">
-                    <h3>Endereço <a href="#" class="edit-link" data-edit="address">Editar</a></h3>
-                    <p id="address"> </p>
-                </div>
-                <div class="info-item">
-                    <h3>Telefone <a href="#" class="edit-link" data-edit="tel">Editar</a></h3>
-                    <p id="tel">+55 (31)</p>
-                </div>
-                <div class="info-item">
-                    <h3>Informações</h3>
-                    <p>Email: <span id="user-email">peterparker@avengers.com</span></p>
-                    <p>Data de Criação: <span id="creation-date"></span></p>
-                    <p>Nome: <span id="user-full-name">Peter Parker</span></p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="assets/js/profile-script.js"></script>
 </body>
-
 </html>

@@ -1,72 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const username = localStorage.getItem('username');
-    const email = localStorage.getItem('email');
-    const tel = localStorage.getItem('tel');
-    var today = new Date();
-            var day = String(today.getDate()).padStart(2, '0');
-            var month = String(today.getMonth() + 1).padStart(2, '0');
-            var year = today.getFullYear();
-            var formattedDate = day + '/' + month + '/' + year;
-            document.getElementById('creation-date').textContent = formattedDate;
-
-    if (username) {
-        document.getElementById('user-name').textContent = username;
-        document.getElementById('user-full-name').textContent = username;
-    }
-
-    if (email) {
-        document.getElementById('user-email').textContent = email;
-    }
-
-    if (tel) {
-        document.getElementById('tel').textContent = tel;
-    }
-
-    
-    function makeEditable(event) {
+document.addEventListener("DOMContentLoaded", function() {
+    // Função de logout
+    document.querySelector('#sidebar ul.bottom-links li a[href$="Sair"]').addEventListener('click', function(event) {
         event.preventDefault();
-        const editTargetId = event.target.getAttribute('data-edit');
-        const targetElement = document.getElementById(editTargetId);
+        localStorage.removeItem('usuario'); // Remove os dados do usuário do Local Storage
+        window.location.href = '/codigo/login.html'; // Redireciona para a página de login
+    });
 
-        
-        if (targetElement.tagName === 'INPUT') {
-            return;
+    // Função para colapsar o sidebar
+    document.getElementById('sidebarCollapse').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('collapse');
+        document.getElementById('content').classList.toggle('collapse');
+    });
+
+    // Carregar informações do usuário
+    function carregarDadosUsuario() {
+        const usuario = JSON.parse(localStorage.getItem('usuario'));
+        if (usuario) {
+            document.querySelector('.card-body h5').textContent = usuario.nomeCompleto;
+            document.getElementById('firstName').value = usuario.nome;
+            document.getElementById('lastName').value = usuario.sobrenome;
+            document.getElementById('phoneNumber').value = usuario.telefone;
+            document.getElementById('email').value = usuario.email;
+            document.getElementById('city').value = usuario.cidade;
+            document.getElementById('state').value = usuario.estado;
+            document.getElementById('zipcode').value = usuario.cep;
+            document.getElementById('country').value = usuario.pais;
+        } else {
+            window.location.href = '/codigo/login.html'; // Redireciona para a página de login se não houver usuário
         }
-
-        const currentValue = targetElement.textContent;
-        const inputElement = document.createElement('input');
-        inputElement.type = 'text';
-        inputElement.value = currentValue;
-
-        targetElement.replaceWith(inputElement);
-        inputElement.focus();
-
-
-        function saveChanges() {
-            const newValue = inputElement.value;
-            targetElement.textContent = newValue;
-
-            
-            if (editTargetId === 'user-full-name') {
-                localStorage.setItem('username', newValue);
-            } else if (editTargetId === 'user-email') {
-                localStorage.setItem('email', newValue);
-            }
-
-            inputElement.replaceWith(targetElement);
-        }
-
-        
-        inputElement.addEventListener('blur', saveChanges);
-        inputElement.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                saveChanges();
-            }
-        });
     }
 
-    
-    document.querySelectorAll('.edit-link').forEach(function(link) {
-        link.addEventListener('click', makeEditable);
-    });
+    carregarDadosUsuario();
 });

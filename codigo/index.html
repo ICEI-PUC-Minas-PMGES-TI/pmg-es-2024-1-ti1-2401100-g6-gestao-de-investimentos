@@ -3,70 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
-    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="description" content="InvestPro - Sua plataforma de investimentos.">
+    <meta name="keywords" content="InvestPro, investimentos, finanças, gestão financeira">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>InvestPro</title>
-    <link rel="stylesheet" href="/codigo/assets/css/styles.css">
+    <title>InvestPro - Home</title>
+    <link rel="stylesheet" href="/codigo/assets/css/index.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="/codigo/assets/js/script.js" defer></script>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta name="googlebot" content="noindex, noarchive, nosnippet">
-    <meta name="robots" content="noindex, nofollow">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
-
-
-
-
-
-
-
 <body>
-<div class="landing">
-    <div class="fade"></div>
-    <div class="wrapper">
-        <header>
-            <img class="logo" src="./assets/css/imgs/logo.png" alt="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Notícias</a></li>
-                    <li><a href="#">Contatos</a></li>
-                    <li class="button sign-in"><a href="#">Entrar</a></li>
-                    <li class="button sign-up"><a href="Register.html">Criar Conta</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="title">
-            <h1>InvestPro</h1>
-            <span>Investimento inteligente, futuro seguro...</span>
-        </div>
-        <div class="info">
-            <div class="section">
-                <div>
-                    <h2 class="name">Fundação</h2>
-                    <span class="subtitle">Agosto de 2024</span>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">InvestPro</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white" href="/codigo/login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
-                <span>
-                    Na InvestPro, oferecemos uma plataforma online para gestão de investimentos e orientação especializada, ajudando você a garantir um futuro financeiro seguro.
-                </span>
             </div>
-            <div class="social">
-                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Gerencie Seus Investimentos com a InvestPro</h1>
+            <p class="lead">A melhor plataforma para consolidar suas carteiras de investimento e obter as melhores oportunidades do mercado.</p>
+            <a href="#" class="btn btn-light btn-lg">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h3>Gestão de Carteiras</h3>
+                        <p>Consolide todas as suas carteiras de investimento em um só lugar.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                        <h3>InvestPro Academy</h3>
+                        <p>Aprenda tudo sobre investimentos com nossos cursos e tutoriais.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-newspaper fa-3x text-primary mb-3"></i>
+                        <h3>InvestPro News</h3>
+                        <p>Fique por dentro das últimas notícias e tendências do mercado financeiro.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section bg-light py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Nossa Equipe</h2>
+                    <p>Conheça os profissionais que estão por trás da InvestPro.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="/codigo/assets/imgs/team1.jpg" class="img-fluid rounded-circle mb-3" alt="Team Member 1">
+                        <h5>João Silva</h5>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="/codigo/assets/imgs/team2.jpg" class="img-fluid rounded-circle mb-3" alt="Team Member 2">
+                        <h5>Maria Souza</h5>
+                        <p>CTO</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="/codigo/assets/imgs/team3.jpg" class="img-fluid rounded-circle mb-3" alt="Team Member 3">
+                        <h5>Carlos Lima</h5>
+                        <p>CFO</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="/codigo/assets/imgs/team4.jpg" class="img-fluid rounded-circle mb-3" alt="Team Member 4">
+                        <h5>Ana Paula</h5>
+                        <p>CMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Depoimentos</h2>
+                    <p>Veja o que nossos clientes dizem sobre nós.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"A InvestPro me ajudou a consolidar minhas carteiras de investimento de forma prática e eficiente. Recomendo!"</p>
+                        <h5>Lucas Martins</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Os cursos da InvestPro Academy são ótimos para quem quer aprender mais sobre investimentos."</p>
+                        <h5>Fernanda Oliveira</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Sempre me mantenho atualizado com as notícias da InvestPro News. Excelente plataforma!"</p>
+                        <h5>Rafael Santos</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 InvestPro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
