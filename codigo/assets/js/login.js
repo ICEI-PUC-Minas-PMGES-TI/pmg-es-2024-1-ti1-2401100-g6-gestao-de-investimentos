@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const senha = document.getElementById('loginSenha').value;
         
         if (verificarLogin(email, senha)) {
+            localStorage.setItem('loggedIn', true);
+            localStorage.setItem('loggedInUser', email);
             alert('Login bem-sucedido!');
             window.location.href = '/codigo/pages/dashboard.html';
         } else {

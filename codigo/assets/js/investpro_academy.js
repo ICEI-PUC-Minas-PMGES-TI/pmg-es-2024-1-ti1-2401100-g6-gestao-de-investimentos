@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.style.width = '60px';
     });
 
-    // Função para filtrar notícias por categoria
-    window.filterNews = function(category) {
-        // Lógica para filtrar notícias por categoria
-        alert(`Filtrando notícias por: ${category}`);
+    // Função para filtrar cursos por categoria
+    window.filterCourses = function(category) {
+        // Lógica para filtrar cursos por categoria
+        alert(`Filtrando cursos por: ${category}`);
     };
 
     // Função de logout

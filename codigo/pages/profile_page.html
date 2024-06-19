@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/codigo/assets/js/profile_page.js" defer></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -27,52 +28,44 @@
             <img src="logo.png" alt="InvestPro Logo" class="logo">
         </div>
         <div class="sidebar-menu">
-            <div class="menu-item" title="Dashboard">
-                <i class="fas fa-tachometer-alt"></i>
-                <span class="menu-text">Dashboard</span>
-            </div>
-            <div class="menu-item" title="Products">
-                <i class="fas fa-box"></i>
-                <span class="menu-text">Products</span>
-            </div>
-            <div class="menu-item" title="Store">
-                <i class="fas fa-store"></i>
-                <span class="menu-text">Store</span>
-            </div>
-            <div class="menu-item" title="Messages">
-                <i class="fas fa-envelope"></i>
-                <span class="menu-text">Messages</span>
-            </div>
-            <div class="menu-item" title="Statistics">
-                <i class="fas fa-chart-bar"></i>
-                <span class="menu-text">Statistics</span>
-            </div>
-            <div class="menu-item" title="Invoices">
-                <i class="fas fa-file-invoice"></i>
-                <span class="menu-text">Invoices</span>
-            </div>
-            <div class="menu-item" title="To-Do List">
-                <i class="fas fa-list"></i>
-                <span class="menu-text">To-Do List</span>
-            </div>
-            <div class="menu-item" title="Finances">
-                <i class="fas fa-dollar-sign"></i>
-                <span class="menu-text">Finances</span>
-            </div>
+            <a href="dashboard.html" class="menu-item" title="Início">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Início</span>
+            </a>
+            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="menu-text">InvestPro Academy</span>
+            </a>
+            <a href="news.html" class="menu-item" title="InvestPro News">
+                <i class="fas fa-newspaper"></i>
+                <span class="menu-text">InvestPro News</span>
+            </a>
+            <a href="investment-panel.html" class="menu-item" title="Painel de Investimento">
+                <i class="fas fa-chart-line"></i>
+                <span class="menu-text">Painel de Investimento</span>
+            </a>
+            <a href="my-portfolio.html" class="menu-item" title="Minha Carteira">
+                <i class="fas fa-wallet"></i>
+                <span class="menu-text">Minha Carteira</span>
+            </a>
+            <a href="profile.html" class="menu-item" title="Página de Perfil">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Página de Perfil</span>
+            </a>
         </div>
         <div class="sidebar-footer">
-            <div class="menu-item" title="Help & Center">
+            <a href="help.html" class="menu-item" title="Ajuda">
                 <i class="fas fa-question-circle"></i>
-                <span class="menu-text">Help & Center</span>
-            </div>
-            <div class="menu-item" title="Settings">
+                <span class="menu-text">Ajuda</span>
+            </a>
+            <a href="settings.html" class="menu-item" title="Configurações">
                 <i class="fas fa-cog"></i>
-                <span class="menu-text">Settings</span>
-            </div>
-            <div class="menu-item" title="Log Out">
+                <span class="menu-text">Configurações</span>
+            </a>
+            <a href="#" id="logout" class="menu-item" title="Logout">
                 <i class="fas fa-sign-out-alt"></i>
-                <span class="menu-text">Log Out</span>
-            </div>
+                <span class="menu-text">Logout</span>
+            </a>
         </div>
     </div>
     <div class="content">
@@ -84,8 +77,8 @@
                 <div class="profile-cover"></div>
                 <div class="profile-info">
                     <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-                    <h2>Nathaniel Poole</h2>
-                    <p>nathaniel.poole@investpro.com</p>
+                    <h2 id="username"></h2>
+                    <p id="useremail"></p>
                 </div>
             </div>
             <div class="profile-settings">
@@ -98,47 +91,78 @@
                     <button class="tab-button" onclick="openTab(event, 'InvestorProfile')">Investor Profile</button>
                 </div>
                 <div id="AccountSettings" class="tab-content active">
-                    <form>
+                    <div class="info-view" id="accountInfo">
+                        <p><strong>First Name:</strong> <span id="viewFirstName"></span></p>
+                        <p><strong>Last Name:</strong> <span id="viewLastName"></span></p>
+                        <p><strong>Phone Number:</strong> <span id="viewPhoneNumber"></span></p>
+                        <p><strong>Email Address:</strong> <span id="viewEmailAddress"></span></p>
+                        <p><strong>City:</strong> <span id="viewCity"></span></p>
+                        <p><strong>State/County:</strong> <span id="viewStateCounty"></span></p>
+                        <p><strong>Postcode:</strong> <span id="viewPostcode"></span></p>
+                        <p><strong>Country:</strong> <span id="viewCountry"></span></p>
+                        <button class="edit-button" onclick="editAccountSettings()">Edit</button>
+                    </div>
+                    <form id="accountForm" style="display: none;">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" value="Nathaniel">
+                            <input type="text" id="firstName" name="firstName">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" value="Poole">
+                            <input type="text" id="lastName" name="lastName">
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="text" id="phoneNumber" name="phoneNumber" value="+1-800-000-0000">
+                            <input type="text" id="phoneNumber" name="phoneNumber">
                         </div>
                         <div class="form-group">
                             <label for="emailAddress">Email Address</label>
-                            <input type="email" id="emailAddress" name="emailAddress" value="nathaniel.poole@investpro.com">
+                            <input type="email" id="emailAddress" name="emailAddress">
                         </div>
                         <div class="form-group">
                             <label for="city">City</label>
-                            <input type="text" id="city" name="city" value="Bridgeport">
+                            <input type="text" id="city" name="city">
                         </div>
                         <div class="form-group">
                             <label for="stateCounty">State/County</label>
-                            <input type="text" id="stateCounty" name="stateCounty" value="CT">
+                            <input type="text" id="stateCounty" name="stateCounty">
                         </div>
                         <div class="form-group">
                             <label for="postcode">Postcode</label>
-                            <input type="text" id="postcode" name="postcode" value="12345">
+                            <input type="text" id="postcode" name="postcode">
                         </div>
                         <div class="form-group">
                             <label for="country">Country</label>
-                            <input type="text" id="country" name="country" value="United States">
+                            <input type="text" id="country" name="country">
                         </div>
-                        <button type="submit" class="update-button">Update</button>
+                        <button type="button" class="save-button" onclick="saveAccountSettings()">Save</button>
+                        <button type="button" class="cancel-button" onclick="cancelEdit()">Cancel</button>
                     </form>
                 </div>
-                <!-- Quiz content -->
+                <div id="CompanySettings" class="tab-content">
+                    <form>
+                        <!-- Adicione os campos de configuração da empresa aqui -->
+                    </form>
+                </div>
+                <div id="Documents" class="tab-content">
+                    <form>
+                        <!-- Adicione os campos de documentos aqui -->
+                    </form>
+                </div>
+                <div id="Billing" class="tab-content">
+                    <form>
+                        <!-- Adicione os campos de faturamento aqui -->
+                    </form>
+                </div>
+                <div id="Notifications" class="tab-content">
+                    <form>
+                        <!-- Adicione os campos de notificações aqui -->
+                    </form>
+                </div>
                 <div id="InvestorProfile" class="tab-content">
                     <div class="quiz-container">
                         <h2>Quiz Perfil de Investimentos</h2>
-                        <div id="progress_bar"></div>
+                        <div id="progress_bar"><div></div></div>
                         <form class="questions_box">
                             <div id="question-1" class="quiz-question">
                                 <h2>Pergunta 1</h2>
@@ -146,7 +170,7 @@
                                 <label><input id="question-1-answer-a" type="radio" name="question1" value="1"> Preservar o capital</label><br>
                                 <label><input id="question-1-answer-b" type="radio" name="question1" value="2"> Equilibrar crescimento e segurança</label><br>
                                 <label><input id="question-1-answer-c" type="radio" name="question1" value="3"> Buscar retornos mais altos, mesmo que isso signifique assumir mais riscos</label><br>
-                                <button type="button" id="submit1" class="button">Enviar Resposta</button>
+                                <button type="button" id="submit1" class="submit-button">Enviar Resposta</button>
                             </div>
                             <div id="question-2" class="quiz-question">
                                 <h2>Pergunta 2</h2>
@@ -154,7 +178,7 @@
                                 <label><input id="question-2-answer-a" type="radio" name="question2" value="1"> Muito preocupado</label><br>
                                 <label><input id="question-2-answer-b" type="radio" name="question2" value="2"> Preocupado, mas disposto a esperar para recuperar as perdas</label><br>
                                 <label><input id="question-2-answer-c" type="radio" name="question2" value="3"> Não me preocuparia muito, desde que haja potencial para crescimento a longo prazo</label><br>
-                                <button type="button" id="submit2" class="button">Enviar Resposta</button>
+                                <button type="button" id="submit2" class="submit-button">Enviar Resposta</button>
                             </div>
                             <div id="question-3" class="quiz-question">
                                 <h2>Pergunta 3</h2>
@@ -162,7 +186,7 @@
                                 <label><input id="question-3-answer-a" type="radio" name="question3" value="1"> Curto prazo (até 2 anos)</label><br>
                                 <label><input id="question-3-answer-b" type="radio" name="question3" value="2"> Médio prazo (2 a 5 anos)</label><br>
                                 <label><input id="question-3-answer-c" type="radio" name="question3" value="3"> Longo prazo (mais de 5 anos)</label><br>
-                                <button type="button" id="submit3" class="button">Enviar Resposta</button>
+                                <button type="button" id="submit3" class="submit-button">Enviar Resposta</button>
                             </div>
                             <div id="question-4" class="quiz-question">
                                 <h2>Pergunta 4</h2>
@@ -170,7 +194,7 @@
                                 <label><input id="question-4-answer-a" type="radio" name="question4" value="1"> Não tenho tempo para acompanhar de perto, prefiro opções mais estáveis</label><br>
                                 <label><input id="question-4-answer-b" type="radio" name="question4" value="2"> Estou disposto a acompanhar regularmente, mas não todos os dias</label><br>
                                 <label><input id="question-4-answer-c" type="radio" name="question4" value="3"> Estou disposto a acompanhar diariamente e fazer ajustes conforme necessário</label><br>
-                                <button type="button" id="submit4" class="button">Enviar Resposta</button>
+                                <button type="button" id="submit4" class="submit-button">Enviar Resposta</button>
                             </div>
                             <div id="question-5" class="quiz-question">
                                 <h2>Pergunta 5</h2>
@@ -178,15 +202,15 @@
                                 <label><input id="question-5-answer-a" type="radio" name="question5" value="1"> Acho importante para reduzir o risco, mesmo que signifique sacrificar retornos potenciais</label><br>
                                 <label><input id="question-5-answer-b" type="radio" name="question5" value="2"> Estou aberto à diversificação, desde que não comprometa muito o potencial de crescimento</label><br>
                                 <label><input id="question-5-answer-c" type="radio" name="question5" value="3"> Não me importo muito com a diversificação, desde que eu possa buscar retornos mais altos</label><br>
-                                <button type="button" id="submit5" class="button">Enviar Resposta</button>
+                                <button type="button" id="submit5" class="submit-button">Enviar Resposta</button>
                             </div>
                             <div id="result" class="quiz-result" style="display: none;">
                                 <h2>Obrigado por responder o Quiz!</h2>
                                 <h3>Seu perfil de Investimento é:</h3>
                                 <h1 id="printtotalscore"></h1>
                                 <p id="printscoreinfo"></p>
-                                <button class="more-button">Saiba Mais</button>
-                                <button class="retake-button">Refazer o Teste</button>
+                                <button type="button" class="more-button">Saiba Mais</button>
+                                <button type="button" class="retake-button">Refazer o Teste</button>
                             </div>
                         </form>
                     </div>
@@ -194,7 +218,5 @@
             </div>
         </main>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
