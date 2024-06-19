@@ -95,7 +95,7 @@
                     <button class="tab-button" onclick="openTab(event, 'Documents')">Documents</button>
                     <button class="tab-button" onclick="openTab(event, 'Billing')">Billing</button>
                     <button class="tab-button" onclick="openTab(event, 'Notifications')">Notifications</button>
-                    <button class="tab-button" onclick="openTab(event, 'ProfileInvestor')">Perfil de Investidor</button>
+                    <button class="tab-button" onclick="openTab(event, 'InvestorProfile')">Investor Profile</button>
                 </div>
                 <div id="AccountSettings" class="tab-content active">
                     <form>
@@ -134,7 +134,63 @@
                         <button type="submit" class="update-button">Update</button>
                     </form>
                 </div>
-                <!-- Other tab contents can be added similarly -->
+                <!-- Quiz content -->
+                <div id="InvestorProfile" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Quiz Perfil de Investimentos</h2>
+                        <div id="progress_bar"></div>
+                        <form class="questions_box">
+                            <div id="question-1" class="quiz-question">
+                                <h2>Pergunta 1</h2>
+                                <h3>Qual é o seu principal objetivo ao investir?</h3>
+                                <label><input id="question-1-answer-a" type="radio" name="question1" value="1"> Preservar o capital</label><br>
+                                <label><input id="question-1-answer-b" type="radio" name="question1" value="2"> Equilibrar crescimento e segurança</label><br>
+                                <label><input id="question-1-answer-c" type="radio" name="question1" value="3"> Buscar retornos mais altos, mesmo que isso signifique assumir mais riscos</label><br>
+                                <button type="button" id="submit1" class="button">Enviar Resposta</button>
+                            </div>
+                            <div id="question-2" class="quiz-question">
+                                <h2>Pergunta 2</h2>
+                                <h3>Como você se sentiria se o valor dos seus investimentos caísse temporariamente?</h3>
+                                <label><input id="question-2-answer-a" type="radio" name="question2" value="1"> Muito preocupado</label><br>
+                                <label><input id="question-2-answer-b" type="radio" name="question2" value="2"> Preocupado, mas disposto a esperar para recuperar as perdas</label><br>
+                                <label><input id="question-2-answer-c" type="radio" name="question2" value="3"> Não me preocuparia muito, desde que haja potencial para crescimento a longo prazo</label><br>
+                                <button type="button" id="submit2" class="button">Enviar Resposta</button>
+                            </div>
+                            <div id="question-3" class="quiz-question">
+                                <h2>Pergunta 3</h2>
+                                <h3>Qual é o seu horizonte de investimento?</h3>
+                                <label><input id="question-3-answer-a" type="radio" name="question3" value="1"> Curto prazo (até 2 anos)</label><br>
+                                <label><input id="question-3-answer-b" type="radio" name="question3" value="2"> Médio prazo (2 a 5 anos)</label><br>
+                                <label><input id="question-3-answer-c" type="radio" name="question3" value="3"> Longo prazo (mais de 5 anos)</label><br>
+                                <button type="button" id="submit3" class="button">Enviar Resposta</button>
+                            </div>
+                            <div id="question-4" class="quiz-question">
+                                <h2>Pergunta 4</h2>
+                                <h3>Quanto tempo você está disposto a dedicar ao acompanhamento dos seus investimentos?</h3>
+                                <label><input id="question-4-answer-a" type="radio" name="question4" value="1"> Não tenho tempo para acompanhar de perto, prefiro opções mais estáveis</label><br>
+                                <label><input id="question-4-answer-b" type="radio" name="question4" value="2"> Estou disposto a acompanhar regularmente, mas não todos os dias</label><br>
+                                <label><input id="question-4-answer-c" type="radio" name="question4" value="3"> Estou disposto a acompanhar diariamente e fazer ajustes conforme necessário</label><br>
+                                <button type="button" id="submit4" class="button">Enviar Resposta</button>
+                            </div>
+                            <div id="question-5" class="quiz-question">
+                                <h2>Pergunta 5</h2>
+                                <h3>Como você se sente sobre a ideia de diversificar seus investimentos?</h3>
+                                <label><input id="question-5-answer-a" type="radio" name="question5" value="1"> Acho importante para reduzir o risco, mesmo que signifique sacrificar retornos potenciais</label><br>
+                                <label><input id="question-5-answer-b" type="radio" name="question5" value="2"> Estou aberto à diversificação, desde que não comprometa muito o potencial de crescimento</label><br>
+                                <label><input id="question-5-answer-c" type="radio" name="question5" value="3"> Não me importo muito com a diversificação, desde que eu possa buscar retornos mais altos</label><br>
+                                <button type="button" id="submit5" class="button">Enviar Resposta</button>
+                            </div>
+                            <div id="result" class="quiz-result" style="display: none;">
+                                <h2>Obrigado por responder o Quiz!</h2>
+                                <h3>Seu perfil de Investimento é:</h3>
+                                <h1 id="printtotalscore"></h1>
+                                <p id="printscoreinfo"></p>
+                                <button class="more-button">Saiba Mais</button>
+                                <button class="retake-button">Refazer o Teste</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

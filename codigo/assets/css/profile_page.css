@@ -172,13 +172,13 @@ body {
   color: #333;
 }
 
-.form-group input {
+.form-group input, .form-group select {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.update-button {
+.update-button, .submit-button, .more-button, .retake-button {
   background-color: #3b5998;
   color: #fff;
   padding: 10px 20px;
@@ -186,8 +186,41 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 10px;
 }
 
-.update-button:hover {
+.update-button:hover, .submit-button:hover, .more-button:hover, .retake-button:hover {
   background-color: #314a86;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-question {
+  display: none;
+}
+
+.quiz-question.active {
+  display: block;
+}
+
+.quiz-result {
+  text-align: center;
+}
+
+#progress_bar {
+  height: 10px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progress_bar > div {
+  height: 100%;
+  background-color: #3b5998;
+  width: 0;
 }
