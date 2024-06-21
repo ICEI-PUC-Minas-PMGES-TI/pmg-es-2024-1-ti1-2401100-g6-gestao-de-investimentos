@@ -30,6 +30,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-image: url(/codigo/assets/imgs/background-images/fundologin.png);
 }
 
 .left-side .content {
@@ -38,7 +39,7 @@ body {
 }
 
 .left-side .logo {
-    width: 150px;
+    width: 200px;
     margin-bottom: 20px;
 }
 
@@ -97,6 +98,17 @@ body {
 }
 
 .login-form .signup-link a {
+    color: var(--cor-azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#forgot-pass {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#forgot-pass a {
     color: var(--cor-azul);
     text-decoration: none;
     font-weight: bold;
