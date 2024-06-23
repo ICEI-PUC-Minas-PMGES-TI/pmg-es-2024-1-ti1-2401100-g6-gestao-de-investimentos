@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Simulação de envio de instruções de recuperação de senha
         alert(`Instruções de recuperação de senha foram enviadas para ${email}`);
-        window.location.href = '/codigo/login.html'; // Redireciona para a página de login
+        window.location.href = '/codigo/pages/login_page.html'; // Redireciona para a página de login
     });
 });
