@@ -2,26 +2,28 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: InvetPro
 authors:
-  - family-names: 
+  - family-names: Rocha
+    given-names: Gabriel
+  - family-names: Soares
+    given-names: João
+  - family-names: Barbosa
+    given-names: João
+  - family-names: Ferreira
+    given-names: Lucas
+  - family-names: Costa
+    given-names: Mateus 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: 
     given-names: 
-  - family-names: 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: 
     given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
+- name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: 
     given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
 keywords:
   - 
   - 
