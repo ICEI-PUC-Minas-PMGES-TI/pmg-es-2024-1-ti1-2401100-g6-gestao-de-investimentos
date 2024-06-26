@@ -7,6 +7,8 @@
     --cor-azul: #0089bc;
     --cor-azul-claro: #0bb9e3;
     --cor-branca: #ffffff;
+    --cor-cinza: #ccc;
+    --cor-vermelha: #e74c3c;
 }
 
 * {
@@ -121,12 +123,16 @@ body {
     margin-bottom: 20px;
 }
 
-.registration-form .form-group input,
-.registration-form .form-group select {
+.registration-form .form-group input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-cinza);
     border-radius: 5px;
+}
+
+.registration-form .form-group input:focus {
+    border-color: var(--cor-roxo);
+    box-shadow: 0 0 5px rgba(114, 62, 209, 0.5);
 }
 
 .registration-form .form-check {
@@ -168,4 +174,132 @@ body {
     color: var(--cor-azul);
     text-decoration: none;
     font-weight: bold;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input[type="file"]::before {
+    content: 'Escolher arquivo';
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="file"]:hover::before {
+    background: var(--cor-cinza);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-info i {
+    margin-right: 10px;
+    color: var(--cor-azul-escuro);
+}
+
+.invalid-feedback {
+    color: var(--cor-vermelha);
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .left-side, .right-side {
+        padding: 20px;
+    }
+
+    .registration-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%;
+    }
+
+    .right-side {
+        padding: 20px;
+    }
+
+    .registration-form .form-row {
+        flex-direction: column;
+    }
+
+    .registration-form .form-group {
+        width: 100%;
+    }
+
+    .social-login-buttons {
+        flex-direction: column;
+    }
+
+    .registration-form .btn-google,
+    .registration-form .btn-facebook,
+    .registration-form .btn-apple {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .registration-form .btn-google:last-child,
+    .registration-form .btn-facebook:last-child,
+    .registration-form .btn-apple:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-side .logo {
+        width: 150px;
+    }
+
+    .left-side h1 {
+        font-size: 1.5em;
+    }
+
+    .left-side p {
+        font-size: 0.9em;
+    }
+
+    .social-login-buttons .btn-google,
+    .social-login-buttons .btn-facebook,
+    .social-login-buttons .btn-apple {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .registration-form h2 {
+        font-size: 1.5em;
+    }
+
+    .registration-form .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .registration-form .form-group input {
+        padding: 10px;
+    }
+
+    .file-info span {
+        font-size: 14px;
+    }
 }
