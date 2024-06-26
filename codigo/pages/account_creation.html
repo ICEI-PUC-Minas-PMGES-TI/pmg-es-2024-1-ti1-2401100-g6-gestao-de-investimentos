@@ -8,15 +8,13 @@
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
     <title>InvestPro - Criação de Conta</title>
     <link rel="stylesheet" href="/codigo/assets/css/account_creation.css">
-    <link rel="icon" href="/codigo/assets/imgs/icons/">
+    <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
     <script src="/codigo/assets/js/account_creation.js" defer></script>
-    
-
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="googlebot" content="noindex, noarchive, nosnippet">
@@ -29,41 +27,51 @@
             <h1>Não tem uma conta?</h1>
             <p>Registre-se para acessar todos os recursos da nossa plataforma. Gerencie seus investimentos em um só lugar. É grátis!</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.google.com"><i class="fab fa-google"></i></a>
             </div>
         </div>
     </div>
     <div class="right-side">
         <form class="registration-form" id="registrationForm">
             <h2>Crie sua conta na InvestPro</h2>
-            <button class="btn btn-google"><i class="fab fa-google"></i> Cadastrar-se com Google</button>
-            <p>ou</p>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control" placeholder="Nome Completo" id="nomeCompleto" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="email" class="form-control" placeholder="E-mail" id="email" required>
+                    <input type="text" class="form-control" placeholder="Nome de Usuário" id="nomeUsuario" required>
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control" placeholder="E-mail" id="email" required>
+                </div>
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control" placeholder="CPF" id="cpf" required>
                 </div>
-                <div class="form-group col-md-6">
-                    <input type="tel" class="form-control" placeholder="Telefone" id="telefone" required>
-                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="date" class="form-control" placeholder="Data de Nascimento" id="dataNascimento" required>
+                    <input type="tel" class="form-control" placeholder="Telefone" id="telefone" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" placeholder="Endereço" id="endereco" required>
+                    <input type="date" class="form-control" placeholder="Data de Nascimento" id="dataNascimento" required>
                 </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Endereço" id="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoPerfilInvestidor">Tipo de Perfil de Investidor</label>
+                <select id="tipoPerfilInvestidor" class="form-control" required>
+                    <option value="" disabled selected>Selecione o perfil</option>
+                    <option value="Conservador">Conservador</option>
+                    <option value="Moderado">Moderado</option>
+                    <option value="Agressivo">Agressivo</option>
+                    <option value="Ainda não sei">Ainda não sei</option>
+                </select>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -80,6 +88,12 @@
                 </label>
             </div>
             <button type="submit" class="btn btn-primary">Criar Conta</button>
+            <label for="social-login-buttons">Ou cadastre-se com:</label>
+            <div class="social-login-buttons" id="social-login-buttons">
+                <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Google</button>
+                <button type="button" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button type="button" class="btn btn-apple"><i class="fab fa-apple"></i> Apple</button>
+            </div>
             <p class="login-link">Já tem uma conta? <a href="/codigo/pages/login_page.html">Entre aqui</a></p>
         </form>
     </div>

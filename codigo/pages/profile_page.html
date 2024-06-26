@@ -12,15 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="/codigo/assets/js/profile_page.js" defer></script>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta name="googlebot" content="noindex, noarchive, nosnippet">
-    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
     <div class="sidebar" id="sidebar">
@@ -70,151 +61,87 @@
     </div>
     <div class="content">
         <header class="header">
-            <h1>Profile</h1>
+            <h1>Perfil</h1>
         </header>
         <main class="main-content">
             <div class="profile-header">
-                <div class="profile-cover"></div>
+                <div class="profile-cover">
+                    <img src="banner.png" alt="Banner" class="banner-img">
+                    <button class="edit-banner-btn">Alterar Banner</button>
+                </div>
                 <div class="profile-info">
-                    <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-                    <h2 id="username"></h2>
-                    <p id="useremail"></p>
+                    <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
+                    <button class="edit-profile-pic-btn">Alterar Foto de Perfil</button>
+                    <h2 id="username">Nome de Usuário</h2>
+                    <p id="useremail">Email</p>
+                    <p id="investorProfile">Perfil de Investidor</p>
                 </div>
             </div>
             <div class="profile-settings">
                 <div class="tabs">
-                    <button class="tab-button active" onclick="openTab(event, 'AccountSettings')">Account Settings</button>
-                    <button class="tab-button" onclick="openTab(event, 'CompanySettings')">Company Settings</button>
-                    <button class="tab-button" onclick="openTab(event, 'Documents')">Documents</button>
-                    <button class="tab-button" onclick="openTab(event, 'Billing')">Billing</button>
-                    <button class="tab-button" onclick="openTab(event, 'Notifications')">Notifications</button>
-                    <button class="tab-button" onclick="openTab(event, 'InvestorProfile')">Investor Profile</button>
+                    <button class="tab-button active" onclick="openTab(event, 'AccountSettings')">Configurações da Conta</button>
+                    <button class="tab-button" onclick="openTab(event, 'Documents')">Documentos</button>
+                    <button class="tab-button" onclick="openTab(event, 'Billing')">Faturamento</button>
+                    <button class="tab-button" onclick="openTab(event, 'Notifications')">Notificações</button>
+                    <button class="tab-button" onclick="openTab(event, 'InvestorProfile')">Perfil de Investidor</button>
                 </div>
                 <div id="AccountSettings" class="tab-content active">
                     <div class="info-view" id="accountInfo">
-                        <p><strong>First Name:</strong> <span id="viewFirstName"></span></p>
-                        <p><strong>Last Name:</strong> <span id="viewLastName"></span></p>
-                        <p><strong>Phone Number:</strong> <span id="viewPhoneNumber"></span></p>
-                        <p><strong>Email Address:</strong> <span id="viewEmailAddress"></span></p>
-                        <p><strong>City:</strong> <span id="viewCity"></span></p>
-                        <p><strong>State/County:</strong> <span id="viewStateCounty"></span></p>
-                        <p><strong>Postcode:</strong> <span id="viewPostcode"></span></p>
-                        <p><strong>Country:</strong> <span id="viewCountry"></span></p>
-                        <button class="edit-button" onclick="editAccountSettings()">Edit</button>
+                        <p><strong>Nome de Usuário:</strong> <span id="viewUsername"></span></p>
+                        <p><strong>Primeiro Nome:</strong> <span id="viewFirstName"></span></p>
+                        <p><strong>Sobrenome:</strong> <span id="viewLastName"></span></p>
+                        <p><strong>Número de Telefone:</strong> <span id="viewPhoneNumber"></span></p>
+                        <p><strong>Endereço de Email:</strong> <span id="viewEmailAddress"></span></p>
+                        <p><strong>Cidade:</strong> <span id="viewCity"></span></p>
+                        <p><strong>Estado/Condado:</strong> <span id="viewStateCounty"></span></p>
+                        <p><strong>CEP:</strong> <span id="viewPostcode"></span></p>
+                        <p><strong>País:</strong> <span id="viewCountry"></span></p>
+                        <button class="edit-button">Editar</button>
+                        <button class="delete-data-button">Apagar Dados</button>
+                        <button class="delete-account-button">Apagar Conta</button>
                     </div>
                     <form id="accountForm" style="display: none;">
                         <div class="form-group">
-                            <label for="firstName">First Name</label>
+                            <label for="username">Nome de Usuário</label>
+                            <input type="text" id="username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">Primeiro Nome</label>
                             <input type="text" id="firstName" name="firstName">
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Last Name</label>
+                            <label for="lastName">Sobrenome</label>
                             <input type="text" id="lastName" name="lastName">
                         </div>
                         <div class="form-group">
-                            <label for="phoneNumber">Phone Number</label>
+                            <label for="phoneNumber">Número de Telefone</label>
                             <input type="text" id="phoneNumber" name="phoneNumber">
                         </div>
                         <div class="form-group">
-                            <label for="emailAddress">Email Address</label>
+                            <label for="emailAddress">Endereço de Email</label>
                             <input type="email" id="emailAddress" name="emailAddress">
                         </div>
                         <div class="form-group">
-                            <label for="city">City</label>
+                            <label for="city">Cidade</label>
                             <input type="text" id="city" name="city">
                         </div>
                         <div class="form-group">
-                            <label for="stateCounty">State/County</label>
+                            <label for="stateCounty">Estado/Condado</label>
                             <input type="text" id="stateCounty" name="stateCounty">
                         </div>
                         <div class="form-group">
-                            <label for="postcode">Postcode</label>
+                            <label for="postcode">CEP</label>
                             <input type="text" id="postcode" name="postcode">
                         </div>
                         <div class="form-group">
-                            <label for="country">Country</label>
+                            <label for="country">País</label>
                             <input type="text" id="country" name="country">
                         </div>
-                        <button type="button" class="save-button" onclick="saveAccountSettings()">Save</button>
-                        <button type="button" class="cancel-button" onclick="cancelEdit()">Cancel</button>
+                        <button type="button" class="save-button">Salvar</button>
+                        <button type="button" class="cancel-button">Cancelar</button>
                     </form>
                 </div>
-                <div id="CompanySettings" class="tab-content">
-                    <form>
-                        <!-- Adicione os campos de configuração da empresa aqui -->
-                    </form>
-                </div>
-                <div id="Documents" class="tab-content">
-                    <form>
-                        <!-- Adicione os campos de documentos aqui -->
-                    </form>
-                </div>
-                <div id="Billing" class="tab-content">
-                    <form>
-                        <!-- Adicione os campos de faturamento aqui -->
-                    </form>
-                </div>
-                <div id="Notifications" class="tab-content">
-                    <form>
-                        <!-- Adicione os campos de notificações aqui -->
-                    </form>
-                </div>
-                <div id="InvestorProfile" class="tab-content">
-                    <div class="quiz-container">
-                        <h2>Quiz Perfil de Investimentos</h2>
-                        <div id="progress_bar"><div></div></div>
-                        <form class="questions_box">
-                            <div id="question-1" class="quiz-question">
-                                <h2>Pergunta 1</h2>
-                                <h3>Qual é o seu principal objetivo ao investir?</h3>
-                                <label><input id="question-1-answer-a" type="radio" name="question1" value="1"> Preservar o capital</label><br>
-                                <label><input id="question-1-answer-b" type="radio" name="question1" value="2"> Equilibrar crescimento e segurança</label><br>
-                                <label><input id="question-1-answer-c" type="radio" name="question1" value="3"> Buscar retornos mais altos, mesmo que isso signifique assumir mais riscos</label><br>
-                                <button type="button" id="submit1" class="submit-button">Enviar Resposta</button>
-                            </div>
-                            <div id="question-2" class="quiz-question">
-                                <h2>Pergunta 2</h2>
-                                <h3>Como você se sentiria se o valor dos seus investimentos caísse temporariamente?</h3>
-                                <label><input id="question-2-answer-a" type="radio" name="question2" value="1"> Muito preocupado</label><br>
-                                <label><input id="question-2-answer-b" type="radio" name="question2" value="2"> Preocupado, mas disposto a esperar para recuperar as perdas</label><br>
-                                <label><input id="question-2-answer-c" type="radio" name="question2" value="3"> Não me preocuparia muito, desde que haja potencial para crescimento a longo prazo</label><br>
-                                <button type="button" id="submit2" class="submit-button">Enviar Resposta</button>
-                            </div>
-                            <div id="question-3" class="quiz-question">
-                                <h2>Pergunta 3</h2>
-                                <h3>Qual é o seu horizonte de investimento?</h3>
-                                <label><input id="question-3-answer-a" type="radio" name="question3" value="1"> Curto prazo (até 2 anos)</label><br>
-                                <label><input id="question-3-answer-b" type="radio" name="question3" value="2"> Médio prazo (2 a 5 anos)</label><br>
-                                <label><input id="question-3-answer-c" type="radio" name="question3" value="3"> Longo prazo (mais de 5 anos)</label><br>
-                                <button type="button" id="submit3" class="submit-button">Enviar Resposta</button>
-                            </div>
-                            <div id="question-4" class="quiz-question">
-                                <h2>Pergunta 4</h2>
-                                <h3>Quanto tempo você está disposto a dedicar ao acompanhamento dos seus investimentos?</h3>
-                                <label><input id="question-4-answer-a" type="radio" name="question4" value="1"> Não tenho tempo para acompanhar de perto, prefiro opções mais estáveis</label><br>
-                                <label><input id="question-4-answer-b" type="radio" name="question4" value="2"> Estou disposto a acompanhar regularmente, mas não todos os dias</label><br>
-                                <label><input id="question-4-answer-c" type="radio" name="question4" value="3"> Estou disposto a acompanhar diariamente e fazer ajustes conforme necessário</label><br>
-                                <button type="button" id="submit4" class="submit-button">Enviar Resposta</button>
-                            </div>
-                            <div id="question-5" class="quiz-question">
-                                <h2>Pergunta 5</h2>
-                                <h3>Como você se sente sobre a ideia de diversificar seus investimentos?</h3>
-                                <label><input id="question-5-answer-a" type="radio" name="question5" value="1"> Acho importante para reduzir o risco, mesmo que signifique sacrificar retornos potenciais</label><br>
-                                <label><input id="question-5-answer-b" type="radio" name="question5" value="2"> Estou aberto à diversificação, desde que não comprometa muito o potencial de crescimento</label><br>
-                                <label><input id="question-5-answer-c" type="radio" name="question5" value="3"> Não me importo muito com a diversificação, desde que eu possa buscar retornos mais altos</label><br>
-                                <button type="button" id="submit5" class="submit-button">Enviar Resposta</button>
-                            </div>
-                            <div id="result" class="quiz-result" style="display: none;">
-                                <h2>Obrigado por responder o Quiz!</h2>
-                                <h3>Seu perfil de Investimento é:</h3>
-                                <h1 id="printtotalscore"></h1>
-                                <p id="printscoreinfo"></p>
-                                <button type="button" class="more-button">Saiba Mais</button>
-                                <button type="button" class="retake-button">Refazer o Teste</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <!-- Outras abas de conteúdo aqui -->
             </div>
         </main>
     </div>

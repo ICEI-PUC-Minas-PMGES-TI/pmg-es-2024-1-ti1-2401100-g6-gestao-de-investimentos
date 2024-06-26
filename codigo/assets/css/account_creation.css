@@ -78,21 +78,37 @@ body {
     color: var(--cor-azul-escuro);
 }
 
-.registration-form .btn-google {
+.registration-form .btn-google,
+.registration-form .btn-facebook,
+.registration-form .btn-apple {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 32%;
     padding: 15px;
-    background: #db4a39;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 0 1%;
     font-size: 16px;
+    cursor: pointer;
 }
 
-.registration-form .btn-google i {
+.registration-form .btn-google {
+    background: #db4a39;
+}
+
+.registration-form .btn-facebook {
+    background: #3b5998;
+}
+
+.registration-form .btn-apple {
+    background: #000000;
+}
+
+.registration-form .btn-google i,
+.registration-form .btn-facebook i,
+.registration-form .btn-apple i {
     margin-right: 10px;
 }
 
@@ -105,7 +121,8 @@ body {
     margin-bottom: 20px;
 }
 
-.registration-form .form-group input {
+.registration-form .form-group input,
+.registration-form .form-group select {
     width: 100%;
     padding: 15px;
     border: 1px solid #ccc;
@@ -133,6 +150,13 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-login-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .registration-form .login-link {

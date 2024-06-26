@@ -23,26 +23,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadProfile() {
         const profile = JSON.parse(localStorage.getItem('profile'));
         if (profile) {
-            document.getElementById('viewFirstName').textContent = profile.firstName;
-            document.getElementById('viewLastName').textContent = profile.lastName;
-            document.getElementById('viewPhoneNumber').textContent = profile.phoneNumber;
-            document.getElementById('viewEmailAddress').textContent = profile.emailAddress;
-            document.getElementById('viewCity').textContent = profile.city;
-            document.getElementById('viewStateCounty').textContent = profile.stateCounty;
-            document.getElementById('viewPostcode').textContent = profile.postcode;
-            document.getElementById('viewCountry').textContent = profile.country;
-            document.getElementById('username').textContent = `${profile.firstName} ${profile.lastName}`;
-            document.getElementById('useremail').textContent = profile.emailAddress;
+            document.getElementById('viewUsername').textContent = profile.username || '';
+            document.getElementById('viewFirstName').textContent = profile.firstName || '';
+            document.getElementById('viewLastName').textContent = profile.lastName || '';
+            document.getElementById('viewPhoneNumber').textContent = profile.phoneNumber || '';
+            document.getElementById('viewEmailAddress').textContent = profile.emailAddress || '';
+            document.getElementById('viewCity').textContent = profile.city || '';
+            document.getElementById('viewStateCounty').textContent = profile.stateCounty || '';
+            document.getElementById('viewPostcode').textContent = profile.postcode || '';
+            document.getElementById('viewCountry').textContent = profile.country || '';
+            document.getElementById('username').textContent = `${profile.username || ''}`;
+            document.getElementById('useremail').textContent = profile.emailAddress || '';
 
             // Preencher o formulário com as informações do perfil
-            document.getElementById('firstName').value = profile.firstName;
-            document.getElementById('lastName').value = profile.lastName;
-            document.getElementById('phoneNumber').value = profile.phoneNumber;
-            document.getElementById('emailAddress').value = profile.emailAddress;
-            document.getElementById('city').value = profile.city;
-            document.getElementById('stateCounty').value = profile.stateCounty;
-            document.getElementById('postcode').value = profile.postcode;
-            document.getElementById('country').value = profile.country;
+            document.getElementById('usernameInput').value = profile.username || '';
+            document.getElementById('firstName').value = profile.firstName || '';
+            document.getElementById('lastName').value = profile.lastName || '';
+            document.getElementById('phoneNumber').value = profile.phoneNumber || '';
+            document.getElementById('emailAddress').value = profile.emailAddress || '';
+            document.getElementById('city').value = profile.city || '';
+            document.getElementById('stateCounty').value = profile.stateCounty || '';
+            document.getElementById('postcode').value = profile.postcode || '';
+            document.getElementById('country').value = profile.country || '';
         }
     }
 
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Salvar configurações da conta
     window.saveAccountSettings = function() {
         const profile = {
+            username: document.getElementById('usernameInput').value,
             firstName: document.getElementById('firstName').value,
             lastName: document.getElementById('lastName').value,
             phoneNumber: document.getElementById('phoneNumber').value,
@@ -74,6 +77,43 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('profile', JSON.stringify(profile));
         loadProfile();
         cancelEdit();
+    };
+
+    // Limpar dados da conta
+    window.clearAccountData = function() {
+        if (confirm('Tem certeza de que deseja apagar seus dados?')) {
+            const profile = JSON.parse(localStorage.getItem('profile'));
+            profile.firstName = '';
+            profile.lastName = '';
+            profile.phoneNumber = '';
+            profile.city = '';
+            profile.stateCounty = '';
+            profile.postcode = '';
+            profile.country = '';
+            localStorage.setItem('profile', JSON.stringify(profile));
+            loadProfile();
+        }
+    };
+
+    // Confirmar exclusão da conta
+    window.confirmDeleteAccount = function() {
+        $('#confirmDeleteModal').modal('show');
+    };
+
+    // Excluir conta
+    window.deleteAccount = function() {
+        localStorage.removeItem('profile');
+        window.location.href = 'index.html';
+    };
+
+    // Alterar imagem de perfil
+    window.changeProfilePic = function() {
+        // Implementar lógica para alterar a imagem de perfil
+    };
+
+    // Alterar banner
+    window.changeBanner = function() {
+        // Implementar lógica para alterar o banner
     };
 
     loadProfile();
