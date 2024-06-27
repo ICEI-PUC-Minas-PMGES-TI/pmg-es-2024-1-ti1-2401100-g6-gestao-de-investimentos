@@ -1,6 +1,5 @@
 /* Root */
 :root {
-    /* Cores */
     --cor-azul-escuro: #441092;
     --cor-roxo: #723ed1;
     --cor-roxo-claro: #7f5ce5;
@@ -27,7 +26,7 @@ body {
 .left-side {
     flex: 1;
     background-color: var(--cor-roxo);
-    color: var(--cor-branca);
+    color: var (--cor-branca);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +55,7 @@ body {
 }
 
 .left-side .social-icons a {
-    color: var(--cor-branca);
+    color: var (--cor-branca);
     margin: 0 10px;
     font-size: 1.5em;
 }
@@ -123,16 +122,21 @@ body {
     margin-bottom: 20px;
 }
 
-.registration-form .form-group input {
+.registration-form .form-group input,
+.registration-form .form-group select {
     width: 100%;
     padding: 15px;
     border: 1px solid var(--cor-cinza);
     border-radius: 5px;
 }
 
-.registration-form .form-group input:focus {
-    border-color: var(--cor-roxo);
-    box-shadow: 0 0 5px rgba(114, 62, 209, 0.5);
+.registration-form .form-group select {
+    color: var(--cor-cinza);
+}
+
+.registration-form .form-group select:focus,
+.registration-form .form-group select option:not([value=""]) {
+    color: black;
 }
 
 .registration-form .form-check {
@@ -206,13 +210,6 @@ input[type="file"]:hover::before {
 .file-info i {
     margin-right: 10px;
     color: var(--cor-azul-escuro);
-}
-
-.invalid-feedback {
-    color: var(--cor-vermelha);
-    font-size: 0.875em;
-    margin-top: 5px;
-    display: none;
 }
 
 /* Media Queries */

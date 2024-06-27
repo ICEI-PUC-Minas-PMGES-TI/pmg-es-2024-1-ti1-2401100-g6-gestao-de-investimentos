@@ -1,4 +1,3 @@
-/* Root */
 :root {
     --cor-azul-escuro: #441092;
     --cor-roxo: #723ed1;
@@ -6,37 +5,31 @@
     --cor-azul: #0089bc;
     --cor-azul-claro: #0bb9e3;
     --cor-branca: #ffffff;
+    --cor-cinza: #ccc;
 }
 
-/* Reset de Estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Tags do Body */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f6f9;
+    display: flex;
 }
 
-/* Barra Lateral */
 .sidebar {
-    width: 60px;
+    width: 250px;
     height: 100vh;
     background-color: var(--cor-azul-escuro);
     position: fixed;
-    transition: width 0.2s;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.sidebar:hover {
-    width: 250px;
 }
 
 .sidebar-header {
@@ -79,21 +72,15 @@ body {
 }
 
 .menu-text {
-    display: none;
-}
-
-.sidebar:hover .menu-text {
     display: inline;
 }
 
 .content {
-    margin-left: 60px;
-    padding: 20px;
-    transition: margin-left 0.2s;
-}
-
-.sidebar:hover ~ .content {
     margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -101,9 +88,10 @@ body {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: var(--cor-azul-escuro);
+    text-align: center;
 }
 
-.stats-cards {
+.cards-overview {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -135,7 +123,7 @@ body {
     color: var(--cor-azul-escuro);
 }
 
-.recent-invoices {
+.recent-activities {
     margin-top: 20px;
     color: var(--cor-azul-escuro);
 }
@@ -158,4 +146,33 @@ table th {
 
 table tr:nth-child(even) {
     background-color: var(--cor-azul-claro);
+}
+
+.news-updates {
+    margin-top: 20px;
+    color: var(--cor-azul-escuro);
+}
+
+.news-updates ul {
+    list-style: none;
+}
+
+.news-updates li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+    .content {
+        margin-left: 60px;
+    }
+    .cards-overview, .charts {
+        flex-direction: column;
+    }
+    .card, .chart {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

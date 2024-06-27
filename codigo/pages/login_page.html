@@ -7,15 +7,13 @@
     <meta name="keywords" content="gestão de investimentos, login, InvestPro, investimento, finanças">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
     <title>InvestPro - Login</title>
-    <link rel="stylesheet" href="/codigo/assets/css//login_page.css">
-    <link rel="icon" href="/codigo/assets/imgs/icons/">
+    <link rel="stylesheet" href="/codigo/assets/css/login_page.css">
+    <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/codigo/assets/js/login.js" defer></script>
-    
-
+    <script src="/codigo/assets/js/login_page.js" defer></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="googlebot" content="noindex, noarchive, nosnippet">
@@ -34,13 +32,28 @@
             <h2>Login na InvestPro</h2>
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="E-mail" id="loginEmail" required>
+                <div class="invalid-feedback" id="emailFeedback"></div>
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="Senha" id="loginSenha" required>
+                <div class="invalid-feedback" id="senhaFeedback"></div>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Lembre-se de mim</label>
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
-            <p class="signup-link">Não tem uma conta? <a href="/codigo/pages/account_creation.html">Cadastre-se aqui</a></p>
-            <p id="forgot-pass">Esqueceu sua senha? <a href="/codigo/pages/forgot_password.html">Altere aqui</a></p>
+            <div class="login-links">
+                <a href="/codigo/pages/forgot_password.html">Esqueceu a senha?</a>
+                <a href="/codigo/pages/account_creation.html">Criar Conta</a>
+            </div>
+            <label for="social-login-buttons">Ou faça login com:</label>
+            <div class="social-login-buttons" id="social-login-buttons">
+                <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Google</button>
+                <button type="button" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button type="button" class="btn btn-apple"><i class="fab fa-apple"></i> Apple</button>
+            </div>
+            <div class="error-feedback" id="errorFeedback" style="display:none;"></div>
         </form>
     </div>
 </body>

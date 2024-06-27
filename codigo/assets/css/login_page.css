@@ -1,12 +1,13 @@
 /* Root */
 :root {
-    /* Cores */
     --cor-azul-escuro: #441092;
     --cor-roxo: #723ed1;
     --cor-roxo-claro: #7f5ce5;
     --cor-azul: #0089bc;
     --cor-azul-claro: #0bb9e3;
     --cor-branca: #ffffff;
+    --cor-cinza: #ccc;
+    --cor-vermelha: #e74c3c;
 }
 
 * {
@@ -83,6 +84,25 @@ body {
     border-radius: 5px;
 }
 
+.login-form .form-group input:focus {
+    border-color: var(--cor-roxo);
+    box-shadow: 0 0 5px rgba(114, 62, 209, 0.5);
+}
+
+.login-form .form-check {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.login-form .form-check-input {
+    margin-right: 10px;
+}
+
+.login-form .form-check-label {
+    color: var(--cor-azul-escuro);
+}
+
 .login-form .btn-primary {
     width: 100%;
     padding: 15px;
@@ -91,26 +111,122 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
-.login-form .signup-link {
-    text-align: center;
-    margin-top: 20px;
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.login-form .signup-link a {
+.login-links a {
     color: var(--cor-azul);
     text-decoration: none;
     font-weight: bold;
 }
 
-#forgot-pass {
-    text-align: center;
-    margin-top: 20px;
+.social-login-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-#forgot-pass a {
-    color: var(--cor-azul);
-    text-decoration: none;
-    font-weight: bold;
+.social-login-buttons .btn-google,
+.social-login-buttons .btn-facebook,
+.social-login-buttons .btn-apple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32%;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-login-buttons .btn-google {
+    background: #db4a39;
+}
+
+.social-login-buttons .btn-facebook {
+    background: #3b5998;
+}
+
+.social-login-buttons .btn-apple {
+    background: #000000;
+}
+
+.social-login-buttons .btn-google i,
+.social-login-buttons .btn-facebook i,
+.social-login-buttons .btn-apple i {
+    margin-right: 10px;
+}
+
+.error-feedback {
+    color: var(--cor-vermelha);
+    font-size: 0.875em;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .social-login-buttons {
+        flex-direction: column;
+    }
+
+    .social-login-buttons .btn-google,
+    .social-login-buttons .btn-facebook,
+    .social-login-buttons .btn-apple {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .social-login-buttons .btn-google:last-child,
+    .social-login-buttons .btn-facebook:last-child,
+    .social-login-buttons .btn-apple:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-side .logo {
+        width: 150px;
+    }
+
+    .left-side h1 {
+        font-size: 1.5em;
+    }
+
+    .left-side p {
+        font-size: 0.9em;
+    }
+
+    .login-form h2 {
+        font-size: 1.5em;
+    }
+
+    .login-form .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-form .form-group input {
+        padding: 10px;
+    }
 }

@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const userData = {
             id: Date.now(),
-            nome: formData.get('nomeCompleto'),
-            nome_usuario: formData.get('nomeUsuario'),
-            email: formData.get('email'),
-            senha: formData.get('senha'),
-            cpf: formData.get('cpf'),
-            data_nascimento: formData.get('dataNascimento'),
-            telefone: formData.get('telefone'),
-            endereco: formData.get('endereco'),
+            nome: document.getElementById('nomeCompleto').value,
+            nome_usuario: document.getElementById('nomeUsuario').value,
+            email: document.getElementById('email').value,
+            senha: document.getElementById('senha').value,
+            cpf: document.getElementById('cpf').value,
+            data_nascimento: document.getElementById('dataNascimento').value,
+            telefone: document.getElementById('telefone').value,
+            endereco: document.getElementById('endereco').value,
             foto_perfil: "/codigo/assets/imgs/perfis/default.png",
             foto_banner: "/codigo/assets/imgs/banners/default.png",
             tipo: "usuario"

@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/codigo/assets/js/dashboard.js" defer></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -25,7 +26,7 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="logo.png" alt="InvestPro Logo" class="logo">
+            <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
         </div>
         <div class="sidebar-menu">
             <a href="/codigo/pages/dashboard.html" class="menu-item" title="Início">
@@ -67,61 +68,6 @@
                 <span class="menu-text">Logout</span>
             </a>
         </div>
-    </div>
-    <div class="content">
-        <header class="header">
-            <h1>Welcome Back, <span id="username"></span>!</h1>
-        </header>
-        <main class="main-content">
-            <div class="stats-cards">
-                <div class="card">
-                    <h3>Customers</h3>
-                    <p>1,456</p>
-                </div>
-                <div class="card">
-                    <h3>Revenue</h3>
-                    <p>$3,345</p>
-                </div>
-                <div class="card">
-                    <h3>Profit</h3>
-                    <p>60%</p>
-                </div>
-                <div class="card">
-                    <h3>Invoices</h3>
-                    <p>1,135</p>
-                </div>
-            </div>
-            <div class="charts">
-                <div class="chart">Invoice Statistics Chart</div>
-                <div class="chart">Sales Analytics Chart</div>
-            </div>
-            <div class="recent-invoices">
-                <h2>Recent Invoices</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Invoice #</th>
-                            <th>Customer</th>
-                            <th>Products</th>
-                            <th>Order Date</th>
-                            <th>Status</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#PO-0001</td>
-                            <td>Eren Yeager</td>
-                            <td>2 Black Backpack</td>
-                            <td>20/03/2022</td>
-                            <td>Completed</td>
-                            <td>$61</td>
-                        </tr>
-                        <!-- More rows as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </main>
     </div>
 </body>
 </html>
