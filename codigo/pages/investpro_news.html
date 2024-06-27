@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fique atualizado com as últimas notícias e análises do mercado financeiro na InvestPro News.">
-    <meta name="keywords" content="notícias de investimentos, mercado financeiro, InvestPro News, análise financeira">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>InvestPro - News</title>
+    <title>InvestPro - Dashboard</title>
     <link rel="stylesheet" href="/codigo/assets/css/investpro_news.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/codigo/assets/js/investpro_news.js" defer></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -25,30 +26,30 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="logo.png" alt="InvestPro Logo" class="logo">
+            <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
         </div>
         <div class="sidebar-menu">
-            <a href="dashboard.html" class="menu-item" title="Início">
+            <a href="/codigo/pages/dashboard.html" class="menu-item" title="Início">
                 <i class="fas fa-home"></i>
                 <span class="menu-text">Início</span>
             </a>
-            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+            <a href="/codigo/pages/investpro_academy.html" class="menu-item" title="InvestPro Academy">
                 <i class="fas fa-graduation-cap"></i>
                 <span class="menu-text">InvestPro Academy</span>
             </a>
-            <a href="news.html" class="menu-item" title="InvestPro News">
+            <a href="/codigo/pages/investpro_news.html" class="menu-item" title="InvestPro News">
                 <i class="fas fa-newspaper"></i>
                 <span class="menu-text">InvestPro News</span>
             </a>
-            <a href="investment-panel.html" class="menu-item" title="Painel de Investimento">
+            <a href="/codigo/pages/investment_panel.html" class="menu-item" title="Painel de Investimento">
                 <i class="fas fa-chart-line"></i>
                 <span class="menu-text">Painel de Investimento</span>
             </a>
-            <a href="my-portfolio.html" class="menu-item" title="Minha Carteira">
+            <a href="/codigo/pages/wallet.html" class="menu-item" title="Minha Carteira">
                 <i class="fas fa-wallet"></i>
                 <span class="menu-text">Minha Carteira</span>
             </a>
-            <a href="profile.html" class="menu-item" title="Página de Perfil">
+            <a href="/codigo/pages/profile_page.html" class="menu-item" title="Página de Perfil">
                 <i class="fas fa-user"></i>
                 <span class="menu-text">Página de Perfil</span>
             </a>
@@ -67,68 +68,6 @@
                 <span class="menu-text">Logout</span>
             </a>
         </div>
-    </div>
-    <div class="content">
-        <header class="header">
-            <h1>InvestPro News</h1>
-            <input type="text" placeholder="Buscar artigos..." class="search-bar">
-        </header>
-        <main class="main-content">
-            <div id="newsCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="highlight-image1.jpg" class="d-block w-100" alt="Destaque 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Título do Artigo em Destaque 1</h5>
-                            <p>Resumo do artigo em destaque 1. Leia mais para detalhes.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="highlight-image2.jpg" class="d-block w-100" alt="Destaque 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Título do Artigo em Destaque 2</h5>
-                            <p>Resumo do artigo em destaque 2. Leia mais para detalhes.</p>
-                        </div>
-                    </div>
-                    <!-- Adicione mais itens do carrossel aqui -->
-                </div>
-                <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div class="news-categories">
-                <h2>Categorias</h2>
-                <button class="category-button" onclick="filterNews('market-updates')">Notícias de Mercado</button>
-                <button class="category-button" onclick="filterNews('analysis-reports')">Análises e Relatórios</button>
-                <button class="category-button" onclick="filterNews('economic-news')">Novidades Econômicas</button>
-                <button class="category-button" onclick="filterNews('interviews-opinions')">Entrevistas e Opiniões</button>
-                <button class="category-button" onclick="filterNews('educational-guides')">Guias Educacionais</button>
-            </div>
-            <div class="news-feed">
-                <h2>Últimas Notícias</h2>
-                <div class="news-article">
-                    <img src="article-image1.jpg" alt="Artigo 1">
-                    <h3>Título do Artigo 1</h3>
-                    <p>Resumo do artigo 1. Leia mais para detalhes.</p>
-                    <button class="read-more-button">Leia Mais</button>
-                </div>
-                <div class="news-article">
-                    <img src="article-image2.jpg" alt="Artigo 2">
-                    <h3>Título do Artigo 2</h3>
-                    <p>Resumo do artigo 2. Leia mais para detalhes.</p>
-                    <button class="read-more-button">Leia Mais</button>
-                </div>
-                <!-- Adicione mais artigos aqui -->
-            </div>
-        </main>
-        <footer class="news-footer">
-            <p>InvestPro © 2024</p>
-        </footer>
     </div>
 </body>
 </html>

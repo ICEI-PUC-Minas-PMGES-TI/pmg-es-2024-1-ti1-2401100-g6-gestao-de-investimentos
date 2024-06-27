@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Painel de Investimentos da InvestPro para gerenciar e acompanhar o desempenho dos seus investimentos.">
-    <meta name="keywords" content="investimentos, painel de investimentos, InvestPro, finanças, carteira de investimentos">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>InvestPro - Painel de Investimentos</title>
+    <title>InvestPro - Dashboard</title>
     <link rel="stylesheet" href="/codigo/assets/css/investment_panel.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -16,35 +16,40 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/codigo/assets/js/investment_panel.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="logo.png" alt="InvestPro Logo" class="logo">
+            <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
         </div>
         <div class="sidebar-menu">
-            <a href="dashboard.html" class="menu-item" title="Início">
+            <a href="/codigo/pages/dashboard.html" class="menu-item" title="Início">
                 <i class="fas fa-home"></i>
                 <span class="menu-text">Início</span>
             </a>
-            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+            <a href="/codigo/pages/investpro_academy.html" class="menu-item" title="InvestPro Academy">
                 <i class="fas fa-graduation-cap"></i>
                 <span class="menu-text">InvestPro Academy</span>
             </a>
-            <a href="news.html" class="menu-item" title="InvestPro News">
+            <a href="/codigo/pages/investpro_news.html" class="menu-item" title="InvestPro News">
                 <i class="fas fa-newspaper"></i>
                 <span class="menu-text">InvestPro News</span>
             </a>
-            <a href="investment-panel.html" class="menu-item active" title="Painel de Investimento">
+            <a href="/codigo/pages/investment_panel.html" class="menu-item" title="Painel de Investimento">
                 <i class="fas fa-chart-line"></i>
                 <span class="menu-text">Painel de Investimento</span>
             </a>
-            <a href="my-portfolio.html" class="menu-item" title="Minha Carteira">
+            <a href="/codigo/pages/wallet.html" class="menu-item" title="Minha Carteira">
                 <i class="fas fa-wallet"></i>
                 <span class="menu-text">Minha Carteira</span>
             </a>
-            <a href="profile.html" class="menu-item" title="Página de Perfil">
+            <a href="/codigo/pages/profile_page.html" class="menu-item" title="Página de Perfil">
                 <i class="fas fa-user"></i>
                 <span class="menu-text">Página de Perfil</span>
             </a>
@@ -63,77 +68,6 @@
                 <span class="menu-text">Logout</span>
             </a>
         </div>
-    </div>
-    <div class="content">
-        <header class="header">
-            <h1>Painel de Investimentos</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar investimentos, tarefas, etc.">
-            </div>
-        </header>
-        <main class="main-content">
-            <div class="overview">
-                <div class="overview-card">
-                    <h3>Investimentos Ativos</h3>
-                    <p class="amount">R$ 10.000,00</p>
-                    <p class="details">+5% desde o último mês</p>
-                </div>
-                <div class="overview-card">
-                    <h3>Ganhos Mensais</h3>
-                    <p class="amount">R$ 1.200,00</p>
-                    <p class="details">+2% desde o último mês</p>
-                </div>
-                <div class="overview-card">
-                    <h3>Despesas Totais</h3>
-                    <p class="amount">R$ 500,00</p>
-                    <p class="details">-1% desde o último mês</p>
-                </div>
-            </div>
-            <div class="charts-section">
-                <div class="chart-card">
-                    <h3>Desempenho dos Investimentos</h3>
-                    <canvas id="investmentPerformanceChart"></canvas>
-                </div>
-                <div class="chart-card">
-                    <h3>Distribuição da Carteira</h3>
-                    <canvas id="portfolioDistributionChart"></canvas>
-                </div>
-            </div>
-            <div class="tasks-section">
-                <div class="tasks-header">
-                    <h3>Resumo de Tarefas</h3>
-                    <button class="btn btn-primary">Adicionar Tarefa</button>
-                </div>
-                <div class="tasks-overview">
-                    <div class="task-card">
-                        <h4>Concluídas</h4>
-                        <p>16</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>Em Andamento</h4>
-                        <p>4</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>Novas</h4>
-                        <p>6</p>
-                    </div>
-                </div>
-            </div>
-            <div class="recent-activities">
-                <h3>Atividades Recentes</h3>
-                <ul class="activities-list">
-                    <li>
-                        <p><strong>João Eduardo</strong> adicionou um novo investimento em <strong>TESLA</strong>.</p>
-                        <span>Hoje, 14:30</span>
-                    </li>
-                    <li>
-                        <p><strong>Maria Cristina</strong> atualizou sua carteira de investimentos.</p>
-                        <span>Ontem, 18:45</span>
-                    </li>
-                    <!-- Adicionar mais atividades conforme necessário -->
-                </ul>
-            </div>
-        </main>
     </div>
 </body>
 </html>

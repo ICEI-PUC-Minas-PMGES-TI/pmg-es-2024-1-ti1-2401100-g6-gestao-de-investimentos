@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
 
+    // Expand and collapse sidebar on hover
     sidebar.addEventListener('mouseover', () => {
         sidebar.style.width = '250px';
     });
@@ -9,15 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.style.width = '60px';
     });
 
-    // Função para filtrar cursos por categoria
-    window.filterCourses = function(category) {
-        // Lógica para filtrar cursos por categoria
-        alert(`Filtrando cursos por: ${category}`);
-    };
-
-    // Função de logout
-    document.getElementById('logout').addEventListener('click', function() {
-        localStorage.removeItem('usuario');
-        window.location.href = 'login.html';
+    // Logout functionality
+    document.getElementById('logout').addEventListener('click', () => {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('loggedInUser');
+        window.location.href = '/codigo/pages/login_page.html'; // Redirect to login after logout
     });
 });

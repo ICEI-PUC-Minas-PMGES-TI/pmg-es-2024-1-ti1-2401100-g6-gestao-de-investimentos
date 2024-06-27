@@ -3,43 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gerencie seu perfil na InvestPro. Edite suas informações pessoais, configurações da conta e muito mais.">
-    <meta name="keywords" content="perfil, InvestPro, gerenciamento de conta, informações pessoais">
+    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
+    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>InvestPro - Perfil</title>
+    <title>InvestPro - Dashboard</title>
     <link rel="stylesheet" href="/codigo/assets/css/profile_page.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/codigo/assets/js/profile_page.js" defer></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="googlebot" content="noindex, noarchive, nosnippet">
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="logo.png" alt="InvestPro Logo" class="logo">
+            <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="InvestPro Logo" class="logo">
         </div>
         <div class="sidebar-menu">
-            <a href="dashboard.html" class="menu-item" title="Início">
+            <a href="/codigo/pages/dashboard.html" class="menu-item" title="Início">
                 <i class="fas fa-home"></i>
                 <span class="menu-text">Início</span>
             </a>
-            <a href="investpro_academy.html" class="menu-item" title="InvestPro Academy">
+            <a href="/codigo/pages/investpro_academy.html" class="menu-item" title="InvestPro Academy">
                 <i class="fas fa-graduation-cap"></i>
                 <span class="menu-text">InvestPro Academy</span>
             </a>
-            <a href="news.html" class="menu-item" title="InvestPro News">
+            <a href="/codigo/pages/investpro_news.html" class="menu-item" title="InvestPro News">
                 <i class="fas fa-newspaper"></i>
                 <span class="menu-text">InvestPro News</span>
             </a>
-            <a href="investment-panel.html" class="menu-item" title="Painel de Investimento">
+            <a href="/codigo/pages/investment_panel.html" class="menu-item" title="Painel de Investimento">
                 <i class="fas fa-chart-line"></i>
                 <span class="menu-text">Painel de Investimento</span>
             </a>
-            <a href="my-portfolio.html" class="menu-item" title="Minha Carteira">
+            <a href="/codigo/pages/wallet.html" class="menu-item" title="Minha Carteira">
                 <i class="fas fa-wallet"></i>
                 <span class="menu-text">Minha Carteira</span>
             </a>
-            <a href="profile.html" class="menu-item" title="Página de Perfil">
+            <a href="/codigo/pages/profile_page.html" class="menu-item" title="Página de Perfil">
                 <i class="fas fa-user"></i>
                 <span class="menu-text">Página de Perfil</span>
             </a>
@@ -58,92 +68,6 @@
                 <span class="menu-text">Logout</span>
             </a>
         </div>
-    </div>
-    <div class="content">
-        <header class="header">
-            <h1>Perfil</h1>
-        </header>
-        <main class="main-content">
-            <div class="profile-header">
-                <div class="profile-cover">
-                    <img src="banner.png" alt="Banner" class="banner-img">
-                    <button class="edit-banner-btn">Alterar Banner</button>
-                </div>
-                <div class="profile-info">
-                    <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
-                    <button class="edit-profile-pic-btn">Alterar Foto de Perfil</button>
-                    <h2 id="username">Nome de Usuário</h2>
-                    <p id="useremail">Email</p>
-                    <p id="investorProfile">Perfil de Investidor</p>
-                </div>
-            </div>
-            <div class="profile-settings">
-                <div class="tabs">
-                    <button class="tab-button active" onclick="openTab(event, 'AccountSettings')">Configurações da Conta</button>
-                    <button class="tab-button" onclick="openTab(event, 'Documents')">Documentos</button>
-                    <button class="tab-button" onclick="openTab(event, 'Billing')">Faturamento</button>
-                    <button class="tab-button" onclick="openTab(event, 'Notifications')">Notificações</button>
-                    <button class="tab-button" onclick="openTab(event, 'InvestorProfile')">Perfil de Investidor</button>
-                </div>
-                <div id="AccountSettings" class="tab-content active">
-                    <div class="info-view" id="accountInfo">
-                        <p><strong>Nome de Usuário:</strong> <span id="viewUsername"></span></p>
-                        <p><strong>Primeiro Nome:</strong> <span id="viewFirstName"></span></p>
-                        <p><strong>Sobrenome:</strong> <span id="viewLastName"></span></p>
-                        <p><strong>Número de Telefone:</strong> <span id="viewPhoneNumber"></span></p>
-                        <p><strong>Endereço de Email:</strong> <span id="viewEmailAddress"></span></p>
-                        <p><strong>Cidade:</strong> <span id="viewCity"></span></p>
-                        <p><strong>Estado/Condado:</strong> <span id="viewStateCounty"></span></p>
-                        <p><strong>CEP:</strong> <span id="viewPostcode"></span></p>
-                        <p><strong>País:</strong> <span id="viewCountry"></span></p>
-                        <button class="edit-button">Editar</button>
-                        <button class="delete-data-button">Apagar Dados</button>
-                        <button class="delete-account-button">Apagar Conta</button>
-                    </div>
-                    <form id="accountForm" style="display: none;">
-                        <div class="form-group">
-                            <label for="username">Nome de Usuário</label>
-                            <input type="text" id="username" name="username">
-                        </div>
-                        <div class="form-group">
-                            <label for="firstName">Primeiro Nome</label>
-                            <input type="text" id="firstName" name="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Sobrenome</label>
-                            <input type="text" id="lastName" name="lastName">
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Número de Telefone</label>
-                            <input type="text" id="phoneNumber" name="phoneNumber">
-                        </div>
-                        <div class="form-group">
-                            <label for="emailAddress">Endereço de Email</label>
-                            <input type="email" id="emailAddress" name="emailAddress">
-                        </div>
-                        <div class="form-group">
-                            <label for="city">Cidade</label>
-                            <input type="text" id="city" name="city">
-                        </div>
-                        <div class="form-group">
-                            <label for="stateCounty">Estado/Condado</label>
-                            <input type="text" id="stateCounty" name="stateCounty">
-                        </div>
-                        <div class="form-group">
-                            <label for="postcode">CEP</label>
-                            <input type="text" id="postcode" name="postcode">
-                        </div>
-                        <div class="form-group">
-                            <label for="country">País</label>
-                            <input type="text" id="country" name="country">
-                        </div>
-                        <button type="button" class="save-button">Salvar</button>
-                        <button type="button" class="cancel-button">Cancelar</button>
-                    </form>
-                </div>
-                <!-- Outras abas de conteúdo aqui -->
-            </div>
-        </main>
     </div>
 </body>
 </html>
