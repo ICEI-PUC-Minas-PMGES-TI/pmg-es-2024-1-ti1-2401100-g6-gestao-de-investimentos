@@ -1,8 +1,8 @@
 /* Root */
 :root {
     --cor-azul-escuro: #441092;
-    --cor-roxo: #723ed1;
-    --cor-roxo-claro: #7f5ce5;
+    --cor-roxo: #333;
+    --cor-roxo-claro: #333;
     --cor-azul: #0089bc;
     --cor-azul-claro: #0bb9e3;
     --cor-branca: #ffffff;
@@ -97,214 +97,84 @@ body {
 }
 
 .header {
-    background-color: var(--cor-branca);
+    background: #333;
+    color: #fff;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.438);
-    color: var(--cor-azul-escuro);
-    margin-bottom: 2vh;
-    border-radius: 10px;
     text-align: center;
+    margin-bottom: 2vh;
 }
 
 .filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
     margin-bottom: 20px;
-    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .filter-btn {
+    background: #333;
+    color: #fff;
+    border: none;
     padding: 10px 20px;
-    border-radius: 10px;
-    background-color: var(--cor-branca);
-    color: #000000; /* Cor padrão preta */
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background 0.3s;
 }
 
-/* Botões de filtro com cores baseadas na complexidade */
-.filter-btn[data-filter="basic-investments"] {
-    border: 2px solid #D0E1F9; /* Azul claro */
+.filter-btn:hover {
+    background: #575757;
 }
-
-.filter-btn[data-filter="stocks-variable-income"] {
-    border: 2px solid #A3C4F3; /* Azul médio claro */
-}
-
-.filter-btn[data-filter="fixed-income"] {
-    border: 2px solid #6A94D4; /* Azul médio */
-}
-
-.filter-btn[data-filter="investment-funds"] {
-    border: 2px solid #4776D9; /* Azul escuro */
-}
-
-.filter-btn[data-filter="real-estate"] {
-    border: 2px solid #2554B1; /* Azul mais escuro */
-}
-
-.filter-btn[data-filter="cryptocurrencies"] {
-    border: 2px solid #133B85; /* Azul profundo */
-}
-
-.filter-btn[data-filter="commodities-market"] {
-    border: 2px solid #082463; /* Azul intenso */
-}
-
-.filter-btn[data-filter="economics-macroeconomics"] {
-    border: 2px solid #001442; /* Azul muito escuro */
-}
-
-.filter-btn[data-filter="financial-education"] {
-    border: 2px solid #0A3D62; /* Azul marinho */
-}
-
-.filter-btn[data-filter="retirement-planning"] {
-    border: 2px solid #3B3B98; /* Roxo claro */
-}
-
-.filter-btn[data-filter="risk-analysis-diversification"] {
-    border: 2px solid #6D4C41; /* Marrom */
-}
-
-.filter-btn[data-filter="corporate-finance"] {
-    border: 2px solid #5D4037; /* Marrom escuro */
-}
-
-.filter-btn[data-filter="investment-technology"] {
-    border: 2px solid #2C3E50; /* Cinza azulado */
-}
-
-.filter-btn[data-filter="sustainable-investments"] {
-    border: 2px solid #27AE60; /* Verde claro */
-}
-
-.filter-btn[data-filter="trading-short-operations"] {
-    border: 2px solid #16A085; /* Verde azulado */
-}
-
-.filter-btn[data-filter="all"] {
-    border: 2px solid var(--cor-roxo); /* Padrão roxo */
-}
-
-/* Efeitos ao passar o mouse */
-.filter-btn[data-filter="basic-investments"]:hover {
-    background-color: #D0E1F9; /* Azul claro */
-    color: #004080; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="stocks-variable-income"]:hover {
-    background-color: #A3C4F3; /* Azul médio claro */
-    color: #003060; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="fixed-income"]:hover {
-    background-color: #6A94D4; /* Azul médio */
-    color: #002040; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="investment-funds"]:hover {
-    background-color: #4776D9; /* Azul escuro */
-    color: #001030; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="real-estate"]:hover {
-    background-color: #2554B1; /* Azul mais escuro */
-    color: #000820; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="cryptocurrencies"]:hover {
-    background-color: #133B85; /* Azul profundo */
-    color: #000410; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="commodities-market"]:hover {
-    background-color: #082463; /* Azul intenso */
-    color: #000204; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="economics-macroeconomics"]:hover {
-    background-color: #001442; /* Azul muito escuro */
-    color: #000102; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="financial-education"]:hover {
-    background-color: #0A3D62; /* Azul marinho */
-    color: #001021; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="retirement-planning"]:hover {
-    background-color: #3B3B98; /* Roxo claro */
-    color: #250D58; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="risk-analysis-diversification"]:hover {
-    background-color: #6D4C41; /* Marrom */
-    color: #4E342E; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="corporate-finance"]:hover {
-    background-color: #5D4037; /* Marrom escuro */
-    color: #3E2723; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="investment-technology"]:hover {
-    background-color: #2C3E50; /* Cinza azulado */
-    color: #212F3C; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="sustainable-investments"]:hover {
-    background-color: #27AE60; /* Verde claro */
-    color: #1E8449; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="trading-short-operations"]:hover {
-    background-color: #16A085; /* Verde azulado */
-    color: #0E6655; /* Cor do texto ajustada */
-}
-
-.filter-btn[data-filter="all"]:hover {
-    background-color: var(--cor-roxo); /* Padrão roxo */
-    color: var(--cor-branca);
-}
-
 
 .course-category {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.course-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
+.course-category h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
 }
 
 .course-card {
-    background-color: var(--cor-branca);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.438);
-    min-width: 200px;
-    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.21);
+    padding: 30px;
     text-align: center;
 }
 
 .course-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 .course-card h3 {
-    margin: 10px 0;
-    font-size: 1.1em;
+    margin: 15px 0 10px;
+    font-size: 18px;
+    color: #333;
 }
 
 .course-card p {
-    font-size: 0.9em;
-    color: var(--cor-azul-escuro);
+    color: #666;
+    font-size: 14px;
+}
+
+.btn-load-more {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-load-more:hover {
+    background: #575757;
 }

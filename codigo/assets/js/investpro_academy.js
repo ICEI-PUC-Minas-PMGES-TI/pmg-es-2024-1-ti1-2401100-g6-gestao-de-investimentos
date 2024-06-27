@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/codigo/pages/login_page.html'; // Redirect to login after logout
     });
 
-
     const filterButtons = document.querySelectorAll('.filter-btn');
     const courseCategories = document.querySelectorAll('.course-category');
 
@@ -38,4 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const loadMoreButtons = document.querySelectorAll('.btn-load-more');
+
+    loadMoreButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const grid = e.target.previousElementSibling;
+            const hiddenCards = grid.querySelectorAll('.course-card.hidden');
+
+            hiddenCards.forEach((card, index) => {
+                if (index < 4) {
+                    card.classList.remove('hidden');
+                }
+            });
+
+            if (grid.querySelectorAll('.course-card.hidden').length === 0) {
+                e.target.style.display = 'none';
+            }
+        });
+    });
 });
