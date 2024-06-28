@@ -48,10 +48,12 @@ body {
 .left-side h1 {
     font-size: 2em;
     margin-bottom: 10px;
+    color: var(--cor-branca);
 }
 
 .left-side p {
     margin-bottom: 20px;
+    color: var(--cor-cinza);
 }
 
 .left-side .social-icons a {

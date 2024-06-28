@@ -7,201 +7,215 @@
     <meta name="keywords" content="InvestPro, investimentos, sobre nós, equipe, serviços, contato">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
     <title>InvestPro - Sobre Nós</title>
-    <link rel="stylesheet" href="/codigo/assets/css/styles.css">
-    <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/codigo/assets/css/styles.css">
+    <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/codigo/assets/js/institutional_page.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Nós</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#team">Nossa Equipe</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#signup">Criação de Conta</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img src="/codigo/assets/imgs/logos/Logo_InvestPro.png" alt="">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Nossa Equipe</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/codigo/pages/login_page.html">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/codigo/pages/account_creation.html">Criação de Conta</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Lorem Ipsum is Dummy</h1>
-            <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <a href="#about" class="btn">Sobre Nós</a>
-            <a href="#contact" class="btn">Contato</a>
-        </div>
-    </section>
-    <section id="about" class="about-us">
-        <h2>Sobre Nós</h2>
-        <div class="about-content">
-            <div class="text">
-                <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <a href="#" class="btn">Saiba Mais</a>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <h3>20+</h3>
-                    <p>Anos de Experiência</p>
-                </div>
-                <div class="stat">
-                    <h3>35+</h3>
-                    <p>Prêmios Ganhos</p>
-                </div>
-                <div class="stat">
-                    <h3>1750+</h3>
-                    <p>Clientes Satisfeitos</p>
-                </div>
-                <div class="stat">
-                    <h3>120+</h3>
-                    <p>Especialistas na Equipe</p>
-                </div>
+    
+    <section class="hero text-center text-white d-flex align-items-center" style="background-image: url('/codigo/assets/imgs/background-images/index/fundoindex.png'); height: 100vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="display-4">Transforme Suas Finanças com InvestPro</h1>
+                <p class="lead">Na InvestPro, oferecemos soluções inovadoras para maximizar seus investimentos, combinando expertise
+                    e tecnologia de ponta. Vamos ajudar você a alcançar seus objetivos financeiros com estratégias personalizadas e eficazes.
+                </p>
+                <a href="#about" class="btn btn-primary btn-lg mr-3">Sobre Nós</a>
+                <a href="#contact" class="btn btn-secondary btn-lg">Contato</a>
             </div>
         </div>
     </section>
-    <section id="services" class="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service-content">
-            <div class="service-item">
-                <h3>Serviço 1</h3>
-                <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            </div>
-            <div class="service-item">
-                <h3>Serviço 2</h3>
-                <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            </div>
-            <div class="service-item">
-                <h3>Serviço 3</h3>
-                <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            </div>
-        </div>
-    </section>
-    <section id="team" class="team">
-        <h2>Nossa Equipe</h2>
-        <div class="team-content">
-            <div class="team-member">
-                <img src="team-member1.jpg" alt="Membro da Equipe">
-                <div class="member-info">
-                    <h3>Nome do Membro</h3>
-                    <p>Posição</p>
+    
+    <section id="about" class="about-us py-5">
+        <div class="container" id="imagem">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="text-primary">Sobre Nós</h2>
+                    <p class="lead">Na InvestPro, estamos comprometidos em oferecer soluções inovadoras de investimento com foco na satisfação do cliente e eficiência operacional. Nosso objetivo é construir um futuro financeiro sólido para nossos clientes através de consultoria especializada e serviços de alta qualidade.</p>
+                    <a href="#" class="btn btn-outline-primary">Saiba Mais</a>
                 </div>
-            </div>
-            <div class="team-member">
-                <img src="team-member2.jpg" alt="Membro da Equipe">
-                <div class="member-info">
-                    <h3>Nome do Membro</h3>
-                    <p>Posição</p>
-                </div>
-            </div>
-            <div class="team-member">
-                <img src="team-member3.jpg" alt="Membro da Equipe">
-                <div class="member-info">
-                    <h3>Nome do Membro</h3>
-                    <p>Posição</p>
+                <div class="col-lg-6">
+                    <div class="row text-center">
+                        <div class="col-sm-6 mb-4">
+                            <div class="stat p-4 shadow-sm rounded">
+                                <h3 class="text-primary">50+</h3>
+                                <p>Clientes Atendidos</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="stat p-4 shadow-sm rounded">
+                                <h3 class="text-primary">30+</h3>
+                                <p>Projetos Concluídos</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="stat p-4 shadow-sm rounded">
+                                <h3 class="text-primary">5</h3>
+                                <p>Especialidades Oferecidas</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="stat p-4 shadow-sm rounded">
+                                <h3 class="text-primary">95%</h3>
+                                <p>Feedback Positivo</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="contact">
-        <h2>Solicitar Contato</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Seu Nome</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="form-group">
-                <label for="email">Seu Email</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-                <label for="phone">Seu Telefone</label>
-                <input type="text" id="phone" name="phone">
-            </div>
-            <div class="form-group">
-                <label for="message">Sua Mensagem</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Solicitação</button>
-        </form>
-    </section>
-    <section id="login" class="login">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="loginEmail">E-mail</label>
-                <input type="email" id="loginEmail" name="loginEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="loginPassword">Senha</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-            </div>
-            <button type="submit" class="btn">Entrar</button>
-        </form>
-    </section>
-    <section id="signup" class="signup">
-        <h2>Criação de Conta</h2>
-        <form id="signupForm">
-            <div class="form-group">
-                <label for="signupName">Nome Completo</label>
-                <input type="text" id="signupName" name="signupName" required>
-            </div>
-            <div class="form-group">
-                <label for="signupEmail">E-mail</label>
-                <input type="email" id="signupEmail" name="signupEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="signupPassword">Senha</label>
-                <input type="password" id="signupPassword" name="signupPassword" required>
-            </div>
-            <button type="submit" class="btn">Criar Conta</button>
-        </form>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>O que fazemos</h3>
-                <ul>
-                    <li><a href="#">Serviço 1</a></li>
-                    <li><a href="#">Serviço 2</a></li>
-                    <li><a href="#">Serviço 3</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Carreiras</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Rua Exemplo, 123</p>
-                <p>Belo Horizonte, MG</p>
-                <p>Email: exemplo@investpro.com</p>
-            </div>
-            <div class="footer-section">
-                <h3>Siga-nos</h3>
-                <ul class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
+    
+    <section id="services" class="services py-5 bg-light" style="background-image: url(/codigo/assets/imgs/background-images/teste2.png);">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4">
+                        <h3>Consultoria de Investimentos Personalizada</h3>
+                        <p>Oferece recomendações de investimento personalizadas com base no perfil
+                        de risco e nos objetivos financeiros individuais, visando maximizar
+                        retornos e gerenciar riscos de maneira eficiente.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4">
+                        <h3>Monitoramento e Relatórios de Desempenho</h3>
+                        <p>Permite aos investidores monitorar continuamente o desempenho de suas carteiras,
+                        com relatórios detalhados que incluem análises de risco e comparações com
+                        benchmarks relevantes, facilitando a avaliação do progresso e a tomada de decisões informadas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4">
+                        <h3>Educação e Ferramentas de Análise</h3>
+                        <p>Fornece recursos educacionais, como artigos, vídeos e ferramentas de simulação de portfólio,
+                            além de análises de tendências de mercado, para capacitar os investidores com conhecimento
+                            e insights que ajudam na tomada de decisões financeiras mais estratégicas.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
+    </section>
+    
+    <section id="team" class="team py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossa Equipe</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="team-member text-center">
+                        <img src="/codigo/assets/imgs/team/jaoed.jpg" class="img-fluid rounded-circle mb-3" alt="Membro da Equipe">
+                        <div class="member-info">
+                            <h3>João Eduardo</h3>
+                            <p>Scrum Master</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="team-member text-center">
+                        <img src="/codigo/assets/imgs/team/mateus.jpg" class="img-fluid rounded-circle mb-3" alt="Membro da Equipe">
+                        <div class="member-info">
+                            <h3>Mateus Costa</h3>
+                            <p>Project Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="team-member text-center">
+                        <img src="/codigo/assets/imgs/team/gabriel.jpg" class="img-fluid rounded-circle mb-3" alt="Membro da Equipe">
+                        <div class="member-info">
+                            <h3>Gabriel Starling</h3>
+                            <p>Dev</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-2 mb-4">
+                    <div class="team-member text-center">
+                        <img src="/codigo/assets/imgs/team/lucas.jpg" class="img-fluid rounded-circle mb-3" alt="Membro da Equipe">
+                        <div class="member-info">
+                            <h3>Lucas Ferreira</h3>
+                            <p>Dev</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="team-member text-center">
+                        <img src="/codigo/assets/imgs/team/joapedro.jpg" class="img-fluid rounded-circle mb-3" alt="Membro da Equipe">
+                        <div class="member-info">
+                            <h3>João Pedro</h3>
+                            <p>Dev</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>O que fazemos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Gestão de Carteira</a></li>
+                        <li><a href="#" class="text-white">Serviços de Corretagem</a></li>
+                        <li><a href="#" class="text-white">Educação e Treinamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Links Úteis</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-white">Sobre Nós</a></li>
+                        <li><a href="#contact" class="text-white">Contato</a></li>
+                        <li><a href="#" class="text-white">Carreiras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Contato</h3>
+                    <p>Rua Exemplo, 123</p>
+                    <p>Belo Horizonte, MG</p>
+                    <p>Email: <a href="mailto:exemplo@investpro.com" class="text-white">exemplo@investpro.com</a></p>
+                    <p>Telefone: (31) 1234-5678</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Siga-nos</h3>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white mr-3"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="text-white mr-3"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
             <p>&copy; 2024 InvestPro. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/codigo/assets/js/institutional_page.js" defer></script>
 </body>
 </html>
