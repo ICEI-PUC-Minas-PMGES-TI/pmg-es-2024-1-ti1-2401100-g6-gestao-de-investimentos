@@ -1,0 +1,282 @@
+/* Root */
+:root {
+    --cor-azul-escuro: #441092;
+    --cor-roxo: #723ed1;
+    --cor-roxo-claro: #7f5ce5;
+    --cor-azul: #0089bc;
+    --cor-azul-claro: #0bb9e3;
+    --cor-branca: #ffffff;
+}
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tags do Body */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: var(--cor-roxo);
+    position: fixed;
+    transition: width 0.2s;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--cor-roxo-claro);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-menu, .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--cor-branca);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: var(--cor-azul-claro);
+    color: var(--cor-roxo);
+    text-decoration: none;
+}
+
+.menu-item i {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.menu-text {
+    display: none;
+}
+
+.sidebar:hover .menu-text {
+    display: inline;
+}
+
+.sidebar:hover ~ .content {
+    margin-left: 250px;
+}
+
+
+/* CSS adicional para a página de Ajuda */
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.2s;
+}
+
+.help-section, .faq-section, .contact-container {
+    margin-bottom: 40px;
+}
+
+/* Seção: Como podemos te ajudar? */
+.help-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: var(--cor-roxo);
+    color: var(--cor-branca);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.help-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.section {
+    background-color: var(--cor-branca);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section i {
+    font-size: 36px;
+    color: var(--cor-roxo);
+}
+
+.section h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.section p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Seção: Perguntas Frequentes */
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordion .card-header {
+    background-color: var(--cor-branca);
+    border: none;
+    padding: 0;
+}
+
+.accordion .btn-link {
+    width: 100%;
+    text-align: left;
+    color: var(--cor-roxo);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion .btn-link:hover {
+    text-decoration: none;
+    color: var(--cor-roxo-claro);
+}
+
+.accordion .card-body {
+    font-size: 14px;
+    color: #555;
+    background-color: var(--cor-branca);
+    border-top: 1px solid #ddd;
+}
+
+.accordion .card-header .btn-link::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f067"; /* Plus icon */
+}
+
+.accordion .card-header .btn-link[aria-expanded="true"]::after {
+    content: "\f068"; /* Minus icon */
+}
+
+/* Contato e Outros Meios de Contato */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-section, .other-contacts-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.contact-section h2, .other-contacts-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--cor-branca);
+}
+
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form .btn {
+    width: 100%;
+    background-color: var(--cor-roxo);
+    color: var(--cor-branca);
+    border: none;
+}
+
+#contact-form .btn:hover {
+    background-color: var(--cor-roxo-claro);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--cor-branca);
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list li i {
+    margin-right: 10px;
+    color: var(--cor-roxo);
+}
+
+.contact-list li a {
+    color: var(--cor-roxo);
+    text-decoration: none;
+}
+
+.contact-list li a:hover {
+    text-decoration: underline;
+}
