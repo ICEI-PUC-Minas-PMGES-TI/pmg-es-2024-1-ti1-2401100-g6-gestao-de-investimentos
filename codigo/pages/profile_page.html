@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acesse sua dashboard na InvestPro para gerenciar seus investimentos de forma eficiente e acompanhar o desempenho da sua carteira financeira.">
-    <meta name="keywords" content="investimentos, dashboard, InvestPro, finanças, carteira financeira">
+    <meta name="description" content="Gerencie seu perfil de usuário na InvestPro. Edite suas informações, apague sua conta ou faça um quiz para descobrir seu perfil de investidor.">
+    <meta name="keywords" content="perfil, usuário, InvestPro, edição de perfil, quiz, investidor">
     <meta name="author" content="Crow3442 - Desenvolvedor da Equipe da InvestPro">
-    <title>InvestPro - Dashboard</title>
+    <title>InvestPro - Perfil de Usuário</title>
     <link rel="stylesheet" href="/codigo/assets/css/profile_page.css">
     <link rel="icon" href="/codigo/assets/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -45,10 +45,6 @@
                 <i class="fas fa-chart-line"></i>
                 <span class="menu-text">Painel de Investimento</span>
             </a>
-            <a href="/codigo/pages/wallet.html" class="menu-item" title="Minha Carteira">
-                <i class="fas fa-wallet"></i>
-                <span class="menu-text">Minha Carteira</span>
-            </a>
             <a href="/codigo/pages/profile_page.html" class="menu-item" title="Página de Perfil">
                 <i class="fas fa-user"></i>
                 <span class="menu-text">Página de Perfil</span>
@@ -63,6 +59,208 @@
                 <i class="fas fa-sign-out-alt"></i>
                 <span class="menu-text">Logout</span>
             </a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="profile-header">
+            <div class="profile-photo">
+                <img id="profile-photo" src="/codigo/assets/imgs/user_photo.jpg" alt="User Photo">
+                <input type="file" id="change-photo-input" style="display:none;">
+            </div>
+            <div class="profile-info">
+                <h2 id="display-full-name">João Eduardo</h2>
+                <p id="display-email">joao@example.com</p>
+                <button id="change-photo" class="btn btn-primary">Mudar Foto</button>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="account-settings">Configurações da Conta</button>
+                    <button class="tab-button" data-tab="investor-quiz">Quiz de Perfil de Investidor</button>
+                </div>
+                <div class="tab-content active" id="account-settings">
+                    <h3>Configurações da Conta</h3>
+                    <div id="profile-info">
+                        <p><strong>Nome Completo:</strong> <span id="display-full-name"></span></p>
+                        <p><strong>Nome de Usuário:</strong> <span id="display-username"></span></p>
+                        <p><strong>Email:</strong> <span id="display-email"></span></p>
+                        <p><strong>CPF:</strong> <span id="display-cpf"></span></p>
+                        <p><strong>Telefone:</strong> <span id="display-phone"></span></p>
+                        <p><strong>Data de Nascimento:</strong> <span id="display-birthdate"></span></p>
+                        <p><strong>Endereço:</strong> <span id="display-address"></span></p>
+                        <button id="edit-profile" class="btn btn-primary">Editar</button>
+                        <button id="delete-account" class="btn btn-danger">Apagar Conta</button>
+                        <button id="delete-data" class="btn btn-warning">Apagar Dados</button>
+                    </div>
+                    <form id="profile-form" style="display:none;">
+                        <div class="form-group">
+                            <label for="profile-full-name">Nome Completo:</label>
+                            <input type="text" id="profile-full-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-username">Nome de Usuário:</label>
+                            <input type="text" id="profile-username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email:</label>
+                            <input type="email" id="profile-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-cpf">CPF:</label>
+                            <input type="text" id="profile-cpf" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-phone">Telefone:</label>
+                            <input type="text" id="profile-phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-birthdate">Data de Nascimento:</label>
+                            <input type="text" id="profile-birthdate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-address">Endereço:</label>
+                            <input type="text" id="profile-address" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" id="cancel-edit" class="btn btn-secondary">Cancelar</button>
+                    </form>
+                </div>
+                <div class="tab-content" id="investor-quiz">
+                    <h3>Descubra seu Perfil de Investidor</h3>
+                    <form id="investor-quiz-form">
+                        <div class="form-group">
+                            <label for="question1">1. Qual é o seu nível de experiência com investimentos?</label>
+                            <select id="question1" class="form-control">
+                                <option value="beginner">Iniciante</option>
+                                <option value="intermediate">Intermediário</option>
+                                <option value="advanced">Avançado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">2. Qual é o seu principal objetivo ao investir?</label>
+                            <select id="question2" class="form-control">
+                                <option value="growth">Crescimento</option>
+                                <option value="income">Renda</option>
+                                <option value="preservation">Preservação do Capital</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">3. Qual é o seu horizonte de investimento?</label>
+                            <select id="question3" class="form-control">
+                                <option value="short">Curto Prazo (menos de 1 ano)</option>
+                                <option value="medium">Médio Prazo (1 a 5 anos)</option>
+                                <option value="long">Longo Prazo (mais de 5 anos)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">4. Como você reagiria a uma queda significativa no valor dos seus investimentos?</label>
+                            <select id="question4" class="form-control">
+                                <option value="panic">Entraria em pânico e venderia tudo</option>
+                                <option value="hold">Manteria os investimentos</option>
+                                <option value="buy">Aproveitaria para comprar mais</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">5. Qual a proporção de sua renda mensal que você está disposto a investir?</label>
+                            <select id="question5" class="form-control">
+                                <option value="small">Menos de 10%</option>
+                                <option value="moderate">Entre 10% e 30%</option>
+                                <option value="large">Mais de 30%</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">6. Você possui outras fontes de renda além do seu trabalho principal?</label>
+                            <select id="question6" class="form-control">
+                                <option value="no">Não</option>
+                                <option value="yes">Sim</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">7. Qual é o seu grau de conhecimento sobre análise de investimentos?</label>
+                            <select id="question7" class="form-control">
+                                <option value="none">Nenhum</option>
+                                <option value="basic">Básico</option>
+                                <option value="advanced">Avançado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">8. Com que frequência você acompanha o mercado financeiro?</label>
+                            <select id="question8" class="form-control">
+                                <option value="never">Nunca</option>
+                                <option value="occasionally">Ocasionalmente</option>
+                                <option value="regularly">Regularmente</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">9. Você está disposto a assumir riscos para obter maiores retornos?</label>
+                            <select id="question9" class="form-control">
+                                <option value="no">Não</option>
+                                <option value="maybe">Talvez</option>
+                                <option value="yes">Sim</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">10. Qual é a sua faixa etária?</label>
+                            <select id="question10" class="form-control">
+                                <option value="below_25">Abaixo de 25 anos</option>
+                                <option value="25_40">Entre 25 e 40 anos</option>
+                                <option value="above_40">Acima de 40 anos</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ver Perfil</button>
+                    </form>
+                    <div id="quiz-result" style="display:none;">
+                        <h3>Seu perfil de investidor é: <span id="investor-profile"></span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para confirmação de deleção de dados -->
+    <div class="modal fade" id="deleteDataModal" tabindex="-1" aria-labelledby="deleteDataModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteDataModalLabel">Confirmar Deleção de Dados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja apagar todos os seus dados (exceto email, senha e nome de usuário)?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="confirm-delete-data" class="btn btn-danger">Apagar Dados</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para confirmação de deleção de conta -->
+    <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteAccountModalLabel">Confirmar Deleção de Conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja apagar sua conta? Esta ação não pode ser desfeita.
+                    <div class="form-group">
+                        <label for="confirm-password">Digite sua senha:</label>
+                        <input type="password" id="confirm-password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="confirm-delete-account" class="btn btn-danger">Apagar Conta</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

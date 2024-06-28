@@ -86,19 +86,143 @@ body {
   display: inline;
 }
 
-.content {
-  margin-left: 60px;
-  padding: 20px;
-  transition: margin-left 0.2s;
-}
-
 .sidebar:hover ~ .content {
   margin-left: 250px;
 }
 
-.header {
-  background-color: var(--cor-branca);
+/* Estilos gerais */
+.content {
+  margin-left: 60px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  color: var(--cor-azul-escuro);
+  transition: margin-left 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  margin-right: 20px;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  margin-bottom: 15px;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  background-color: var(--cor-branca);
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: var(--cor-roxo);
+  margin-bottom: 5%;
+}
+
+.tab-button.active {
+  background-color: var(--cor-roxo);
+  color: var(--cor-branca);
+  border: 1px solid #ddd;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: var(--cor-branca);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+#profile-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#profile-form .form-group {
+  margin-bottom: 20px;
+}
+
+#profile-form .btn {
+  width: 100%;
+  background-color: var(--cor-roxo);
+  color: var(--cor-branca);
+  border: none;
+  margin-bottom: 3%;
+}
+
+#profile-form .btn:hover {
+  background-color: var(--cor-roxo-claro);
+}
+
+#investor-quiz-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#investor-quiz-form .form-group {
+  margin-bottom: 20px;
+}
+
+#investor-quiz-form .btn {
+  width: 100%;
+  background-color: var(--cor-roxo);
+  color: var(--cor-branca);
+  border: none;
+}
+
+#investor-quiz-form .btn:hover {
+  background-color: var(--cor-roxo-claro);
+}
+
+#quiz-result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Modal customizado */
+.modal-header, .modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-footer .btn {
+  margin: 5px;
 }
