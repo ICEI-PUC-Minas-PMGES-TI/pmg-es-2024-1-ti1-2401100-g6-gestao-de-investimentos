@@ -226,3 +226,56 @@ body {
 .modal-footer .btn {
   margin: 5px;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .menu-item {
+    padding: 10px;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .menu-item i {
+    margin-right: 0;
+  }
+
+  .menu-text {
+    display: inline;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    margin-bottom: 10px;
+  }
+
+  .tab-button {
+    margin-bottom: 10px;
+  }
+
+  .tab-container {
+    flex-direction: column;
+  }
+}
