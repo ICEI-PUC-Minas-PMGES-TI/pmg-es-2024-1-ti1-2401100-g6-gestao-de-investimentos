@@ -340,9 +340,11 @@ Adotamos a utilisação dos seguintes Framework.
 
 
 # Avaliação da Aplicação
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
+##Senario de teste da apicação 
+1. **Primeiro contato** 
+  O usuario acessa a página principal Navega por ela e decide criar a sua conta, apos cadastrar seu dados ele segue para a pagina de logim e entra na plataforma
+2. **Primeiro analise**
+   Apos o primeiro contato e cadasto o usuario ter contato com a Dashboard com um resumo de todo o seu portifolio e representações do seu sitema 
 > Apresente os cenários de testes utilizados na realização dos testes da
 > sua aplicação. Escolha cenários de testes que demonstrem os requisitos
 > sendo satisfeitos.
