@@ -32,9 +32,6 @@ Os membros do grupo são:
     - [Público Geral:](#público-geral)
 - [Especificações do Projeto](#especificações-do-projeto)
   - [Personas e Mapas de Empatia](#personas-e-mapas-de-empatia)
-    - [Pessoas endividadas que querem aprender sobra controle financeiro e gostariam de, após sair das dívidas, começar a investir](#pessoas-endividadas-que-querem-aprender-sobra-controle-financeiro-e-gostariam-de-após-sair-das-dívidas-começar-a-investir)
-    - [Pessoas que já tem um conhecimento prévio do mercado e uma vida financeira melhor estabelecida, mas com inseguranças sobre investimentos](#pessoas-que-já-tem-um-conhecimento-prévio-do-mercado-e-uma-vida-financeira-melhor-estabelecida-mas-com-inseguranças-sobre-investimentos)
-    - [Jovens que desejam adquirir conhecimento na area de iniciar sua vida financeiro. E estão iniciando no mercado de investimentos com](#jovens-que-desejam-adquirir-conhecimento-na-area-de-iniciar-sua-vida-financeiro-e-estão-iniciando-no-mercado-de-investimentos-com)
   - [Histórias de Usuários](#histórias-de-usuários)
   - [Requisitos](#requisitos)
     - [Requisitos Funcionais](#requisitos-funcionais)
@@ -149,13 +146,18 @@ Nesta parte do documento, serão detalhadas as especificações do projeto Inves
 ## Personas e Mapas de Empatia
 
 O processo de criação de personas é essencial para garantir que o software atenda às necessidades e expectativas dos usuários. Utilizamos a abordagem de Design Thinking para criar personas significativas e úteis.
-### Pessoas endividadas que querem aprender sobra controle financeiro e gostariam de, após sair das dívidas, começar a investir 
-![Larry Miller - Persona 1](images/personas/larry-miller.jpg)
-### Pessoas que já tem um conhecimento prévio do mercado e uma vida financeira melhor estabelecida, mas com inseguranças sobre investimentos 
-![Jade Selkie - Persona02](images/personas/jade-selkie.jpg)
-### Jovens que desejam adquirir conhecimento na area de iniciar sua vida financeiro. E estão iniciando no mercado de investimentos com
-![Soul Goodman - Persona03](images/personas/soul-goodman.jpg)
 
+> Pessoas endividadas que querem aprender sobra controle financeiro e gostariam de, após sair das dívidas, começar a investir 
+> 
+> ![Larry Miller - Persona 1](images/personas/larry-miller.jpg)
+
+> Pessoas que já tem um conhecimento prévio do mercado e uma vida financeira melhor estabelecida, mas com inseguranças sobre investimentos 
+> 
+> ![Jade Selkie - Persona02](images/personas/jade-selkie.jpg)
+
+> Jovens que desejam adquirir conhecimento na area de iniciar sua vida financeiro. E estão iniciando no mercado de investimentos com
+> 
+> ![Soul Goodman - Persona03](images/personas/soul-goodman.jpg)
 
 ## Histórias de Usuários
 
@@ -462,10 +464,3 @@ Os testes selecionados foram do teste 1 ao teste 6 e a seguir as justificativas 
 * [Documentação do Chart.js](https://www.chartjs.org/docs/latest/)
 * [Referência de Hospedagem](https://pages.github.com/)
 * [LucidChart - Diagrama de Arquitetura](https://www.lucidchart.com/pages/pt)
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
