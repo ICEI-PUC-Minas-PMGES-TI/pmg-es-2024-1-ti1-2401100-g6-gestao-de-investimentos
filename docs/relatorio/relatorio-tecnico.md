@@ -56,7 +56,7 @@ Os membros do grupo são:
 
 Investir no mercado financeiro pode ser complicado e desafiador. Muitas pessoas têm dificuldade em entender como investir, o porquê investir e como gerenciar efetivamente seus investimentos. Além disso, o controle de investimentos pode ser confuso e demorado, especialmente ao lidar com múltiplas contas e instituições financeiras.
 
-InvestPro enfrenta o desafio de simplificar esse processo para investidores de todos os níveis de experiência. A plataforma visa fornecer educação financeira, orientação especializada e ferramentas poderosas para facilitar o gerenciamento e controle de investimentos, permitindo aos usuários tomar decisões mais inteligentes e maximizar seus retornos financeiros.
+InvestPro enfrenta o desafio de simplificar esse processo para investidores de todos os níveis de experiência. A plataforma visa fornecer educação financeira, orientação e ferramentas para facilitar o gerenciamento e controle de investimentos, permitindo aos usuários tomar decisões mais inteligentes e maximizar seus retornos financeiros.
 
 ## Objetivos
 
@@ -66,7 +66,7 @@ Desenvolver um software eficiente e intuitivo para simplificar o processo de inv
    Criar uma seção educacional dentro da plataforma InvestPro, oferecendo recursos como artigos, vídeos e tutoriais interativos para fornecer aos usuários conhecimentos básicos sobre investimentos, estratégias de investimento e gestão de carteiras. O objetivo é capacitar os investidores a entenderem melhor o mercado financeiro e tomarem decisões mais conscientes.
 
 2. **Implementação de Ferramentas de Controle e Comparação de Investimentos:**
-   Desenvolver ferramentas que permitam aos usuários acompanhar facilmente o desempenho de seus investimentos, realizar comparações entre diferentes ativos e instituições financeiras, e facilitar a portabilidade de dados entre contas. Isso incluirá a integração de APIs de instituições financeiras para fornecer acesso direto aos dados dos investidores e a criação de algoritmos de análise para gerar insights relevantes sobre o desempenho dos investimentos. O objetivo é simplificar o controle e a gestão das carteiras de investimento, permitindo aos usuários otimizar seus portfólios e maximizar seus resultados financeiros.
+   Desenvolver ferramentas que permitam aos usuários acompanhar facilmente o desempenho de seus investimentos e facilitar a portabilidade de dados entre contas. a criação de algoritmos de análise para gerar insights relevantes sobre o desempenho dos investimentos. O objetivo é simplificar o controle e a gestão das carteiras de investimento, permitindo aos usuários otimizar seus portfólios e maximizar seus resultados financeiros.
 
 ## Justificativa
 
@@ -76,7 +76,7 @@ Investir dinheiro é uma atividade crucial para muitas pessoas e empresas, e pod
    Muitas pessoas evitam investir simplesmente porque não entendem como funciona o mercado financeiro. Ao desenvolver uma plataforma educacional dentro do InvestPro, podemos ajudar a democratizar o conhecimento financeiro, tornando as informações sobre investimentos acessíveis e compreensíveis para um público mais amplo. Isso pode motivar mais pessoas a começarem a investir e a tomar melhores decisões financeiras para o seu futuro.
 
 2. **Facilitar o Controle e Gerenciamento de Investimentos:**
-   Gerenciar investimentos pode ser uma tarefa desafiadora, especialmente para aqueles com múltiplas contas e investimentos em diferentes instituições financeiras. Implementar ferramentas de controle e comparação de investimentos no InvestPro pode simplificar esse processo, fornecendo aos investidores uma visão clara e abrangente de seus portfólios e permitindo que façam ajustes estratégicos com base em dados precisos e atualizados. Isso pode ajudar os investidores a maximizar seus retornos e minimizar seus riscos ao longo do tempo.
+   Gerenciar investimentos pode ser uma tarefa desafiadora, especialmente para aqueles com múltiplas contas e investimentos em diferentes instituições financeiras. Implementar ferramentas de controle e comparação de investimentos no InvestPro pode simplificar esse processo, fornecendo aos investidores uma visão clara e abrangente de seus portfólios e permitindo que façam ajustes estratégicos com base em dados. Isso pode ajudar os investidores a maximizar seus retornos e minimizar seus riscos ao longo do tempo.
 
 3. **Promover a Confiança e Segurança dos Investidores:**
    Muitas vezes, a falta de transparência e controle pode levar os investidores a se sentirem inseguros em relação aos seus investimentos. Ao oferecer ferramentas que simplificam o processo de controle e comparação de investimentos, podemos promover a confiança e segurança dos investidores, permitindo-lhes tomar decisões mais informadas e sentir-se mais no controle de seu futuro financeiro.
@@ -136,10 +136,7 @@ Nesta parte do documento, serão detalhadas as especificações do projeto Inves
 4. **Mapas Mentais e Diagramas de Fluxo de Dados:**
    - Elaboração de mapas mentais e diagramas de fluxo de dados para visualizar a estrutura da aplicação e o fluxo de informações entre os diferentes componentes do sistema.
 
-5. **Análise de Riscos:**
-   - Identificação e avaliação dos riscos potenciais associados ao desenvolvimento e implementação da aplicação, bem como a definição de estratégias para mitigá-los.
-
-6. **Feedback dos Stakeholders:**
+5. **Feedback dos Stakeholders:**
    - Coleta de feedback dos stakeholders, incluindo investidores, consultores financeiros, administradores de instituições financeiras e outros usuários relevantes, para garantir que as especificações do projeto atendam às suas expectativas e requisitos.
 
 ## Personas e Mapas de Empatia
