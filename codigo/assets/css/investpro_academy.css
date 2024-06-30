@@ -1,8 +1,8 @@
 /* Root */
 :root {
     --cor-azul-escuro: #441092;
-    --cor-roxo: #333;
-    --cor-roxo-claro: #333;
+    --cor-roxo: #723ed1;
+    --cor-roxo-claro: #7f5ce5;
     --cor-azul: #0089bc;
     --cor-azul-claro: #0bb9e3;
     --cor-branca: #ffffff;
@@ -97,11 +97,10 @@ body {
 }
 
 .header {
-    background: #333;
-    color: #fff;
+    background-color: var(--cor-branca);
     padding: 20px;
-    text-align: center;
-    margin-bottom: 2vh;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: var(--cor-azul-escuro);
 }
 
 .filter-buttons {
@@ -113,7 +112,7 @@ body {
 }
 
 .filter-btn {
-    background: #333;
+    background: var(--cor-roxo);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -122,16 +121,7 @@ body {
 }
 
 .filter-btn:hover {
-    background: #575757;
-}
-
-.course-category {
-    margin-bottom: 40px;
-}
-
-.course-category h2 {
-    margin-bottom: 20px;
-    color: #333;
+    background: var(--cor-roxo-claro);
 }
 
 .course-grid {
@@ -164,17 +154,55 @@ body {
     font-size: 14px;
 }
 
-.btn-load-more {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+    }
+
+    .sidebar:hover {
+        width: 100%;
+    }
+
+    .sidebar-header, .sidebar-footer {
+        padding: 10px;
+        background-color: var(--cor-roxo);
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .menu-item i {
+        margin-right: 5px;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .sidebar:hover ~ .content {
+        margin: 0;
+    }
 }
 
-.btn-load-more:hover {
-    background: #575757;
+@media (max-width: 600px) {
+    .course-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
 }

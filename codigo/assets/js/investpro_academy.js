@@ -1,58 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-
-    // Expand and collapse sidebar on hover
-    sidebar.addEventListener('mouseover', () => {
-        sidebar.style.width = '250px';
-    });
-
-    sidebar.addEventListener('mouseout', () => {
-        sidebar.style.width = '60px';
-    });
-
-    // Logout functionality
-    document.getElementById('logout').addEventListener('click', () => {
-        localStorage.removeItem('loggedIn');
-        localStorage.removeItem('loggedInUser');
-        window.location.href = '/codigo/pages/login_page.html'; // Redirect to login after logout
-    });
-
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const courseCategories = document.querySelectorAll('.course-category');
+    const courseCards = document.querySelectorAll('.course-card');
 
+    // Função de filtragem
+    const filterCourses = (filter) => {
+        console.log(`Filtrando por: ${filter}`); // Adiciona um log para depuração
+        courseCards.forEach(card => {
+            console.log(`Curso: ${card.classList}`); // Adiciona um log para depuração
+            if (filter === 'all') {
+                card.style.display = 'block';
+            } else {
+                if (card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    };
+
+    // Adiciona evento de clique a cada botão de filtragem
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
+            filterCourses(filter);
 
-            courseCategories.forEach(category => {
-                if (filter === 'all' || category.getAttribute('data-category') === filter) {
-                    category.style.display = 'block';
-                } else {
-                    category.style.display = 'none';
-                }
-            });
-
+            // Remove a classe 'active' de todos os botões e adiciona ao botão clicado
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
         });
     });
 
-    const loadMoreButtons = document.querySelectorAll('.btn-load-more');
-
-    loadMoreButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const grid = e.target.previousElementSibling;
-            const hiddenCards = grid.querySelectorAll('.course-card.hidden');
-
-            hiddenCards.forEach((card, index) => {
-                if (index < 4) {
-                    card.classList.remove('hidden');
-                }
-            });
-
-            if (grid.querySelectorAll('.course-card.hidden').length === 0) {
-                e.target.style.display = 'none';
-            }
-        });
-    });
+    // Filtragem inicial para mostrar todos os cursos
+    filterCourses('all');
 });
