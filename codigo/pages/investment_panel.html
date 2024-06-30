@@ -62,18 +62,115 @@
         </div>
     </div>
 
-    <div class="content">
-        <header class="header"></header>
-        
-        <main class="main-content">
-            <div class="block block-1"></div>
-            
-            <div class="block block-2"></div>
-            
-            <div class="block block-3">
-                
+    <div class="content" id="content">
+        <h1>Painel de Investimento</h1>
+
+        <div class="investment-summary">
+            <h2>Resumo dos Investimentos</h2>
+            <div class="summary-details">
+                <div class="detail-item">
+                    <h3>Valorização</h3>
+                    <p id="valuation">Carregando...</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Desvalorização</h3>
+                    <p id="depreciation">Carregando...</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Rendimento Total</h3>
+                    <p id="total-return">Carregando...</p>
+                </div>
             </div>
-        </main>
+        </div>
+
+        <div class="investment-charts">
+            <h2>Gráficos de Investimento</h2>
+
+            <div id="organize">
+                <div id="ladoesq">
+                    <div class="chart-container">
+                        <h3>Desempenho Mensal</h3>
+                        <canvas id="performanceChart" width="880" height="680"></canvas>
+                    </div>
+                </div>
+    
+                <div id="ladodir">
+                    <div id="cima">
+                        <div class="chart-container">
+                            <h3>Distribuição de Ativos</h3>
+                            <canvas id="assetDistributionChart"></canvas>
+                        </div>
+            
+                        <div class="chart-container">
+                            <h3>Alocação de Portfólio</h3>
+                            <canvas id="portfolioAllocationChart"></canvas>
+                        </div>
+                    </div>
+    
+                    <div id="baixo">
+                        <div class="chart-container">
+                            <h3>Variação Semanal</h3>
+                            <canvas id="weeklyVariationChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-indicators">
+            <h2>Indicadores de Performance</h2>
+            <div class="indicator-item">
+                <h3>Taxa de Crescimento Anual</h3>
+                <p id="annualGrowthRate">Carregando...</p>
+            </div>
+            <div class="indicator-item">
+                <h3>Retorno sobre Investimento (ROI)</h3>
+                <p id="roi">Carregando...</p>
+            </div>
+        </div>
+
+        <div class="expenses-container">
+            <h2>Controle Financeiro</h2>
+            <div class="form-and-chart">
+                <form id="expense-form">
+                    <label for="transaction-date">Data da Transação:</label>
+                    <input type="date" id="transaction-date" name="transaction-date" required>
+        
+                    <label for="transaction-type">Tipo de Transação:</label>
+                    <select id="transaction-type" name="transaction-type" required>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Saída">Saída</option>
+                    </select>
+        
+                    <label for="transaction-amount">Valor:</label>
+                    <input type="number" id="transaction-amount" name="transaction-amount" required>
+        
+                    <label for="bank">Banco:</label>
+                    <input type="text" id="bank" name="bank" required>
+        
+                    <button type="submit">Adicionar Transação</button>
+                </form>
+        
+                <canvas id="expenses-chart" width="400" height="200"></canvas>
+            </div>
+        
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entrada/Saída</th>
+                        <th>Valor da Aplicação/Retirada</th>
+                        <th>Valor Total</th>
+                        <th>Positivo/Negativo</th>
+                        <th>Banco</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
