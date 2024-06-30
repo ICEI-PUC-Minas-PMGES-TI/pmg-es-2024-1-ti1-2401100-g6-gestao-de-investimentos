@@ -39,7 +39,6 @@ Os membros do grupo são:
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
-- [**############## SPRINT 1 ACABA AQUI #############**](#-sprint-1-acaba-aqui-)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
@@ -272,12 +271,13 @@ Nossa equipe é composta por membros dedicados, cada um desempenhando um papel f
 
 ## Ferramentas
 
-| Ambiente                    | Plataforma   | Link de Acesso                   |
-|-----------------------------|--------------|----------------------------------|
-| Processo de Design Thinking | Miro         | [Link](https://miro.com/)        |
-| Repositório de código       | GitHub       | [Link](https://github.com/)      |
-| Hospedagem do site          | GitHub Pages | [Link](https://pages.github.com) |
-| Protótipo Interativo        | Figma        | [Link](https://www.figma.com/)   |
+| Ambiente                    | Plataforma    | Link de Acesso                   |
+|-----------------------------|---------------|----------------------------------|
+| Processo de Design Thinking | Miro          | [Link](https://miro.com/)        |
+| Repositório de código       | GitHub        | [Link](https://github.com/)      |
+| Hospedagem do site          | GitHub Pages  | [Link](https://pages.github.com) |
+| Protótipo Interativo        | Figma         | [Link](https://www.figma.com/)   |
+| Plataforma de codificação   | Visual Studio | [Link](https://code.visualstudio.com/)|
 
 
 - **Editor de código:** Utilizamos o Visual Studio Code como nosso editor de código principal. Escolhemos o VS Code devido à sua interface amigável, extensibilidade através de plugins e recursos avançados, como depuração integrada, controle de versão e suporte a várias linguagens de programação.
@@ -295,29 +295,33 @@ ficando a cargo do mesmo escolher.
 
 Está sendo utilizado a seguinte nomenclatura para as branches utilizadas:
  - `master`: versão principal e integrada
+ - `develop`: União das branches de cada funcionalidade e integração entre elas  
  - `nome-do-dev-funcionalidade`: cada requisito funcional/feature implementado(a)
  - `template`: parte visual base do projeto
 
 No momento as issues não estão sendo utilizadas.
 
-# **############## SPRINT 1 ACABA AQUI #############**
-
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O projeto de solução desenvolvido pela IvestePro, baseado em todos os resultados que tivemos nas fases de concepção do projeto, sendo elas: Contexto do projeto, Design Thinking e Especificações Técnicas, gerou um site para gestão de investimentos e gastos, focado na disseminação de informações através da aba de notícias, cursos e acompanhamento de ações. Todos esses artefatos juntos gerarão o nosso site que atende às necessidades de diversos níveis de investidores, desde o investidor iniciante sem nenhum tipo de conhecimento na área, pois tem acesso a diversos cursos e conteúdos para que possa iniciar esse hábito tão importante na vida financeira de todos, até os investidores mais experientes, que desejam concentrar as informações de todos os seus investimentos em apenas uma plataforma.
 
 ## Tecnologias Utilizadas
+**Linguagens**
+Nos utilisamos 3 linguagens principais: O HTML foi utilisado para estruturação, marcação dos textos e seções da página, O CSS para estilização e melhoria da experiência do usuário ja o JavaScript foi utilisado para tornar a página dinâmica, se comunicar com o Local Storage, realizar cálculos sobre os investimentos e informações do usuário, e consumir APIs.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+**Frameworks:**
+Adotamos a utilisação dos seguintes Framework.
+1. Bootstrap para facilitar a padronização de componentes da aplicaçao a rsponcividade do site e algumas fumcinalidades de gereção de estruturação dinamica.
+2. cloudflare 
+3. googleapis Para importar banco de fontes para um amior estilização do plataforma
+4. jquery Utilizado para simplificar os scripts executados no navegador
+5. JSDelivr 
+**Ferramentas:**
+1. Githu Para o controle e versionamento do site
+2. visual Studio Pra a codificação das fumcionalidades
+3. Miro Para dar suporte a toso o processo de Design Thinking
+4. Figima para criação so User Flow de Wireframes do projeto 
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
 > Inclua os diagramas de User Flow, esboços criados pelo grupo
 > (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
 > item textualmente comentando e complementando o que está apresentado
