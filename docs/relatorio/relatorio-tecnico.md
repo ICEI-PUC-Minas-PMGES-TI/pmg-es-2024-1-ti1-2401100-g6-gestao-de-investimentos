@@ -25,8 +25,16 @@ Os membros do grupo são:
   - [Objetivos](#objetivos)
   - [Justificativa](#justificativa)
   - [Público-Alvo](#público-alvo)
+  - [Perfil dos Usuários da Aplicação InvestPro](#perfil-dos-usuários-da-aplicação-investpro)
+    - [Investidores Iniciantes:](#investidores-iniciantes)
+    - [Investidores Intermediários:](#investidores-intermediários)
+    - [Investidores Avançados:](#investidores-avançados)
+    - [Público Geral:](#público-geral)
 - [Especificações do Projeto](#especificações-do-projeto)
   - [Personas e Mapas de Empatia](#personas-e-mapas-de-empatia)
+    - [Pessoas endividadas que querem aprender sobra controle financeiro e gostariam de, após sair das dívidas, começar a investir](#pessoas-endividadas-que-querem-aprender-sobra-controle-financeiro-e-gostariam-de-após-sair-das-dívidas-começar-a-investir)
+    - [Pessoas que já tem um conhecimento prévio do mercado e uma vida financeira melhor estabelecida, mas com inseguranças sobre investimentos](#pessoas-que-já-tem-um-conhecimento-prévio-do-mercado-e-uma-vida-financeira-melhor-estabelecida-mas-com-inseguranças-sobre-investimentos)
+    - [Jovens que desejam adquirir conhecimento na area de iniciar sua vida financeiro. E estão iniciando no mercado de investimentos com](#jovens-que-desejam-adquirir-conhecimento-na-area-de-iniciar-sua-vida-financeiro-e-estão-iniciando-no-mercado-de-investimentos-com)
   - [Histórias de Usuários](#histórias-de-usuários)
   - [Requisitos](#requisitos)
     - [Requisitos Funcionais](#requisitos-funcionais)
@@ -35,16 +43,31 @@ Os membros do grupo são:
 - [Projeto de Interface](#projeto-de-interface)
   - [User Flow](#user-flow)
   - [Wireframes](#wireframes)
+    - [Overview](#overview)
+    - [Criar Conta](#criar-conta)
+    - [Entrar](#entrar)
+    - [Institucional](#institucional)
+    - [Homepage](#homepage)
+    - [Profile](#profile)
 - [Metodologia](#metodologia)
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+    - [Linguagens](#linguagens)
+    - [Frameworks](#frameworks)
+    - [Ferramentas](#ferramentas-1)
+  - [Wireframes](#wireframes-1)
+    - [Registro e Login](#registro-e-login)
+    - [Institucional](#institucional-1)
+    - [Dashboard](#dashboard)
+    - [Profile](#profile-1)
+  - [User Flow](#user-flow-1)
   - [Arquitetura da solução](#arquitetura-da-solução)
 - [Avaliação da Aplicação](#avaliação-da-aplicação)
+  - [Cenários de Teste da Aplicação](#cenários-de-teste-da-aplicação)
   - [Plano de Testes](#plano-de-testes)
-  - [Ferramentas de Testes (Opcional)](#ferramentas-de-testes-opcional)
   - [Registros de Testes](#registros-de-testes)
 - [Referências](#referências)
 
@@ -191,8 +214,8 @@ Nesta seção, exploraremos duas etapas cruciais do Projeto de Interface: o User
 Ao compreendermos essas duas áreas-chave do Projeto de Interface, estaremos capacitados a criar interfaces que não apenas atendam às necessidades dos usuários, mas também proporcionem uma experiência fluida e agradável ao interagir com a aplicação. Vamos mergulhar mais fundo no User Flow e nos Wireframes para entender como eles se complementam e contribuem para o sucesso do projeto.
 
 ## User Flow
-![UserFlow](images/user-flow.jpg)
 
+![UserFlow](images/user-flow.jpg)
 
 ## Wireframes
 
@@ -223,7 +246,6 @@ Este wireframe serve como um guia essencial durante o processo de desenvolviment
 ### Profile
 
 ![Wireframe Profile](images/wireframes/perfil.png)
-
 
 # Metodologia
 
@@ -271,13 +293,13 @@ Nossa equipe é composta por membros dedicados, cada um desempenhando um papel f
 
 ## Ferramentas
 
-| Ambiente                    | Plataforma    | Link de Acesso                   |
-|-----------------------------|---------------|----------------------------------|
-| Processo de Design Thinking | Miro          | [Link](https://miro.com/)        |
-| Repositório de código       | GitHub        | [Link](https://github.com/)      |
-| Hospedagem do site          | GitHub Pages  | [Link](https://pages.github.com) |
-| Protótipo Interativo        | Figma         | [Link](https://www.figma.com/)   |
-| Plataforma de codificação   | Visual Studio | [Link](https://code.visualstudio.com/)|
+| Ambiente                    | Plataforma         | Link de Acesso                   |
+|-----------------------------|--------------------|----------------------------------|
+| Processo de Design Thinking | Miro               | [Link](https://miro.com/)        |
+| Repositório de código       | GitHub             | [Link](https://github.com/)      |
+| Hospedagem do site          | GitHub Pages       | [Link](https://pages.github.com) |
+| Protótipo Interativo        | Figma              | [Link](https://www.figma.com/)   |
+| Plataforma de codificação   | Visual Studio Code | [Link](https://code.visualstudio.com/)|
 
 
 - **Editor de código:** Utilizamos o Visual Studio Code como nosso editor de código principal. Escolhemos o VS Code devido à sua interface amigável, extensibilidade através de plugins e recursos avançados, como depuração integrada, controle de versão e suporte a várias linguagens de programação.
@@ -303,89 +325,143 @@ No momento as issues não estão sendo utilizadas.
 
 # Projeto da Solução
 
-O projeto de solução desenvolvido pela IvestePro, baseado em todos os resultados que tivemos nas fases de concepção do projeto, sendo elas: Contexto do projeto, Design Thinking e Especificações Técnicas, gerou um site para gestão de investimentos e gastos, focado na disseminação de informações através da aba de notícias, cursos e acompanhamento de ações. Todos esses artefatos juntos gerarão o nosso site que atende às necessidades de diversos níveis de investidores, desde o investidor iniciante sem nenhum tipo de conhecimento na área, pois tem acesso a diversos cursos e conteúdos para que possa iniciar esse hábito tão importante na vida financeira de todos, até os investidores mais experientes, que desejam concentrar as informações de todos os seus investimentos em apenas uma plataforma.
+O projeto de solução desenvolvido pela InvestPro, baseado em todos os resultados que tivemos nas fases de concepção do projeto, sendo elas: Contexto do projeto, Design Thinking e Especificações Técnicas, gerou um site para gestão de investimentos e gastos, focado na disseminação de informações através da aba de notícias, cursos e acompanhamento de ações. Todos esses artefatos juntos gerarão o nosso site que atende às necessidades de diversos níveis de investidores, desde o investidor iniciante sem nenhum tipo de conhecimento na área, pois tem acesso a diversos cursos e conteúdos para que possa iniciar esse hábito tão importante na vida financeira de todos, até os investidores mais experientes, que desejam concentrar as informações de todos os seus investimentos em apenas uma plataforma.
 
 ## Tecnologias Utilizadas
-**Linguagens**
-Nos utilisamos 3 linguagens principais: O HTML foi utilisado para estruturação, marcação dos textos e seções da página, O CSS para estilização e melhoria da experiência do usuário ja o JavaScript foi utilisado para tornar a página dinâmica, se comunicar com o Local Storage, realizar cálculos sobre os investimentos e informações do usuário, e consumir APIs.
 
-**Frameworks:**
-Adotamos a utilisação dos seguintes Framework.
-1. Bootstrap para facilitar a padronização de componentes da aplicaçao a rsponcividade do site e algumas fumcinalidades de gereção de estruturação dinamica.
-2. cloudflare 
-3. googleapis Para importar banco de fontes para um amior estilização do plataforma
-4. jquery Utilizado para simplificar os scripts executados no navegador
-5. JSDelivr 
-**Ferramentas:**
-1. Githu Para o controle e versionamento do site
-2. visual Studio Pra a codificação das fumcionalidades
-3. Miro Para dar suporte a toso o processo de Design Thinking
-4. Figima para criação so User Flow de Wireframes do projeto 
+### Linguagens
 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+Nos utilizamos 3 linguagens principais: O HTML, sendo para estruturação, marcação dos textos e seções da página, O CSS para estilização e melhoria da experiência do usuário e o JavaScript para tornar a página dinâmica, se comunicar com o Local Storage, realizar cálculos sobre os investimentos e as informações do usuário, além de consumir APIs.
+
+### Frameworks
+
+Cada framework não está sendo utilizado por todas as páginas mas são links padrões em todos os arquivos htmls.
+
+Adotamos a utilização dos seguintes Frameworks:
+
+1. Cloudflare: O Cloudflare foi usado para caching e otimização automática de recursos.
+
+2. [Font Awesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css) (via CDNJS): Font Awesome é uma biblioteca de ícones que foi utilizada para adicionar ícones facilmente escaláveis a diferentes partes do site, como o menu da barra lateral, os botões de logout e outros elementos da interface de usuário (UI).
+
+3. [Google Fonts](https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap) (Roboto): Google Fonts foi utilizado para importar a fonte "Roboto", que é uma fonte limpa e legível, ideal para interfaces de usuário modernas. Essa fonte foi aplicada ao corpo do site para garantir uma aparência consistente e profissional.
+
+4. [Bootstrap CSS](https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css): Bootstrap é um framework CSS popular utilizado para criar layouts responsivos e componentes de UI reutilizáveis. No projeto, Bootstrap foi usado para o design responsivo, garantindo que a dashboard se adapte bem a diferentes tamanhos de tela e dispositivos.
+
+5. [Bootstrap JS](https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js): O JavaScript do Bootstrap foi utilizado para fornecer interatividade adicional aos componentes de UI fornecidos pelo Bootstrap, como modais, dropdowns e tooltips. Ele trabalha em conjunto com Popper.js para garantir que esses componentes funcionem corretamente.
+
+6. [jQuery](https://code.jquery.com/jquery-3.5.1.slim.min.js): jQuery é uma biblioteca JavaScript que simplifica a manipulação de documentos HTML, tratamento de eventos e animações. Foi utilizado para facilitar a interatividade da barra lateral e outras funcionalidades dinâmicas na página.
+
+7. [Popper.js](https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js): Popper.js é uma biblioteca que facilita o posicionamento de elementos popper, como tooltips e dropdowns, em uma página web. Foi utilizado em conjunto com o Bootstrap para garantir que os componentes de UI sejam posicionados corretamente e de forma responsiva.
+
+8. [Font Awesome](https://kit.fontawesome.com/a076d05399.js) (via Kit): Este kit do Font Awesome fornece acesso a uma versão mais recente e completa da biblioteca de ícones, permitindo a utilização de ícones adicionais e funcionalidades mais avançadas, como ícones de marca e ícones interativos.
+
+9. [Chart.js](https://cdn.jsdelivr.net/npm/chart.js): Chart.js é uma biblioteca JavaScript utilizada para criar gráficos interativos e responsivos. No projeto, foi utilizada para exibir o desempenho dos investimentos de forma visualmente atraente e fácil de entender, através de um gráfico de linha que mostra a evolução ao longo do tempo.
+
+### Ferramentas
+
+1. [GitHub](https://github.com): controle e versionamento do site
+2. [Visual Studio Code](https://code.visualstudio.com/): codificação das funcionalidades
+3. [Miro](https://miro.com): suporte a todo o processo de Design Thinking
+4. [Figma](https://figma.com): criação do User Flow e dos Wireframes do projeto 
+
+## Wireframes
+
+### Registro e Login
+
+Com o objetivo de salvar os dados de cada usuário, os wireframes de criar uma conta e logar em uma conta foram criados, possibilitando que cada pessoa tenha seus dados registrados de forma segura e individual.
+
+<div style="display: flex; justify-content: space-between;">
+   <img style="width: 49%;" src="images/wireframes/criar-conta.png">
+   <img style="width: 49%;" src="images/wireframes/entrar.png">
+</div>
+
+### Institucional
+
+Buscando atrair novos investidores para nossa plataforma essa landing page foi criada.
+
+![Wireframe Institucional](images/wireframes/institucional.png)
+
+### Dashboard
+
+Buscando centralizar as informações do usuário essa dashboard possibilita a fácil navegação do site e acesso prático à suas informações sobre investimentos e gastos financeiros.
+
+![Wireframe Dashboard](images/wireframes/homepage.png)
+
+### Profile
+
+Buscando possibilitar ao usuário a alteração e visualização dos seus dados o wireframe da página de perfil foi idealizada e projetada para cumprir com esse objetivo.
+
+![Wireframe Profile](images/wireframes/perfil.png)
+
+## User Flow
+
+Após a criação dos wireframes, é preciso pensar em uma forma de interligar todas as nossas ferramentas/páginas, e para isso o User Flow a seguir foi proposto, apresentando nossos requisitos nos nós presentes na imagem.
+
+![UserFlow](images/user-flow.jpg)
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+Está sendo utilizando principalmente o LocalStorage para armazenamento dos dados(gastos e investimentos) e o site de hospedagem que irá disponibilizar na internet nosso projeto é o GitHub Pages, que possibilita um fácil deploy e um sistema de hospedagem gratuito.
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+![Arquitetura do Projeto](images/arquitetura.png)
 
 # Avaliação da Aplicação
-##Senario de teste da apicação 
-1. **Primeiro contato** 
-  O usuario acessa a página principal Navega por ela e decide criar a sua conta, apos cadastrar seu dados ele segue para a pagina de logim e entra na plataforma
-2. **Primeiro analise**
-   Apos o primeiro contato e cadasto o usuario ter contato com a Dashboard com um resumo de todo o seu portifolio e representações do seu sitema 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+
+## Cenários de Teste da Aplicação
+
+1. **Primeiro Contato**: O usuario acessa a página principal, navega por ela e decide criar a sua conta, após cadastrar seu dados ele segue para a pagina de login e entra na plataforma.
+
+2. **Primeira Análise**: Após o primeiro contato, o usuario tem acesso a Dashboard principal, que apresenta um resumo de todo um portifolio com dados padrões.
+
+3. **Adquirindo Conhecimento**: Explorando mais o site, o usuário se encontra na seção de cursos da nossa plataforma, filtrando por áreas de conhecimento que ele pode ter interesse e aprendendo de forma dinâmica novos assuntos.
+
+4. **Acompanhando o Mercado**: O usuário depois de aprender mais sobre o mundo de investimentos, acessa a área de notícias, procurando aplicar seu novo repertório em análises das notícias mais recentes do mercado financeiro, buscando aplicar seu dinheiro para atingir seu objetivo.
+
+5. **Resumo dos Investimentos**: Depois de fazer uma análise do cenário financeiro atual, o usuário começa a investir em novos ativos e quer ter uma perspectiva de como seu dinheiro está crescendo, podendo fazer isso atráves do nosso Painel de Investimentos, que dá acesso à gráficos, indicadores, ferramentas de controle e valores totais. Além de uma ferramenta que busca ajudar no controle de gastos.
+
+6. **Personalizando o Perfil**: Todo investidor quer saber qual é seu foco principal, seja ele conservardo, agressivo, etc., e com o nosso quiz, o usuário consegue descobrir exatamente qual deve ser seu foco na hora de realizar seus investimentos. Além de que o usuário também pode alterar e apagar seus dados a qualquer momento.
+
+7. **Dúvidas**: Caso o usuário fique perdido nas funcionalidade do nosso site, ele pode acessar nossa área de FAQ ou entrar em contato conosco com as informações disponibilizadas.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Os testes selecionados foram do teste 1 ao teste 6 e a seguir as justificativas e as conclusões, relacionando-os com os requisitos funcionais cumpridos:
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+* Os testes 1 e 2 possibilitam que o usuário tenham um vislumbre do nosso objetivo e abrem caminho para o cumprimento dos requisitos RF-001, RF-003, RF-006, RF-007, RF009 e RF-010, pois o teste 1 se relaciona com a persistência de dados de um usuário entre sessões.
 
-## Ferramentas de Testes (Opcional)
+* Referente ao teste 3, a buscar conhecimento na nossa plataforma de cursos é cumprido o RF-008, que possui o objetivo de educar e dismistificar o mundo financeiro.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+* O teste 4 garante que o RF-005 seja validado, pois este busca a implementação de uma forma de acompanhar o mercado financeiro.
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+* O RF-010 se torna pronto com a nossa Dashboard, testado no teste 1, e nosso Painel de Investimentos, testado no teste 5.
+
+* O RF-006 e RF-007 são testados pelo teste 6, pois apresentam informações dos usuários e o Quiz que mostra qual seu direcionamento.
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+* **Teste 1:** ocorreu sem nenhum problema, garantindo que nosso sistema está de fato registrando novos usuários e apresenta simplificamente como é possível realizar o cadastro no nosso site.
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+* **Teste 2:** nos garantiu que as informações mostradas inicialmente ao usuário não está sendo feito de forma que sobrecarregue demais o investidor.
 
+* **Teste 3:** referente aos curso nos mostra que de fato é do interesse dos iniciantes e até mesmo mais avançados investidores adquirir novos conhecimentos de forma centralizada sendo possível filtrar aquilo que é do interesse do usuário.
+
+* **Teste 4:** foi realizado sem empecilhos, possibilitando nosso time ver que as notícias estão bem organizadas e possibilitando nossos usuários encontrar as tedências do mercado.
+
+* **Teste 5:** nos mostrou que a interface é bem intuitiva e que mesmo aqueles com pouco conhecimento tecnológico consegue utilizar tranquilamente nosso painel.
+
+* **Teste 6:** foi efetivo, com as pessoas que realizaram o Quiz de fato se identificando com o resultado mostrado além que também mostrou que a personalização do perfil os agradou.
+
+* **Teste 7:** praticamente não foi realizado devido à nossa interface amigável e simples de se usar.
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
+* [Documentação do Bootstrap (v4.5)](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [Documentação do JQuery](https://api.jquery.com/)
+* [Referência dos Ícones do FontAwesome](https://fontawesome.com/search?o=r&m=free)
+* [Documentação do Popper.js](https://popper.js.org/docs/v2/)
+* [Documentação do Chart.js](https://www.chartjs.org/docs/latest/)
+* [Referência de Hospedagem](https://pages.github.com/)
+* [LucidChart - Diagrama de Arquitetura](https://www.lucidchart.com/pages/pt)
 
 > Inclua todas as referências (livros, artigos, sites, etc) utilizados
 > no desenvolvimento do trabalho.
