@@ -100,21 +100,6 @@ Investir dinheiro é uma atividade crucial para muitas pessoas e empresas, e pod
 - **Relação com a Tecnologia:** Proficiente no uso de tecnologia, familiarizados com ferramentas de análise financeira e investimento.
 - **Objetivo:** Aperfeiçoar estratégias de investimento, maximizar retornos e gerenciar portfólios complexos com eficiência.
 
-### Consultores Financeiros:
-- **Conhecimentos Prévios:** Experiência profissional em consultoria financeira, certificações em finanças ou investimentos.
-- **Relação com a Tecnologia:** Habilidades avançadas em tecnologia, utilização de softwares especializados em análise financeira.
-- **Objetivo:** Prestar assistência aos clientes na tomada de decisões de investimento, utilizar a plataforma para análise de dados e geração de relatórios personalizados.
-
-### Administradores de Instituições Financeiras:
-- **Conhecimentos Prévios:** Experiência em gestão financeira e compliance.
-- **Relação com a Tecnologia:** Proficiente em ferramentas de software financeiro e sistemas de informação.
-- **Objetivo:** Utilizar a plataforma para análise de dados e monitoramento do desempenho dos investimentos sob sua responsabilidade, tomar decisões estratégicas com base nos insights fornecidos pelo InvestPro.
-
-### Empreendedores e Gestores de Pequenas Empresas:
-- **Conhecimentos Prévios:** Variedade de conhecimentos, desde básicos até avançados, dependendo da formação acadêmica e experiência profissional.
-- **Relação com a Tecnologia:** Uso regular de tecnologia para fins comerciais e financeiros.
-- **Objetivo:** Utilizar a plataforma para gerenciar os investimentos pessoais e/ou corporativos, otimizando os recursos financeiros da empresa e maximizando o retorno sobre o capital investido.
-
 ### Público Geral:
 - **Conhecimentos Prévios:** Diversificados, desde leigos até experientes em investimentos.
 - **Relação com a Tecnologia:** Varia conforme a faixa etária e experiência individual.
