@@ -102,3 +102,60 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: var(--cor-azul-escuro);
 }
+
+.main-content {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--cor-branca);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 20px;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+.list-unstyled {
+    list-style-type: none;
+}
+
+.list-unstyled li {
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+
+h5 {
+    color: var(--cor-roxo);
+    font-weight: bold;
+}
+
+h6 {
+    color: var(--cor-roxo-claro);
+}
+
+.chart-canvas {
+    width: 100% !important;
+    height: auto !important;
+}
