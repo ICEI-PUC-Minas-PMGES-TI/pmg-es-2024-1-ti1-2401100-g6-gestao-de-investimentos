@@ -102,3 +102,42 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: var(--cor-azul-escuro);
 }
+
+.news-section {
+    margin-top: 20px;
+}
+
+.news-item {
+    background-color: var(--cor-branca);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+}
+
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.news-item h2 {
+    margin-bottom: 10px;
+    color: var(--cor-azul-escuro);
+}
+
+.news-item p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: var(--cor-azul);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: var(--cor-azul-escuro);
+}
