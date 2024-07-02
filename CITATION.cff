@@ -20,13 +20,13 @@ authors:
     affiliation: PUC Minas
     family-names: Barros
     given-names: Diego
-- name-suffix: Professor
+  - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Simone
-    given-names: ogueira
+    given-names: Nogueira
 keywords:
-  - 
-  - 
+  - Investimentos
+  - Carteira Digital
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
